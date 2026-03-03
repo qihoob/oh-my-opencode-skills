@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "skills": {
+    "sources": [
+      "~/.opencode/skills",
+      "~/.config/opencode/skills"
+    ]
+  },
+  "agents": {
+    "sisyphus": {
+      "skills": [
+        "system/auto-skill-dispatcher",
+        "project/project-kickoff",
+        "product/product-requirement-analysis",
+        "dev/dev-context-first",
+        "dev/dev-implementation",
+        "dev/module-collaborative-dev",
+        "dev/module-splitting",
+        "dev/parallel-module-orchestrator",
+        "dev/parallel-module-orchestrator",
+        "qa/qa-context-first",
+        "qa/qa-test-case-design",
+        "qa/test-executor",
+        "collaboration/bug-coordinator",
+        "collaboration/collab-product-to-dev",
+        "collaboration/collab-dev-to-qa",
+        "collaboration/collab-acceptance-review",
+        "collaboration/collab-retrospective",
+        "collaboration/iteration_closure"
+      ]
+    },
+    "hephaestus": {
+      "skills": [
+        "dev/dev-context-first",
+        "dev/dev-implementation"
+      ]
+    },
+    "oracle": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    },
+    "librarian": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    },
+    "explore": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    }
+  },
+  "categories": {
+    "quick": {
+      "model": "bailian-coding-plan/kimi-k2.5",
+      "skills": [
+        "dev/dev-context-first",
+        "qa/qa-context-first"
+      ]
+    },
+    "unspecified-high": {
+      "model": "bailian-coding-plan/kimi-k2.5",
+      "skills": [
+        "system/auto-skill-dispatcher",
+        "project/project-kickoff",
+        "product/product-requirement-analysis",
+        "dev/module-collaborative-dev",
+        "dev/module-splitting",
+        "dev/parallel-module-orchestrator",
+        "dev/parallel-module-orchestrator",
+        "qa/test-executor",
+        "collaboration/bug-coordinator",
+        "collaboration/collab-acceptance-review",
+        "collaboration/collab-retrospective"
+      ]
+    },
+    "deep": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    },
+    "visual-engineering": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    }
+  }
+}

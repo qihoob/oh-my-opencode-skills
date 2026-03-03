@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+bun.lock
+package.json
+*.lock
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local OpenCode config (personal)
+opencode.json
+opencode.jsonc
+subtask2.jsonc
+plugin/
