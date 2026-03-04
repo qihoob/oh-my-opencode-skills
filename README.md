@@ -8,6 +8,7 @@
 skills/
 ├── collaboration/     # 协同技能 (6)
 ├── dev/              # 开发技能 (8)
+├── devops/           # DevOps技能 (4)
 ├── product/          # 产品技能 (5)
 ├── project/          # 项目技能 (1)
 ├── qa/               # 测试技能 (4)
@@ -22,12 +23,13 @@ skills/
 |------|------|
 | collaboration/ | 6 |
 | dev/ | 8 |
+| devops/ | 4 |
 | product/ | 5 |
 | project/ | 1 |
 | qa/ | 4 |
 | system/ | 2 |
 | yaml/ | 10 |
-| **总计** | **36** |
+| **总计** | **40** |
 
 ## 完整 Skills 列表
 
@@ -67,7 +69,16 @@ skills/
 | `system-log-implementation` | 统一日志服务实现 |
 | `stability-logging-implementation` | 监控埋点/告警服务实现 |
 
-### 5. QA (测试) - 4
+### 5. DevOps (部署) - 4
+
+| Skill | 说明 |
+|-------|------|
+| `multi-env-config-design` | 多环境配置设计 |
+| `dockerfile-generation` | Docker 配置生成 |
+| `k8s-deployment` | K8s 部署配置 |
+| `config-isolation-patterns` | 配置隔离模式 |
+
+### 6. QA (测试) - 4
 
 | Skill | 说明 |
 |-------|------|
@@ -76,7 +87,7 @@ skills/
 | `test-executor` | 测试执行器 |
 | `module-test-context` | 模块测试上下文 |
 
-### 6. Collaboration (协同) - 6
+### 7. Collaboration (协同) - 6
 
 | Skill | 说明 |
 |-------|------|
@@ -87,7 +98,7 @@ skills/
 | `collab-retrospective` | 迭代复盘 |
 | `iteration_closure` | 复盘闭环 |
 
-### 7. YAML Skills (10)
+### 8. YAML Skills (10)
 
 | Skill | 说明 |
 |-------|------|
@@ -133,6 +144,15 @@ task(
 ```
 
 ## 新增 Skills 说明
+
+### DevOps / 多环境配置 (2026-03-04 新增)
+
+| Skill | 说明 |
+|-------|------|
+| `devops-multi-env-config-design` | 多环境配置设计 |
+| `devops-dockerfile-generation` | Docker 配置生成 |
+| `devops-k8s-deployment` | K8s 部署配置 |
+| `devops-config-isolation-patterns` | 配置隔离模式 |
 
 ### 系统日志 (2026-03-04 新增)
 
