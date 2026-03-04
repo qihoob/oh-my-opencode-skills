@@ -16,6 +16,12 @@
         "product/module-product-requirement",
         "dev/dev-context-first",
         "dev/dev-implementation",
+        "dev/dev-debugging",
+        "dev/dev-refactoring",
+        "dev/dev-architecture-design",
+        "dev/dev-api-design",
+        "dev/dev-database-design",
+        "dev/dev-security-review",
         "dev/module-collaborative-dev",
         "dev/module-splitting",
         "dev/parallel-module-orchestrator",
@@ -29,7 +35,10 @@
         "collaboration/collab-dev-to-qa",
         "collaboration/collab-acceptance-review",
         "collaboration/collab-retrospective",
-        "collaboration/iteration_closure"
+        "collaboration/iteration_closure",
+        "collaboration/collab-multi-module-review",
+        "collaboration/collab-code-review",
+        "collaboration/collab-design-review"
       ]
     },
     "hephaestus": {
@@ -53,7 +62,8 @@
       "model": "bailian-coding-plan/kimi-k2.5",
       "skills": [
         "dev/dev-context-first",
-        "qa/qa-context-first"
+        "qa/qa-context-first",
+        "collaboration/collab-code-review"
       ]
     },
     "unspecified-high": {
@@ -64,6 +74,12 @@
         "product/product-requirement-analysis",
         "product/global-project-analysis",
         "product/module-product-requirement",
+        "dev/dev-debugging",
+        "dev/dev-refactoring",
+        "dev/dev-architecture-design",
+        "dev/dev-api-design",
+        "dev/dev-database-design",
+        "dev/dev-security-review",
         "dev/module-collaborative-dev",
         "dev/module-splitting",
         "dev/parallel-module-orchestrator",
@@ -72,27 +88,38 @@
         "qa/module-test-context",
         "collaboration/bug-coordinator",
         "collaboration/collab-acceptance-review",
-        "collaboration/collab-retrospective"
+        "collaboration/collab-retrospective",
+        "collaboration/collab-multi-module-review",
+        "collaboration/collab-code-review",
+        "collaboration/collab-design-review"
       ]
     },
     "deep": {
-      "model": "bailian-coding-plan/kimi-k2.5"
-    },
-    "visual-engineering": {
-      "model": "bailian-coding-plan/kimi-k2.5"
+      "model": "bailian-coding-plan/kimi-k2.5",
+      "skills": [
+        "dev/dev-architecture-design",
+        "dev/dev-api-design",
+        "dev/dev-database-design",
+        "dev/dev-security-review",
+        "collaboration/collab-multi-module-review",
+        "collaboration/collab-design-review"
+      ]
     },
     "dev": {
       "model": "bailian-coding-plan/kimi-k2.5",
       "skills": [
         "dev/dev-context-first",
-        "dev/dev-implementation"
+        "dev/dev-implementation",
+        "dev/dev-debugging",
+        "dev/dev-refactoring"
       ]
     },
     "qa": {
       "model": "bailian-coding-plan/kimi-k2.5",
       "skills": [
         "qa/qa-context-first",
-        "qa/qa-test-case-design"
+        "qa/qa-test-case-design",
+        "qa/test-executor"
       ]
     },
     "product": {
@@ -110,7 +137,10 @@
         "collaboration/collab-dev-to-qa",
         "collaboration/collab-acceptance-review",
         "collaboration/collab-retrospective",
-        "collaboration/iteration_closure"
+        "collaboration/iteration_closure",
+        "collaboration/collab-multi-module-review",
+        "collaboration/collab-code-review",
+        "collaboration/collab-design-review"
       ]
     }
   }
