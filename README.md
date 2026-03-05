@@ -6,12 +6,13 @@
 
 ```
 skills/
-├── collaboration/     # 协同技能 (6)
-├── dev/              # 开发技能 (8)
+├── collaboration/     # 协同技能 (7)
+├── dev/              # 开发技能 (10)
+├── devops/           # DevOps技能 (9)
 ├── devops/           # DevOps技能 (4)
-├── product/          # 产品技能 (5)
-├── project/          # 项目技能 (1)
-├── qa/               # 测试技能 (4)
+├── product/          # 产品技能 (7)
+├── project/          # 项目技能 (4)
+├── qa/               # 测试技能 (6)
 ├── system/           # 系统技能 (2)
 ├── yaml/             # YAML 格式 Skills (10)
 └── docs/             # 文档 (5)
@@ -21,15 +22,15 @@ skills/
 
 | 目录 | 数量 |
 |------|------|
-| collaboration/ | 6 |
-| dev/ | 8 |
-| devops/ | 4 |
-| product/ | 5 |
-| project/ | 1 |
-| qa/ | 4 |
+|| collaboration/ | 7 |
+|| dev/ | 10 |
+|| devops/ | 9 |
+|| product/ | 7 |
+|| project/ | 4 |
+|| qa/ | 6 |
 | system/ | 2 |
 | yaml/ | 10 |
-| **总计** | **40** |
+|| **总计** | **54** |
 
 ## 完整 Skills 列表
 
@@ -40,23 +41,52 @@ skills/
 | `auto-skill-dispatcher` | 自动技能调度器，一键调用入口 |
 | `auto-skill-dispatcher.yaml` | 调度器配置 |
 
-### 2. Project (项目) - 1
+### 2. Project (项目) - 4
+
+| Skill | 说明 |
+|-------|------|
+| `project-kickoff` | 项目启动器，统领全流程 |
+| `project-resume` | 项目继续，一键继续已启动项目 |
+| `project-team-configuration` | 团队配置，定义人数和角色 |
+| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
+
+| Skill | 说明 |
+|-------|------|
+| `project-kickoff` | 项目启动器，统领全流程 |
+| `project-team-configuration` | 团队配置，定义人数和角色 |
+| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
 
 | Skill | 说明 |
 |-------|------|
 | `project-kickoff` | 项目启动器，统领全流程 |
 
-### 3. Product (产品) - 5
+### 3. Product (产品) - 7
 
 | Skill | 说明 |
 |-------|------|
 | `product-requirement-analysis` | 需求分析，强调可用/易用/好用 |
+| `page-feature-best-practices` | 页面功能最佳实践参考 |
+| `collaborative-requirement-optimization` | 协同需求优化（三方评审） |
+| `global-project-analysis` | 全局项目分析，模块划分 |
 | `global-project-analysis` | 全局项目分析，模块划分 |
 | `module-product-requirement` | 模块需求产出 |
 | `system-log-requirements` | 系统日志/操作日志需求分析 |
 | `stability-logging-requirements` | 系统稳定性监控/业务埋点需求 |
 
-### 4. Dev (开发) - 8
+### 4. Dev (开发) - 10
+
+| Skill | 说明 |
+|-------|------|
+| `dev-context-first` | 开发前先了解最小上下文 |
+| `dev-implementation` | 功能实现 |
+| `dev-frontend-implementation` | 前端开发实现 |
+| `dev-backend-implementation` | 后端开发实现 |
+| `dev-code-quality` | 代码质量规范 (ESLint/Prettier) |
+| `dev-frontend-standards` | 前端开发规范 (响应式/状态/性能) |
+| `module-collaborative-dev` | 多模块协同开发 |
+| `module-splitting` | 模块拆解器 |
+| `parallel-module-orchestrator` | 并行模块编排器 |
+| `system-log-implementation` | 统一日志服务实现 |
 
 | Skill | 说明 |
 |-------|------|
@@ -69,7 +99,25 @@ skills/
 | `system-log-implementation` | 统一日志服务实现 |
 | `stability-logging-implementation` | 监控埋点/告警服务实现 |
 
-### 5. DevOps (部署) - 4
+### 5. DevOps (部署) - 9
+
+| Skill | 说明 |
+|-------|------|
+| `multi-env-config-design` | 多环境配置设计 |
+| `dockerfile-generation` | Docker 配置生成 |
+| `k8s-deployment` | K8s 部署配置 |
+| `config-isolation-patterns` | 配置隔离模式 |
+| `git-commit` | Git提交规范与信息生成 |
+| `devops-ci-cd-pipeline` | CI/CD流水线配置 |
+| `devops-build-config` | 构建配置 (Vite/Webpack) |
+
+| Skill | 说明 |
+|-------|------|
+| `multi-env-config-design` | 多环境配置设计 |
+| `dockerfile-generation` | Docker 配置生成 |
+| `k8s-deployment` | K8s 部署配置 |
+| `config-isolation-patterns` | 配置隔离模式 |
+| `git-commit` | Git提交规范与信息生成 |
 
 | Skill | 说明 |
 |-------|------|
@@ -78,7 +126,16 @@ skills/
 | `k8s-deployment` | K8s 部署配置 |
 | `config-isolation-patterns` | 配置隔离模式 |
 
-### 6. QA (测试) - 4
+### 6. QA (测试) - 6
+
+| Skill | 说明 |
+|-------|------|
+| `qa-context-first` | 测试前先了解最小上下文 |
+| `qa-test-case-design` | 用例设计 |
+| `qa-e2e-testing` | E2E测试 (Playwright/Cypress) |
+| `qa-performance-testing` | 性能测试 (k6/Lighthouse) |
+| `test-executor` | 测试执行器 |
+| `module-test-context` | 模块测试上下文 |
 
 | Skill | 说明 |
 |-------|------|
@@ -87,11 +144,13 @@ skills/
 | `test-executor` | 测试执行器 |
 | `module-test-context` | 模块测试上下文 |
 
-### 7. Collaboration (协同) - 6
+### 7. Collaboration (协同) - 7
 
 | Skill | 说明 |
 |-------|------|
 | `bug-coordinator` | Bug协调器 |
+| `collab-test-debug-cycle` | 测试修复循环管理 |
+| `collab-product-to-dev` | 产品→开发过渡 |
 | `collab-product-to-dev` | 产品→开发过渡 |
 | `collab-dev-to-qa` | 开发→测试过渡 |
 | `collab-acceptance-review` | 验收评审 |
@@ -144,6 +203,43 @@ task(
 ```
 
 ## 新增 Skills 说明
+
+### 项目管理 (2026-03-05 新增)
+
+| Skill | 说明 |
+|-------|------|
+| `project/project-resume` | 项目继续，一键继续已启动项目 |
+| `project/project-team-configuration` | 团队配置，定义人数和角色 |
+| `project/project-task-distribution` | 任务分配，根据团队人数智能分配 |
+
+### DevOps / 多环境配置 (2026-03-04 新增)
+
+| Skill | 说明 |
+|-------|------|
+| `project/project-resume` | 项目继续，一键继续已启动项目 |
+| `project/project-team-configuration` | 团队配置，定义人数和角色 |
+| `project/project-task-distribution` | 任务分配，根据团队人数智能分配 |
+
+| Skill | 说明 |
+|-------|------|
+| `project-resume` | 项目继续，一键继续已启动项目 |
+| `project-team-configuration` | 团队配置，定义人数和角色 |
+| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
+|-------|------|
+| `project-team-configuration` | 团队配置，定义人数和角色 |
+| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
+
+### DevOps / 多环境配置 (2026-03-04 新增)
+
+| Skill | 说明 |
+|-------|------|
+| `devops/multi-env-config-design` | 多环境配置设计 |
+| `devops/dockerfile-generation` | Docker 配置生成 |
+| `devops/k8s-deployment` | K8s 部署配置 |
+| `devops/config-isolation-patterns` | 配置隔离模式 |
+| `devops/git-commit` | Git提交规范与信息生成 |
+
+| Skill | 说明 |
 
 ### DevOps / 多环境配置 (2026-03-04 新增)
 

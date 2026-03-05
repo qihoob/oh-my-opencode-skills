@@ -231,7 +231,15 @@ Bug影响链:
 
 ## 配合 Skills
 
+## 配合 Skills
+
 | 场景 | 调用 Skill |
+|------|-----------|
+| 触发测试 | qa-test-case-design |
+| 开发修复 | dev/module-collaborative-dev |
+| 代码审查 | collab代码审查 (如需要) |
+| 产品验收 | collab-acceptance-review |
+| **循环管理** | **collab-test-debug-cycle** |
 |------|-----------|
 | 触发测试 | qa-test-case-design |
 | 开发修复 | dev/module-collaborative-dev |
