@@ -48,6 +48,8 @@ argument-hint: "<任务描述>"
 | 验收、验收评审、UAT | collaboration/collab-acceptance-review | 验收评审 |
 | 复盘、迭代回顾、总结 | collaboration/collab-retrospective | 迭代复盘 |
 | 迭代闭环、连接下一轮 | collaboration/iteration_closure | 迭代闭环 |
+| 视觉产品经理、视觉PM、设计评审、设计规范、UI确认、交互确认 | collaboration/collab-visual-to-product | 视觉PM与产品PM协同 |
+| 设计稿交接、设计标注、视觉验收、UI交接、开发协同 | collaboration/collab-visual-to-dev | 视觉PM与开发交接 |
 | 提交、commit、版本控制 | git-master | Git 提交操作 |
 | 前端、UI、界面、组件 | frontend-ui-ux | 前端UI/UX开发 |
 | 浏览器、自动化测试、E2E | playwright | 浏览器自动化 |
