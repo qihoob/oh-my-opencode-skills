@@ -1,182 +1,81 @@
 # oh-my-opencode-skills
 
-统一管理的 Skills 项目，包含产品、开发、测试、协同等完整角色技能。
+统一管理的 Skills 项目，按**角色**和**协同**两个维度组织。
 
-## 项目结构
+## 目录结构
 
 ```
 skills/
-├── collaboration/     # 协同技能 (7)
-├── dev/              # 开发技能 (10)
-├── devops/           # DevOps技能 (9)
-├── devops/           # DevOps技能 (4)
-├── product/          # 产品技能 (7)
-├── project/          # 项目技能 (4)
-├── qa/               # 测试技能 (6)
-├── system/           # 系统技能 (2)
-├── yaml/             # YAML 格式 Skills (10)
-└── docs/             # 文档 (5)
+├── collaboration/    # 协同技能
+│   ├── handoff/     # 角色间交接
+│   ├── review/      # 评审活动
+│   ├── process/     # 流程管理
+│   └── sync/        # 同步对齐
+├── dev/             # 开发技能
+│   ├── implementation/
+│   ├── context/
+│   ├── modules/
+│   └── standards/
+├── devops/          # DevOps技能
+│   ├── deploy/
+│   └── ci/
+├── product/         # 产品技能
+│   ├── requirement/
+│   ├── analysis/
+│   └── module/
+├── project/         # 项目技能
+├── qa/              # 测试技能
+│   ├── context/
+│   ├── test-case/
+│   ├── execution/
+│   └── advanced/
+├── visual/          # 视觉技能
+└── system/          # 系统技能
 ```
 
-## Skills 统计
+## Skills 清单
 
-| 目录 | 数量 |
-|------|------|
-|| collaboration/ | 7 |
-|| dev/ | 10 |
-|| devops/ | 9 |
-|| product/ | 7 |
-|| project/ | 4 |
-|| qa/ | 6 |
-| system/ | 2 |
-| yaml/ | 10 |
-|| **总计** | **54** |
+### 角色 Skills
 
-## 完整 Skills 列表
+| 角色 | 目录 | 核心技能 |
+|------|------|----------|
+| 项目 | project/ | kickoff |
+| 产品 | product/ | 需求分析、项目分析、模块需求 |
+| 开发 | dev/ | 功能实现、上下文、模块开发 |
+| 测试 | qa/ | 用例设计、测试执行、上下文 |
+| 视觉 | visual/ | 设计评审、设计稿交接 |
+| DevOps | devops/ | 部署配置、CI/CD |
 
-### 1. System (系统) - 2
+### 协同 Skills
 
-| Skill | 说明 |
-|-------|------|
-| `auto-skill-dispatcher` | 自动技能调度器，一键调用入口 |
-| `auto-skill-dispatcher.yaml` | 调度器配置 |
+| 类型 | 目录 | 技能 |
+|------|------|------|
+| 交接 | collaboration/handoff/ | 产品→开发、开发→测试、视觉→产品、视觉→开发 |
+| 评审 | collaboration/review/ | 验收评审 |
+| 流程 | collaboration/process/ | 复盘、迭代闭环、Bug协调 |
+| 同步 | collaboration/sync/ | 上下文对齐、故障响应 |
 
-### 2. Project (项目) - 4
+## 使用方式
 
-| Skill | 说明 |
-|-------|------|
-| `project-kickoff` | 项目启动器，统领全流程 |
-| `project-resume` | 项目继续，一键继续已启动项目 |
-| `project-team-configuration` | 团队配置，定义人数和角色 |
-| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
+### 自动调度（推荐）
+```typescript
+skill(name="system/auto-skill-dispatcher", user_message="帮我实现用户登录功能")
+```
 
-| Skill | 说明 |
-|-------|------|
-| `project-kickoff` | 项目启动器，统领全流程 |
-| `project-team-configuration` | 团队配置，定义人数和角色 |
-| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
+### 手动调用
+```typescript
+task(
+  category="product",
+  load_skills=["product/requirement/requirement-analysis"],
+  prompt="分析需求"
+)
+```
 
-| Skill | 说明 |
-|-------|------|
-| `project-kickoff` | 项目启动器，统领全流程 |
+## 配置
 
-### 3. Product (产品) - 7
+在 `oh-my-opencode.json` 中配置：
 
-| Skill | 说明 |
-|-------|------|
-| `product-requirement-analysis` | 需求分析，强调可用/易用/好用 |
-| `page-feature-best-practices` | 页面功能最佳实践参考 |
-| `collaborative-requirement-optimization` | 协同需求优化（三方评审） |
-| `global-project-analysis` | 全局项目分析，模块划分 |
-| `global-project-analysis` | 全局项目分析，模块划分 |
-| `module-product-requirement` | 模块需求产出 |
-| `system-log-requirements` | 系统日志/操作日志需求分析 |
-| `stability-logging-requirements` | 系统稳定性监控/业务埋点需求 |
-
-### 4. Dev (开发) - 10
-
-| Skill | 说明 |
-|-------|------|
-| `dev-context-first` | 开发前先了解最小上下文 |
-| `dev-implementation` | 功能实现 |
-| `dev-frontend-implementation` | 前端开发实现 |
-| `dev-backend-implementation` | 后端开发实现 |
-| `dev-code-quality` | 代码质量规范 (ESLint/Prettier) |
-| `dev-frontend-standards` | 前端开发规范 (响应式/状态/性能) |
-| `module-collaborative-dev` | 多模块协同开发 |
-| `module-splitting` | 模块拆解器 |
-| `parallel-module-orchestrator` | 并行模块编排器 |
-| `system-log-implementation` | 统一日志服务实现 |
-
-| Skill | 说明 |
-|-------|------|
-| `dev-context-first` | 开发前先了解最小上下文 |
-| `dev-implementation` | 功能实现 |
-| `module-collaborative-dev` | 多模块协同开发 |
-| `module-splitting` | 模块拆解器 |
-| `parallel-module-orchestrator` | 并行模块编排器 |
-| `module-dev-context` | 模块开发上下文 |
-| `system-log-implementation` | 统一日志服务实现 |
-| `stability-logging-implementation` | 监控埋点/告警服务实现 |
-
-### 5. DevOps (部署) - 9
-
-| Skill | 说明 |
-|-------|------|
-| `multi-env-config-design` | 多环境配置设计 |
-| `dockerfile-generation` | Docker 配置生成 |
-| `k8s-deployment` | K8s 部署配置 |
-| `config-isolation-patterns` | 配置隔离模式 |
-| `git-commit` | Git提交规范与信息生成 |
-| `devops-ci-cd-pipeline` | CI/CD流水线配置 |
-| `devops-build-config` | 构建配置 (Vite/Webpack) |
-
-| Skill | 说明 |
-|-------|------|
-| `multi-env-config-design` | 多环境配置设计 |
-| `dockerfile-generation` | Docker 配置生成 |
-| `k8s-deployment` | K8s 部署配置 |
-| `config-isolation-patterns` | 配置隔离模式 |
-| `git-commit` | Git提交规范与信息生成 |
-
-| Skill | 说明 |
-|-------|------|
-| `multi-env-config-design` | 多环境配置设计 |
-| `dockerfile-generation` | Docker 配置生成 |
-| `k8s-deployment` | K8s 部署配置 |
-| `config-isolation-patterns` | 配置隔离模式 |
-
-### 6. QA (测试) - 6
-
-| Skill | 说明 |
-|-------|------|
-| `qa-context-first` | 测试前先了解最小上下文 |
-| `qa-test-case-design` | 用例设计 |
-| `qa-e2e-testing` | E2E测试 (Playwright/Cypress) |
-| `qa-performance-testing` | 性能测试 (k6/Lighthouse) |
-| `test-executor` | 测试执行器 |
-| `module-test-context` | 模块测试上下文 |
-
-| Skill | 说明 |
-|-------|------|
-| `qa-context-first` | 测试前先了解最小上下文 |
-| `qa-test-case-design` | 用例设计 |
-| `test-executor` | 测试执行器 |
-| `module-test-context` | 模块测试上下文 |
-
-### 7. Collaboration (协同) - 7
-
-| Skill | 说明 |
-|-------|------|
-| `bug-coordinator` | Bug协调器 |
-| `collab-test-debug-cycle` | 测试修复循环管理 |
-| `collab-product-to-dev` | 产品→开发过渡 |
-| `collab-product-to-dev` | 产品→开发过渡 |
-| `collab-dev-to-qa` | 开发→测试过渡 |
-| `collab-acceptance-review` | 验收评审 |
-| `collab-retrospective` | 迭代复盘 |
-| `iteration_closure` | 复盘闭环 |
-
-### 8. YAML Skills (10)
-
-| Skill | 说明 |
-|-------|------|
-| `collaboration-skills.yaml` | 协同技能集 (14) |
-| `context-skills.yaml` | 上下文管理技能 (4) |
-| `dev-skills.yaml` | 开发技能集 (14) |
-| `global-product-skills.yaml` | 全局产品技能 (4) |
-| `module-dev-test-skills.yaml` | 模块开发/测试技能 (13) |
-| `module-product-skills.yaml` | 模块产品技能 (5) |
-| `module-skills.yaml` | 模块管理技能 (5) |
-| `product-skills.yaml` | 产品技能集 (8) |
-| `qa-skills.yaml` | 测试技能集 (11) |
-| `skills-registry.yaml` | 注册索引 |
-
-## 安装
-
-```bash
-# 配置 oh-my-opencode 使用此目录
-# 在 oh-my-opencode.json 中配置:
+```json
 {
   "skills": {
     "sources": ["C:\\Users\\Administrator\\skills"]
@@ -184,88 +83,16 @@ skills/
 }
 ```
 
-## 使用
+## 调度逻辑
 
-### 一键自动调用
+自动调度器根据关键词匹配：
 
-```typescript
-skill(name="system/auto-skill-dispatcher", user_message="帮我实现用户登录功能")
-```
-
-### 手动调用
-
-```typescript
-task(
-  category="unspecified-high",
-  load_skills=["product/product-requirement-analysis"],
-  prompt="分析需求"
-)
-```
-
-## 新增 Skills 说明
-
-### 项目管理 (2026-03-05 新增)
-
-| Skill | 说明 |
-|-------|------|
-| `project/project-resume` | 项目继续，一键继续已启动项目 |
-| `project/project-team-configuration` | 团队配置，定义人数和角色 |
-| `project/project-task-distribution` | 任务分配，根据团队人数智能分配 |
-
-### DevOps / 多环境配置 (2026-03-04 新增)
-
-| Skill | 说明 |
-|-------|------|
-| `project/project-resume` | 项目继续，一键继续已启动项目 |
-| `project/project-team-configuration` | 团队配置，定义人数和角色 |
-| `project/project-task-distribution` | 任务分配，根据团队人数智能分配 |
-
-| Skill | 说明 |
-|-------|------|
-| `project-resume` | 项目继续，一键继续已启动项目 |
-| `project-team-configuration` | 团队配置，定义人数和角色 |
-| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
-|-------|------|
-| `project-team-configuration` | 团队配置，定义人数和角色 |
-| `project-task-distribution` | 任务分配，根据团队人数智能分配 |
-
-### DevOps / 多环境配置 (2026-03-04 新增)
-
-| Skill | 说明 |
-|-------|------|
-| `devops/multi-env-config-design` | 多环境配置设计 |
-| `devops/dockerfile-generation` | Docker 配置生成 |
-| `devops/k8s-deployment` | K8s 部署配置 |
-| `devops/config-isolation-patterns` | 配置隔离模式 |
-| `devops/git-commit` | Git提交规范与信息生成 |
-
-| Skill | 说明 |
-
-### DevOps / 多环境配置 (2026-03-04 新增)
-
-| Skill | 说明 |
-|-------|------|
-| `devops-multi-env-config-design` | 多环境配置设计 |
-| `devops-dockerfile-generation` | Docker 配置生成 |
-| `devops-k8s-deployment` | K8s 部署配置 |
-| `devops-config-isolation-patterns` | 配置隔离模式 |
-
-### 系统日志 (2026-03-04 新增)
-
-| Skill | 说明 |
-|-------|------|
-| `product-system-log-requirements` | 系统日志/操作日志需求分析 |
-| `dev-system-log-implementation` | 统一日志服务实现 |
-
-### 稳定性日志 (2026-03-04 新增)
-
-| Skill | 说明 |
-|-------|------|
-| `product-stability-logging-requirements` | 系统稳定性监控/业务埋点需求 |
-| `dev-stability-logging-implementation` | 监控埋点/告警服务实现 |
-
-## 文档
-
-- [完整 Skills 索引](docs/COMPLETE_SKILLS_INDEX.md)
-- [工作流手册](docs/WORKFLOW_MANUAL.md)
-- [工作流 Skills](docs/WORKFLOW_SKILLS.md)
+| 关键词 | → | Skill |
+|--------|---|-------|
+| 启动项目 | → | project/kickoff |
+| 需求分析 | → | product/requirement/requirement-analysis |
+| 开发功能 | → | dev/implementation/implementation |
+| 测试用例 | → | qa/test-case/test-case-design |
+| 设计评审 | → | visual/design-review |
+| 验收 | → | collaboration/review/acceptance-review |
+| 复盘 | → | collaboration/process/retrospective |
