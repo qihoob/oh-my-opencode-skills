@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "skills": {
+    "sources": [
+      "./skills",
+      "./.opencode/skills",
+      "~/.config/opencode/skills"
+    ]
+  },
+  "agents": {
+    "sisyphus": {
+      "skills": [
+        "system/dispatcher",
+        "project/kickoff",
+        "project/resume",
+        "project/task-distribution",
+        "core/dev-context",
+        "core/dev-implementation",
+        "core/dev-code-review",
+        "core/dev-debugging",
+        "core/dev-refactoring",
+        "core/dev-api-design",
+        "core/dev-db-design",
+        "core/dev-deployment",
+        "core/qa-test-case",
+        "core/qa-test-execution",
+        "core/qa-defect-analysis",
+        "core/qa-context",
+        "core/product-requirement",
+        "core/product-acceptance",
+        "core/product-ux-review",
+        "core/product-page-design",
+        "core/architecture-tech-selection",
+        "core/architecture-system-design",
+        "core/architecture-module-split",
+        "collaboration-handoff",
+        "collaboration-sync",
+        "collaboration-review",
+        "collaboration-bug-track",
+        "collaboration-incident",
+        "collaboration-retrospective",
+        "devops-cicd",
+        "devops-container",
+        "devops-config",
+        "devops-git-commit"
+      ]
+    },
+    "hephaestus": {
+      "skills": [
+        "core/dev-implementation"
+      ]
+    }
+  },
+  "categories": {
+    "quick": {
+      "skills": [
+        "core/dev-implementation",
+        "core/qa-test-case"
+      ]
+    },
+    "unspecified-high": {
+      "skills": [
+        "system/dispatcher",
+        "core/dev-implementation",
+        "core/dev-code-review",
+        "core/dev-debugging",
+        "core/dev-refactoring",
+        "core/dev-api-design",
+        "core/dev-db-design",
+        "core/dev-deployment",
+        "core/qa-test-case",
+        "core/qa-test-execution",
+        "core/qa-defect-analysis",
+        "core/product-requirement",
+        "core/product-acceptance",
+        "core/product-ux-review",
+        "core/product-page-design",
+        "core/architecture-tech-selection",
+        "core/architecture-system-design",
+        "core/architecture-module-split",
+        "collaboration-handoff",
+        "collaboration-sync",
+        "collaboration-review",
+        "collaboration-bug-track",
+        "collaboration-incident",
+        "collaboration-retrospective",
+        "devops-cicd",
+        "devops-container",
+        "devops-config"
+      ]
+    }
+  }
+}
