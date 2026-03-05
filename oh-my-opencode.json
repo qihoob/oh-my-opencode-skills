@@ -2,92 +2,92 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "skills": {
     "sources": [
-      "./skills",
-      "./.opencode/skills",
-      "~/.config/opencode/skills"
+      "C:\\Users\\Administrator\\skills"
     ]
   },
   "agents": {
     "sisyphus": {
       "skills": [
-        "system/dispatcher",
+        "system/auto-skill-dispatcher",
         "project/kickoff",
-        "project/resume",
-        "project/task-distribution",
-        "core/dev-context",
-        "core/dev-implementation",
-        "core/dev-code-review",
-        "core/dev-debugging",
-        "core/dev-refactoring",
-        "core/dev-api-design",
-        "core/dev-db-design",
-        "core/dev-deployment",
-        "core/qa-test-case",
-        "core/qa-test-execution",
-        "core/qa-defect-analysis",
-        "core/qa-context",
-        "core/product-requirement",
-        "core/product-acceptance",
-        "core/product-ux-review",
-        "core/product-page-design",
-        "core/architecture-tech-selection",
-        "core/architecture-system-design",
-        "core/architecture-module-split",
-        "collaboration-handoff",
-        "collaboration-sync",
-        "collaboration-review",
-        "collaboration-bug-track",
-        "collaboration-incident",
-        "collaboration-retrospective",
-        "devops-cicd",
-        "devops-container",
-        "devops-config",
-        "devops-git-commit"
+        "product/requirement/requirement-analysis",
+        "product/analysis/global-project-analysis",
+        "product/analysis/data-analysis",
+        "dev/context/context-first",
+        "dev/implementation/implementation",
+        "dev/implementation/frontend",
+        "dev/implementation/backend",
+        "dev/code-review",
+        "dev/modules/module-collaborative-dev",
+        "dev/modules/module-splitting",
+        "dev/modules/parallel-module-orchestrator",
+        "qa/context/context-first",
+        "qa/test-case/test-case-design",
+        "qa/execution/test-executor",
+        "qa/advanced/e2e-testing",
+        "qa/advanced/performance-testing",
+        "collaboration/process/bug-coordinator",
+        "collaboration/handoff/product-to-dev",
+        "collaboration/handoff/dev-to-qa",
+        "collaboration/handoff/visual-to-product",
+        "collaboration/handoff/visual-to-dev",
+        "collaboration/review/acceptance-review",
+        "collaboration/process/retrospective",
+        "collaboration/process/iteration-closure",
+        "collaboration/sync/incident",
+        "collaboration/sync/context-alignment",
+        "visual/design-review",
+        "visual/design-handoff",
+        "devops/deploy/multi-env",
+        "devops/deploy/dockerfile",
+        "devops/deploy/k8s",
+        "devops/ci/pipeline"
       ]
     },
     "hephaestus": {
       "skills": [
-        "core/dev-implementation"
+        "dev/context/context-first",
+        "dev/implementation/implementation"
       ]
+    },
+    "oracle": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    },
+    "librarian": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    },
+    "explore": {
+      "model": "bailian-coding-plan/kimi-k2.5"
     }
   },
   "categories": {
     "quick": {
+      "model": "bailian-coding-plan/kimi-k2.5",
       "skills": [
-        "core/dev-implementation",
-        "core/qa-test-case"
+        "dev/context/context-first",
+        "qa/context/context-first"
       ]
     },
     "unspecified-high": {
+      "model": "bailian-coding-plan/kimi-k2.5",
       "skills": [
-        "system/dispatcher",
-        "core/dev-implementation",
-        "core/dev-code-review",
-        "core/dev-debugging",
-        "core/dev-refactoring",
-        "core/dev-api-design",
-        "core/dev-db-design",
-        "core/dev-deployment",
-        "core/qa-test-case",
-        "core/qa-test-execution",
-        "core/qa-defect-analysis",
-        "core/product-requirement",
-        "core/product-acceptance",
-        "core/product-ux-review",
-        "core/product-page-design",
-        "core/architecture-tech-selection",
-        "core/architecture-system-design",
-        "core/architecture-module-split",
-        "collaboration-handoff",
-        "collaboration-sync",
-        "collaboration-review",
-        "collaboration-bug-track",
-        "collaboration-incident",
-        "collaboration-retrospective",
-        "devops-cicd",
-        "devops-container",
-        "devops-config"
+        "system/auto-skill-dispatcher",
+        "project/kickoff",
+        "product/requirement/requirement-analysis",
+        "dev/modules/module-collaborative-dev",
+        "dev/modules/module-splitting",
+        "dev/modules/parallel-module-orchestrator",
+        "qa/execution/test-executor",
+        "collaboration/process/bug-coordinator",
+        "collaboration/review/acceptance-review",
+        "collaboration/process/retrospective"
       ]
+    },
+    "deep": {
+      "model": "bailian-coding-plan/kimi-k2.5"
+    },
+    "visual-engineering": {
+      "model": "bailian-coding-plan/kimi-k2.5"
     }
   }
 }
