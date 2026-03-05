@@ -37,6 +37,7 @@ argument-hint: "<任务描述>"
 | 模块拆解 | dev/modules/module-splitting |
 | 并行开发 | dev/modules/parallel-module-orchestrator |
 | 代码审查、code review、CR | dev/code-review |
+| 需求匹配、监督实现、代码验证 | dev/verify-implementation |
 
 ### 测试
 | 关键词 | 启动 Skill |
