@@ -1,0 +1,44 @@
+{
+  "name": "oh-my-opencode-skills",
+  "version": "1.0.0",
+  "description": "oh-my-opencode 技能库 - 统一的 SDLC 技能集合",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Skills are markdown files - no tests required\" && exit 0",
+    "validate": "node scripts/validate-skills.js",
+    "list": "node scripts/list-skills.js"
+  },
+  "keywords": [
+    "opencode",
+    "oh-my-opencode",
+    "skills",
+    "ai-agents",
+    "sdlc",
+    "devops",
+    "code-review",
+    "testing",
+    "product-management"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/oh-my-opencode-skills"
+  },
+  "files": [
+    "collaboration/",
+    "dev/",
+    "devops/",
+    "product/",
+    "project/",
+    "qa/",
+    "system/",
+    "visual/",
+    "README.md",
+    "AGENTS.md",
+    ".opencode/"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
