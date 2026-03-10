@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oh-my-opencode/schemas/main/oh-my-opencode.json",
+  "skills": {
+    "sources": [
+      "C:\\Users\\Administrator\\skills"
+    ],
+    "autoLoad": true
+  },
+  "agents": {
+    "sisyphus": {
+      "defaultSkills": [
+        "system/auto-skill-dispatcher",
+        "system/document-integrity-check",
+        "project/kickoff",
+        "product/requirement/product-requirement-analysis",
+        "product/module/module-document-keeper",
+        "product/feedback/analysis",
+        "dev/context/dev-context-first",
+        "dev/implementation/dev-implementation",
+        "dev/code-review",
+        "qa/context/qa-context-first",
+        "qa/test-case/test-case-design",
+        "qa/execution/test-executor",
+        "collaboration/handoff/collab-product-to-dev",
+        "collaboration/handoff/collab-dev-to-qa",
+        "collaboration/review/collab-acceptance-review",
+        "collaboration/process/collab-retrospective",
+        "collaboration/sync/document-alignment",
+        "devops/ci/pipeline",
+        "devops/deploy/dockerfile",
+        "devops/deploy/k8s",
+        "devops/deploy/multi-env",
+        "devops/monitoring/observability",
+        "devops/data/migration",
+        "devops/cost-optimization",
+        "system/security/compliance"
+      ],
+      "skillSettings": {
+        "dev/code-review": {
+          "enableAutoReview": true,
+          "requireTests": true,
+          "minCoverage": 80,
+          "blockOnSecurityIssues": true
+        },
+        "devops/monitoring/observability": {
+          "defaultStack": "prometheus-grafana-jaeger",
+          "enableGoldenSignals": true
+        },
+        "system/security/compliance": {
+          "enableAutoScan": true,
+          "complianceFrameworks": ["GDPR", "SOC2"],
+          "blockOnCriticalVulnerabilities": true
+        }
+      }
+    }
+  },
+  "hooks": {
+    "preCommit": [
+      "dev/code-review"
+    ],
+    "prePush": [
+      "qa/execution/test-executor",
+      "system/security/compliance"
+    ],
+    "preDeploy": [
+      "devops/monitoring/observability",
+      "devops/data/migration"
+    ]
+  },
+  "integrations": {
+    "github": {
+      "enablePRReview": true,
+      "enableSecurityScan": true,
+      "enableCoverageCheck": true
+    },
+    "sonarqube": {
+      "enabled": true,
+      "qualityGate": "default"
+    },
+    "codecov": {
+      "enabled": true,
+      "targetCoverage": 80
+    }
+  },
+  "version": "1.0.0",
+  "lastUpdated": "2024-03-10T11:00:00.000Z"
+}
