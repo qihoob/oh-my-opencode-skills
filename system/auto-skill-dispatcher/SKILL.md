@@ -54,11 +54,12 @@ version: "4.0"
 | 并行开发、多模块编排 | dev/modules/parallel-module-orchestrator | → dev-implementation |
 | 需求匹配、代码验证 | dev/verify-implementation | → dev-implementation (如不匹配) |
 
-### 测试技能 (7)
+### 测试技能 (8)
 
 | 用户输入 | 触发技能 | 推荐下一步 |
 |----------|----------|------------|
 | 测试上下文、了解被测功能 | qa/context/qa-context-first | → test-case-design |
+| 半路测试、没有需求文档、从代码分析 | qa/context/qa-context-from-code | → test-case-design |
 | 模块测试、测试前 | qa/context/module-test-context | → test-case-design |
 | 测试用例、设计用例 | qa/test-case/test-case-design | → test-case-prioritization |
 | 用例优先级、测试排序 | qa/test-case/test-case-prioritization | → test-executor |
@@ -214,7 +215,7 @@ design-review → design-handoff → dev/implementation/frontend
 | dev/implementation/frontend | dev-context-first 或 product-page-feature-best-practices | 上下文已获取 |
 | dev/implementation/backend | contract-*.md（跨层时）或 dev-context-first | 契约文档是否存在 |
 | dev-code-review | dev-implementation | implementation-*.md 是否存在 |
-| qa-test-case-design | product-requirement-analysis | requirement-*.md 是否存在 |
+| qa-test-case-design | product-requirement-analysis 或 qa-context-from-code | requirement-*.md 或逆向分析报告是否存在 |
 | qa-test-executor | qa-test-case-design | test-cases-*.md 是否存在 |
 | collab-product-to-dev | product-requirement-analysis | requirement-*.md 是否存在 |
 | collab-dev-to-qa | dev-code-review | code-review-*.md 是否存在 |
