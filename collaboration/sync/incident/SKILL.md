@@ -1,0 +1,99 @@
+---
+name: collaboration-incident
+description: (opencode - Skill) 应急响应 - 线上故障、紧急修复、复盘
+subtask: true
+argument-hint: "<故障描述>"
+---
+
+# 应急响应 Skill
+
+## Role
+Incident Commander
+
+## Capabilities
+
+### Incident Response
+- 问题定位
+- 快速止血
+- 服务恢复
+
+### Communication
+- 进度同步
+- 影响评估
+- 用户通知
+
+### Post-mortem
+- 根因分析
+- 改进措施
+- 预防计划
+
+## Trigger Keywords
+
+- 线上故障、紧急
+- P0、应急
+- 服务挂了
+
+## Incident Workflow
+
+```
+1. 发现问题
+2. 快速止血 (降级/回滚/限流)
+3. 定位根因
+4. 彻底修复
+5. 验证恢复
+6. 复盘总结
+```
+
+## Severity Levels
+
+| 级别 | 影响 | 响应时间 | 解决目标 |
+|------|------|---------|---------|
+| P0 | 全站不可用 | 5min | 30min |
+| P1 | 核心功能不可用 | 15min | 2h |
+| P2 | 部分功能异常 | 1h | 8h |
+| P3 | 体验问题 | 4h | 24h |
+
+## Output Format
+
+```markdown
+## 应急处理报告
+
+### 事件: 支付服务不可用
+### 时间: 2024-01-15 14:30
+### 影响: 全部用户无法支付
+
+### 时间线
+| 时间 | 操作 |
+|------|------|
+| 14:30 | 监控报警: 支付服务错误率>50% |
+| 14:32 | 启动应急预案 |
+| 14:35 | 关闭支付功能 (止血) |
+| 14:40 | 开始排查 |
+| 14:50 | 发现数据库连接池耗尽 |
+| 14:55 | 重启服务,恢复支付 |
+| 15:00 | 验证功能正常 |
+
+### 根因
+- 第三方回调大量重试
+- 连接池配置过小
+
+### 改进措施
+| 措施 | 负责人 | 完成时间 |
+|------|--------|---------|
+| 增加连接池 | 小李 | 明天 |
+| 增加限流 | 小王 | 明天 |
+| 优化重试策略 | 小张 | 后天 |
+
+### 复盘日期: 明天上午
+```
+
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `dev/context/dev-context-first` | 后续 | 止血后获取上下文，定位根因 |
+| `dev/implementation/dev-implementation` | 后续 | 根因修复实现 |
+| `collaboration/process/bug-coordinator` | 协同 | Bug 分配和追踪 |
+| `qa/execution/test-executor` | 后续 | 修复后执行验证测试 |
+| `system/security/compliance` | 条件 | 如涉及安全事件，触发合规检查 |
+| `system/state-tracker` | 状态 | 记录应急链路执行状态 |
