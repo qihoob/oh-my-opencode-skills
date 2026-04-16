@@ -87,9 +87,11 @@
 
 当用户输入包含上述关键词时，**必须**：
 
-1. **先调用 skill() 工具**加载相应技能
-2. **等待技能内容加载完成**
+1. **用 Read 工具读取对应 SKILL.md 文件**
+2. **等待文件内容读取完成**
 3. **按照技能指令执行任务**
+
+**注意**：不要调用 Skill() 工具或 Agent 工具，oh-my-opencode 技能是 SKILL.md 文件，不是 Claude Code 原生注册的 skill。
 
 ### 示例流程
 
@@ -98,9 +100,8 @@
 正确流程：
 ```
 1. 识别关键词"分析"、"需求"
-2. 调用 skill(name="product/requirement/product-requirement-analysis")
-3. 等待技能内容加载
-4. 按照技能定义的格式输出用户故事和验收标准
+2. Read("/home/hugh/skill/product/requirement/product-requirement-analysis/SKILL.md")
+3. 按照技能定义的格式输出用户故事和验收标准
 ```
 
 ---
