@@ -2,7 +2,7 @@
 
 ## 可用技能列表
 
-以下是可用的 53 个技能，当用户输入匹配时**必须调用**相应技能：
+以下是可用的 60 个技能，当用户输入匹配时**必须调用**相应技能：
 
 ### 系统类技能 (System)
 
@@ -33,9 +33,14 @@
 
 - `dev/context/dev-context-first` - 当用户提到"给我上下文"、"先看看代码"、"先了解下"、"给我看看"、"看看结构"时调用
 - `dev/context/module-dev-context` - 当用户提到"模块上下文"、"了解模块"、"模块结构"、"代码梳理"时调用
-- `dev/implementation/dev-implementation` - 当用户提到"实现功能"、"编写代码"、"开发功能"、"做功能"、"写代码"时调用
+- `dev/context-restore` - 当用户提到"保存上下文"、"恢复上下文"、"保存进度"、"任务列表"、"切换任务"时调用
+- `dev/implementation/dev-implementation` - 当用户提到"实现功能"、"编写代码"、"开发功能"、"做功能"、"写代码"、"测试驱动"、"TDD"、"先写测试"时调用
 - `dev/implementation/frontend` - 当用户提到"前端开发"、"页面开发"、"组件开发"、"React开发"、"Vue开发"、"交互实现"时调用
 - `dev/implementation/backend` - 当用户提到"后端开发"、"API开发"、"Service开发"、"接口实现"、"业务逻辑"、"数据库操作"时调用
+- `dev/debugging` - 当用户提到"调试"、"debug"、"排查问题"、"定位bug"、"找bug原因"、"复现"、"根因分析"时调用
+- `dev/refactoring` - 当用户提到"重构"、"refactor"、"代码重构"、"提取函数"、"消除重复"、"拆分大函数"、"拆大文件"时调用
+- `dev/adr` - 当用户提到"ADR"、"架构决策"、"决策记录"、"技术选型"、"为什么用X"时调用
+- `dev/dependency-eval` - 当用户提到"评估依赖"、"引入依赖"、"安全检查"、"npm audit"、"替代方案对比"、"许可证检查"时调用
 - `dev/code-review` - 当用户提到"代码审查"、"Code Review"、"CR"、"代码检查"、"代码评审"、"代码质量"、"Review"时调用
 - `dev/standards/dev-code-quality` - 当用户提到"lint"、"eslint"、"prettier"、"代码规范"、"命名规范"、"注释规范"、"pre-commit"、"类型检查"、"代码复杂度"时调用
 - `dev/standards/dev-frontend-standards` - 当用户提到"前端规范"、"响应式"、"响应式布局"、"状态管理"、"加载状态"、"错误处理"、"性能优化"、"无障碍"、"a11y"时调用
@@ -212,6 +217,32 @@ qa-context-first
     -> test-executor
 ```
 
+### 链路 11: 系统化调试 (4 步)
+
+```
+dev/debugging (复现→定位根因)
+  -> dev-implementation (Bug修复模式)
+    -> test-executor (验证修复)
+      -> bug-coordinator (关闭Bug)
+```
+
+### 链路 12: 安全重构 (5 步)
+
+```
+dev/refactoring (识别坏味道→建立安全网→小步重构)
+  -> test-executor (验证行为不变)
+    -> dev/code-review (审查重构)
+      -> dev/adr (记录重构决策，如涉及架构变更)
+```
+
+### 链路 13: 依赖引入 (3 步)
+
+```
+dev/dependency-eval (安全+质量+体积+许可证评估)
+  -> dev/implementation (引入依赖)
+    -> dev/adr (记录选型决策)
+```
+
 当用户请求完整流程时，应**按顺序调用**这些技能。可通过 `system/chain-executor` 执行预定义链路。
 
 ---
@@ -254,7 +285,12 @@ qa-context-first
 | `product-requirement-analysis` | 无（或 project-overview.md） | `requirement-{feature}.md` |
 | `product-collaborative-requirement-optimization` | `requirement-*.md` | 优化后的需求文档 |
 | `dev-context-first` | `requirement-{feature}.md` + **目标模块代码** | 上下文报告（含业务逻辑和代码路径） |
+| `dev-context-restore` | `context-snapshot-{task}.md` | `context-snapshot-{task}.md` |
 | `dev-implementation` | `requirement-{feature}.md` + **现有实现代码** | `implementation-{feature}.md` |
+| `dev-debugging` | 报错信息 + **相关代码** | `bugfix-{bug-id}.md` |
+| `dev-refactoring` | **目标代码** + **测试** | `refactoring-{scope}.md` |
+| `dev-adr` | 需求/契约/实现文档 | `adr-{seq}-{title}.md` |
+| `dev-dependency-eval` | 无 | `dep-eval-{package-name}.md` |
 | `dev-verify-implementation` | `requirement-*.md` + `implementation-*.md` | 验证报告 |
 | `test-case-design` | `requirement-{feature}.md` + **实现代码（必须）** | `test-cases-{feature}.md` |
 | `test-executor` | `test-cases-{feature}.md` | `test-report-{feature}.md` |
@@ -312,3 +348,6 @@ qa-context-first
 | "代码质量" 同时匹配 `dev-code-review` 和 `dev-code-quality` | `dev-code-quality` | 规范层面问题优先用标准技能 |
 | "模块开发" 同时匹配 `module-dev-context` 和 `module-collaborative-dev` | 根据上下文判断：了解结构用前者，协同编码用后者 | 语义区分 |
 | "测试" 匹配多个 QA 技能 | 根据"设计/执行/性能/E2E"等二级关键词精确匹配 | 二级关键词消歧 |
+| "Bug修复" 同时匹配 `dev/debugging` 和 `dev-implementation` | `dev-debugging` 定位根因 → `dev-implementation` 执行修复 | 先定位再修复 |
+| "技术选型" 同时匹配 `dependency-eval` 和 `adr` | `dependency-eval` 评估依赖 → `adr` 记录决策 | 先评估再记录 |
+| "重构" 同时匹配 `dev-refactoring` 和 `dev-implementation` | `dev-refactoring` | 重构是专门场景，有自己的安全流程 |

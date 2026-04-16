@@ -1,7 +1,7 @@
 ---
 name: chain-executor
-description: 技能链路自驱动引擎 - 文档驱动的自动流程推进，无需人工触发下一步
-version: "2.0"
+description: 技能链路自驱动引擎 - 文档驱动的自动流程推进，含迭代回退、CI快速修复循环、非线性流程支持
+version: "3.0"
 ---
 
 # Skill: chain-executor
@@ -9,7 +9,7 @@ version: "2.0"
 **角色**: 系统 (System)
 **功能**: 文档驱动的自推进引擎
 **触发词**: 执行链路、运行流程、开始流程、auto-run、自驱动、自动推进
-**版本**: 2.0 (重写为文档驱动引擎)
+**版本**: 3.0 (增加迭代回退、CI快速修复循环、非线性流程)
 
 ## 核心理念
 
@@ -98,6 +98,104 @@ verify-implementation 产出 verify-report-*.md
 
 ---
 
+### 规则四：迭代回退（非线性流程）
+
+```
+流程不是单向的。以下场景允许回退到上游步骤：
+
+4.1 需求回退
+  触发条件:
+    - dev-context-first 发现需求不明确 / 有矛盾
+    - dev-implementation 发现需求无法实现 / 需要拆分
+    - test-case-design 发现 AC 不可验证
+  回退到: product-requirement-analysis
+  操作:
+    - 标注回退原因（哪个点不明确/不可行/不可验证）
+    - 产出 question-for-product.md（问题清单）
+    - 不删除已有文档，等需求更新后继续
+
+4.2 设计回退
+  触发条件:
+    - dev-implementation 发现方案设计有严重缺陷
+    - verify-implementation 发现跨层不一致（接口/数据模型/状态机）
+  回退到: module-collaborative-dev（重新产出契约）
+  操作:
+    - 标注不一致的具体位置
+    - 更新 contract-*.md
+    - 相关模块同步更新
+
+4.3 实现回退
+  触发条件:
+    - dev-code-review 发现实现方案问题（非代码风格问题）
+    - collab-acceptance-review 发现功能与需求不符
+  回退到: dev-implementation
+  操作:
+    - 带着审查意见回到实现
+    - 重新评估方案设计
+    - 修复后重新走验证流程
+
+4.4 回退保护
+  - 同一个节点最多回退 3 次，超过 3 次暂停并提示人工介入
+  - 回退时保留所有已有文档，不删除
+  - 每次回退记录原因，避免反复回退
+```
+
+### 规则五：CI 快速修复循环
+
+```
+当测试执行器（test-executor）或代码审查（code-review）发现问题时，
+不走完整的 bug-coordinator 流程，而是直接快速修复：
+
+5.1 测试失败快速修复
+  触发条件: test-executor 产出 test-report，有失败用例
+
+  快速路径（失败用例 ≤ 3 个且为 P2/P3 级别）:
+    test-report-*.md (有失败)
+      → [直接] dev-implementation (快速修复模式)
+        → 只修复失败用例对应的问题
+        → 产出 quickfix-{id}.md
+      → [自动] test-executor (回归测试)
+        → 通过 → 回到正常流程
+        → 失败 → 再次快速修复（最多 2 轮）
+        → 2 轮后仍失败 → 升级为正式 Bug → bug-coordinator
+
+  正式路径（失败用例 > 3 个或有 P0/P1 级别）:
+    test-report-*.md (有失败)
+      → [自动] bug-coordinator
+      → [自动] dev-implementation (Bug修复模式)
+      → [自动] test-executor (回归测试)
+
+5.2 代码审查问题快速修复
+  触发条件: dev-code-review 产出 code-review，有修改建议
+
+  快速路径（修改建议 ≤ 5 个且非安全问题）:
+    code-review-*.md (有问题)
+      → [直接] dev-implementation (快速修复模式)
+        → 逐条修复审查意见
+        → 更新 code-review 文档标注已修复
+      → [自动] dev-code-review (复审)
+        → 通过 → 回到正常流程
+        → 不通过 → 再次修复（最多 2 轮）
+
+  正式路径（修改建议 > 5 个或有安全问题）:
+    code-review-*.md (有严重问题)
+      → 回退到 dev-implementation（重新评估方案）
+
+5.3 快速修复 vs 正式 Bug 流程判断
+  ┌──────────────────┬────────────────────┐
+  │ 快速修复          │ 正式 Bug 流程      │
+  ├──────────────────┼────────────────────┤
+  │ 失败用例 ≤ 3      │ 失败用例 > 3       │
+  │ P2/P3 级别       │ P0/P1 级别        │
+  │ 单模块影响        │ 跨模块影响         │
+  │ 修复预计 < 10 分钟│ 修复预计 > 10 分钟 │
+  │ 不涉及数据迁移    │ 涉及数据迁移       │
+  │ 不涉及接口变更    │ 涉及接口变更       │
+  └──────────────────┴────────────────────┘
+```
+
+---
+
 ## 预定义链路（10 条）
 
 ### 链路 1: 完整 SDLC（自驱动）
@@ -135,14 +233,24 @@ product-requirement-analysis
 
 ```
 test-executor 发现失败用例
-  → [自动] 生成 bug-{id}.md
-  → [自动] bug-coordinator 分析分配
-    → 产出 bug-分配单
-    → [自动] dev-implementation (Bug修复模式)
-      → 产出 implementation-bugfix-{id}.md
-      → [自动] test-executor (回归测试)
-        → 通过 → [自动] Bug 关闭
-        → 失败 → [自动] 退回 dev-implementation (循环)
+  → 判断: 快速修复 or 正式 Bug?
+  
+  快速修复路径:
+    → [直接] dev-implementation (快速修复)
+      → [自动] test-executor (回归)
+        → 通过 → Bug 关闭
+        → 失败 → 再修一轮（最多2轮）
+        → 2轮后仍失败 → 升级为正式 Bug
+
+  正式 Bug 路径:
+    → [自动] 生成 bug-{id}.md
+    → [自动] bug-coordinator 分析分配
+      → 产出 bug-分配单
+      → [自动] dev-implementation (Bug修复模式)
+        → 产出 implementation-bugfix-{id}.md
+        → [自动] test-executor (回归测试)
+          → 通过 → [自动] Bug 关闭
+          → 失败 → [自动] 退回 dev-implementation (循环)
 ```
 
 ### 链路 3: 线上故障（自驱动）
@@ -281,6 +389,40 @@ design-review
 用户说: "继续" / "下一步" / "确认"
   → 读取 state.json 获取当前暂停点
   → 执行下一步
+```
+
+### 流程控制命令
+
+```
+用户可以在任意节点发出以下命令：
+
+"回退到需求" / "回到需求分析"
+  → 回退到 product-requirement-analysis
+  → 保留已有文档，标注回退原因
+
+"回退到设计" / "回到方案设计"
+  → 回退到 dev-implementation (方案设计阶段)
+  → 保留已有文档，标注回退原因
+
+"跳过审查" / "跳过 code review"
+  → 跳过 dev-code-review，直接进入 collab-dev-to-qa
+  → 标注跳过原因（仅限紧急情况）
+
+"跳过验证" / "跳过 verify"
+  → 跳过 verify-implementation，直接进入 dev-code-review
+  → 标注跳过原因
+
+"暂停" / "暂停流程"
+  → 在当前步骤暂停，保存状态
+  → 可随时用"继续"恢复
+
+"重试" / "重试当前步骤"
+  → 重新执行当前步骤
+  → 适用于外部环境问题导致的失败
+
+"状态" / "流程状态"
+  → 显示当前流程进度
+  → 显示已完成步骤和下一步
 ```
 
 ---
