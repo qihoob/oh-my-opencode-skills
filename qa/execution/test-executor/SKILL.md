@@ -95,39 +95,62 @@ version: "3.0"
 #### 2B. 浏览器测试执行（核心）
 
 ```
-工具: Playwright（推荐）/ Cypress / 手动操作浏览器
+推荐工具: playwright-skill（已安装为 Claude Code 技能插件）
 
-方式一：自动化浏览器测试（推荐）
-  适合: 可自动化的页面交互用例
+位置: ~/.claude/skills/playwright-skill/
+运行器: node ~/.claude/skills/playwright-skill/run.js <script.js>
+
+playwright-skill 优势:
+- 自动检测开发服务器（detectDevServers）
+- 默认 headed 模式（可见浏览器）
+- 脚本写到 /tmp（不污染项目）
+- 首次运行自动安装 Playwright
+- 15个内置辅助函数（safeClick, safeType, takeScreenshot 等）
+
+方式一：playwright-skill 即时执行（推荐）
+  适合: test-executor 中即时编写和运行浏览器测试用例
 
   执行步骤:
-  1. 启动浏览器（headless 或 headed）
-  2. 按用例步骤自动执行操作
-  3. 每步截图/录屏
+  1. 为每条浏览器测试用例编写 Playwright 脚本
+  2. 通过 playwright-skill 的 run.js 执行:
+     node ~/.claude/skills/playwright-skill/run.js /tmp/test-TC001.js
+  3. 脚本可使用 playwright-skill 内置辅助函数:
+     - safeClick(page, selector) — 安全点击（等待可交互）
+     - safeType(page, selector, text) — 安全输入
+     - takeScreenshot(page, name) — 截图保存
+     - authenticate(page, url, credentials) — 自动登录
+     - extractTableData(page, selector) — 提取表格数据
   4. 验证页面状态（元素可见、文本正确、URL正确）
-  5. 失败时自动截图 + 保留录屏
+  5. 失败时自动截图
 
-  自动化模板（每条浏览器测试用例）:
-  ```typescript
-  // test-runner-{feature}.ts
-  import { test, expect } from '@playwright/test';
+  脚本模板（每条浏览器测试用例）:
+  ```javascript
+  // /tmp/test-TC001.js
+  const { chromium } = require('playwright');
 
-  test('TC001: 正常登录成功', async ({ page }) => {
+  (async () => {
+    const browser = await chromium.launch({ headless: false });
+    const page = await browser.newPage();
+
     // 前置: 打开登录页
     await page.goto('{测试环境URL}/login');
 
-    // 操作: 输入账号密码
+    // 操作: 使用 safeClick/safeType 安全操作
     await page.fill('[data-testid="username"]', '{测试账号}');
     await page.fill('[data-testid="password"]', '{密码}');
     await page.click('[data-testid="login-btn"]');
 
     // 验证: 跳转到首页
-    await expect(page).toHaveURL(/.*dashboard/);
-    await expect(page.locator('[data-testid="user-info"]')).toBeVisible();
+    if (page.url().includes('/dashboard')) {
+      console.log('PASS: TC001 - 成功跳转到首页');
+    } else {
+      console.log('FAIL: TC001 - 未跳转到首页，当前URL: ' + page.url());
+    }
 
-    // 截图: 记录成功状态
-    await page.screenshot({ path: 'screenshots/TC001-pass.png' });
-  });
+    // 截图: 记录结果
+    await page.screenshot({ path: '/tmp/screenshots/TC001-result.png' });
+    await browser.close();
+  })();
   ```
 
 方式二：手动浏览器测试
@@ -339,7 +362,8 @@ version: "3.0"
 | 配合技能 | 关系 | 说明 |
 |----------|------|------|
 | `qa/test-case/test-case-design` | 前置 | 产出测试用例 |
-| `qa/advanced/e2e-testing` | 协同 | Playwright/Cypress 浏览器自动化脚本编写 |
+| `playwright-skill` | 运行时 | 浏览器测试执行引擎（`~/.claude/skills/playwright-skill/run.js`） |
+| `qa/advanced/e2e-testing` | 协同 | 完整 E2E 测试方案（Page Object、视觉回归、跨浏览器） |
 | `qa/advanced/performance-testing` | 协同 | 性能测试（k6/Lighthouse） |
 | `collaboration/process/bug-coordinator` | 后续（自动） | 失败用例自动流转到 Bug 协调 |
 | `dev/implementation/dev-implementation` | 后续 | Bug 修复实现 |

@@ -1,15 +1,37 @@
 ---
-name: qa/advanced/e2e-testing
-description: (opencode - Skill) E2E测试 - Playwright/Cypress/Page Object/视觉回归/跨浏览器测试
-subtask: true
-argument-hint: "<E2E测试> 或 <自动化测试>"
+name: e2e-testing
+description: E2E测试 - Playwright/Cypress/Page Object/视觉回归/跨浏览器测试，配合 playwright-skill 插件即时执行
+version: "2.0"
 ---
 
 # E2E 测试 Skill
 
-## 角色
+**角色**: 测试 (QA)
+**功能**: E2E 测试方案设计（含 Page Object、视觉回归、跨浏览器）
+**触发关键词**: E2E测试、端到端测试、Playwright、Cypress、自动化测试、Page Object、视觉回归、跨浏览器测试
 
-你是 E2E 测试专家，负责为企业级项目设计完整的端到端测试方案，包括 Playwright/Cypress 用例、Page Object 模式、视觉回归测试。
+## 产出文档
+**路径**: `.opencode/docs/e2e-test-plan-{feature-name}.md`
+
+## 依赖文档
+**可选读取**:
+- `.opencode/docs/test-cases-{feature-name}.md` — 测试用例（含浏览器测试用例）
+- `.opencode/docs/contract-{feature}.md` — 契约文档
+
+## 运行时工具
+
+本技能配合 **playwright-skill** 插件（已安装到 `~/.claude/skills/playwright-skill/`）即时执行浏览器测试。
+
+| 能力 | 说明 |
+|------|------|
+| 即时脚本执行 | `node ~/.claude/skills/playwright-skill/run.js <script.js>` |
+| 自动检测开发服务器 | `detectDevServers()` 自动发现 localhost 上的 dev server |
+| 可见浏览器 | 默认 `headless: false`，可观察操作过程 |
+| 脚本写到 /tmp | 不污染项目目录 |
+| 15个辅助函数 | safeClick, safeType, takeScreenshot, authenticate 等 |
+| 自定义 HTTP 头 | 通过 `PLAYWRIGHT_EXTRA_HEADERS` 环境变量注入 |
+
+详细 API 参考: `~/.claude/skills/playwright-skill/API_REFERENCE.md`
 
 ## 测试框架
 
@@ -564,6 +586,31 @@ npx playwright test --ui
 # 带报告
 npx playwright test --report=html
 ```
+
+## 即时执行（playwright-skill）
+
+使用已安装的 playwright-skill 插件即时编写和运行测试：
+
+```bash
+# 编写测试脚本到 /tmp
+# 通过 playwright-skill 执行
+node ~/.claude/skills/playwright-skill/run.js /tmp/e2e-test-login.js
+```
+
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `qa/test-case/test-case-design` | 前置 | 产出含浏览器测试的用例 |
+| `qa/execution/test-executor` | 协调 | test-executor 调用本技能执行浏览器测试部分 |
+| `playwright-skill` | 运行时 | 浏览器自动化执行引擎 |
+| `qa/advanced/performance-testing` | 协同 | 性能测试配合 |
+
+## 工具可用
+- read: 读取测试用例和契约文档
+- write: 写入 E2E 测试方案
+- bash: 执行 playwright-skill run.js
+- grep: 搜索页面组件和路由定义
 
 ## 触发词
 
