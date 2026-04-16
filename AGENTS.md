@@ -110,7 +110,7 @@
 
 某些任务需要**多个技能协作**。以下是核心链路：
 
-### 链路 1: 完整 SDLC 流程 (11 步)
+### 链路 1: 完整 SDLC 流程 (12 步)
 
 ```
 product-requirement-analysis
@@ -121,9 +121,10 @@ product-requirement-analysis
           -> dev-code-review
             -> dev-verify-implementation
               -> collab-dev-to-qa
-                -> test-case-design
-                  -> test-executor
-                    -> collab-acceptance-review
+                -> qa-context-first
+                  -> test-case-design
+                    -> test-executor
+                      -> collab-acceptance-review
                       -> collab-retrospective
                         -> iteration-closure
 ```
@@ -252,10 +253,10 @@ qa-context-first
 |------|---------------|-----------|
 | `product-requirement-analysis` | 无（或 project-overview.md） | `requirement-{feature}.md` |
 | `product-collaborative-requirement-optimization` | `requirement-*.md` | 优化后的需求文档 |
-| `dev-context-first` | `requirement-{feature}.md` | 上下文报告 |
-| `dev-implementation` | `requirement-{feature}.md` | `implementation-{feature}.md` |
+| `dev-context-first` | `requirement-{feature}.md` + **目标模块代码** | 上下文报告（含业务逻辑和代码路径） |
+| `dev-implementation` | `requirement-{feature}.md` + **现有实现代码** | `implementation-{feature}.md` |
 | `dev-verify-implementation` | `requirement-*.md` + `implementation-*.md` | 验证报告 |
-| `test-case-design` | `requirement-{feature}.md` | `test-cases-{feature}.md` |
+| `test-case-design` | `requirement-{feature}.md` + **实现代码（必须）** | `test-cases-{feature}.md` |
 | `test-executor` | `test-cases-{feature}.md` | `test-report-{feature}.md` |
 | `module-document-keeper` | `.opencode/docs/*` | `INDEX.md` |
 | `document-integrity-check` | `.opencode/docs/*` | `DOC_AUDIT.md` |
@@ -265,15 +266,19 @@ qa-context-first
 
 在执行任何技能前，先检查：
 1. `.opencode/docs/` 是否有相关文档？
-2. 文档是否在上下文中？
-3. 如不在，使用 `read` 工具按需加载相关章节
+2. **目标代码是否存在？** — 有代码时必须分析实际实现
+3. 文档是否在上下文中？
+4. 如不在，使用 `read` 工具按需加载相关章节
+5. **代码与文档是否一致？** — 不一致时以代码为准，标注差异
 
 ### 最小上下文原则
 
-1. **文档优先** - 有文档时不重新分析
-2. **按需读取** - 只读取相关章节，不加载全文
-3. **结构化输出** - 便于后续技能定位内容
-4. **引用标记** - 在文档中标注哪些内容供哪个技能使用
+1. **代码优先** - 有代码时不只依赖文档，必须分析实际实现
+2. **文档辅助** - 文档提供意图和标准，代码提供事实
+3. **按需读取** - 只读取相关章节，不加载全文
+4. **结构化输出** - 便于后续技能定位内容
+5. **引用标记** - 在文档中标注哪些内容供哪个技能使用
+6. **差异标注** - 代码与文档不一致时必须标注，以代码为准
 
 ---
 
