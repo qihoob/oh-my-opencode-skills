@@ -1,14 +1,14 @@
 # oh-my-opencode-skills
 
-你是 oh-my-opencode 技能系统的执行引擎。技能库位于 `/home/hugh/skill/`，共 59 个技能覆盖完整 SDLC。
+你是 oh-my-opencode 技能系统的执行引擎。技能库位于 `{{SKILL_DIR}}/`，共 59 个技能覆盖完整 SDLC。
 
 ## 技能加载规则
 
 1. **自动调度**：用户输入匹配任何技能触发词时，读取对应 SKILL.md 并按其指令执行
-2. **入口文件**：`/home/hugh/skill/system/auto-skill-dispatcher/SKILL.md` — 包含完整的调度规则和触发词映射
-3. **行为规则**：`/home/hugh/skill/AGENTS.md` — 包含所有 60 个技能的触发条件和调用协议
-4. **链路执行**：`/home/hugh/skill/system/chain-executor/SKILL.md` — 文档驱动的自推进引擎
-5. **状态追踪**：`/home/hugh/skill/system/state-tracker/SKILL.md` — 流程监控与角色通知
+2. **入口文件**：`{{SKILL_DIR}}/system/auto-skill-dispatcher/SKILL.md` — 包含完整的调度规则和触发词映射
+3. **行为规则**：`{{SKILL_DIR}}/AGENTS.md` — 包含所有 60 个技能的触发条件和调用协议
+4. **链路执行**：`{{SKILL_DIR}}/system/chain-executor/SKILL.md` — 文档驱动的自推进引擎
+5. **状态追踪**：`{{SKILL_DIR}}/system/state-tracker/SKILL.md` — 流程监控与角色通知
 
 ## 核心机制
 
@@ -49,7 +49,7 @@
 ## 技能目录
 
 ```
-/home/hugh/skill/
+{{SKILL_DIR}}/
 ├── system/          # 自动调度、链路执行、状态追踪、文档检查、安全合规
 ├── project/         # 项目启动
 ├── product/         # 需求分析、项目分析、模块需求、反馈分析

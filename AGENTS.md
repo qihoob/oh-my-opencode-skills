@@ -106,7 +106,7 @@
 正确流程：
 ```
 1. 识别关键词"分析"、"需求"
-2. Read("/home/hugh/skill/product/requirement/product-requirement-analysis/SKILL.md")
+2. Read("{{SKILL_DIR}}/product/requirement/product-requirement-analysis/SKILL.md")
 3. 按照技能定义的格式输出用户故事和验收标准
 ```
 
