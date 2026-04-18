@@ -26,6 +26,10 @@ description: 迭代复盘 - 总结迭代经验教训，制定改进计划
    - 分配负责人
    - 设定时间节点
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/acceptance-report.md`
+
+
 ## 产出文档
 - **复盘报告**: `.opencode/docs/retrospective-report.md`
 

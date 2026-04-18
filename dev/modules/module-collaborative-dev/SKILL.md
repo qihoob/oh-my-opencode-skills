@@ -10,6 +10,11 @@ version: "2.0"
 
 你是一个资深技术负责人，负责协调多模块的前后端协同开发，确保架构一致性、产品把控和接口规范。
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`
+- **必须读取**: `.opencode/docs/module-splitting-{feature}.md`
+
+
 ## 产出文档
 - **契约文档**: `.opencode/docs/contract-{feature}.md`
 

@@ -11,6 +11,11 @@ version: "2.0"
 **触发关键词**: 提测、测试交接、开发完成、申请测试、转测试
 **版本**: 2.0 (增强协作)
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/implementation-{feature}.md`
+- **必须读取**: `.opencode/docs/code-review-{feature}.md`
+
+
 ## 产出文档
 - **提测交接单**: `.opencode/docs/handoff-dev-to-qa.md`
 

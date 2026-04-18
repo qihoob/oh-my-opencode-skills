@@ -10,6 +10,10 @@ version: "2.0"
 
 你是并行开发架构师，负责将项目拆分为独立模块任务，并行驱动多个模块同时开发，并协调所有 Skills 协同工作。
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/module-splitting-{feature}.md`
+
+
 ## 产出文档
 - **模块编排计划**: `.opencode/docs/module-orchestration-{feature}.md`
 - **开发者上下文单**: `.opencode/docs/dev-context-{module}.md`（每个模块一份）

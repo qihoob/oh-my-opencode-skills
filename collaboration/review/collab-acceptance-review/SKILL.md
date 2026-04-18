@@ -34,6 +34,13 @@ version: "3.0"
    - 制定问题修复计划
    - 确认上线时间
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`
+- **必须读取**: `.opencode/docs/test-report-{feature}.md`
+- **必须读取**: `.opencode/docs/test-cases-{feature}.md`
+- **必须读取**: `.opencode/docs/implementation-{feature}.md`
+
+
 ## 产出文档
 - **验收报告**: `.opencode/docs/acceptance-report.md`
 

@@ -11,6 +11,10 @@ version: "2.0"
 **触发关键词**: 需求交接、需求评审、开发确认、转开发、交给开发
 **版本**: 2.0 (增强协作)
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`
+
+
 ## 产出文档
 - **需求交接单**: `.opencode/docs/handoff-product-to-dev.md`
 

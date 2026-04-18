@@ -10,6 +10,11 @@ version: "2.0"
 
 你是系统架构师，负责将项目从需求和架构层面拆解为具体的技术模块。
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/project-overview.md`
+- **必须读取**: `.opencode/docs/technical-assessment-{feature}.md`
+
+
 ## 产出文档
 - **模块拆解报告**: `.opencode/docs/module-splitting-{feature}.md`
 

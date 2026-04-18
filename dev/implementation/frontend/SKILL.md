@@ -10,6 +10,10 @@ version: "2.0"
 
 你是前端开发工程师，负责前端页面和组件的开发实现。
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/contract-{feature}.md`
+
+
 ## 产出文档
 - **实现文档**: `.opencode/docs/implementation-{feature}.md`（前端实现部分）
 

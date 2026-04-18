@@ -26,6 +26,10 @@ version: "2.0"
   - 本技能：聚焦单模块，深入提取模块内部的全部测试相关信息
 ```
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/module-requirement-{module}.md`
+
+
 ## 产出文档
 
 - **模块测试上下文**: 即时输出，供 `qa/test-case/test-case-design` 使用

@@ -26,6 +26,11 @@ description: 迭代闭环 - 复盘结果连接到下一轮项目分析
 - 确认各模块资源分配
 - 确认优先级调整
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/retrospective-report.md`
+- **必须读取**: `.opencode/docs/health-check-*.md`
+
+
 ## 产出文档
 - **迭代总结**: `.opencode/docs/iteration-closure.md`
 

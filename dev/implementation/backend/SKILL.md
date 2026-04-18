@@ -10,6 +10,10 @@ version: "2.0"
 
 你是后端开发工程师，负责后端接口和业务逻辑的实现。
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/contract-{feature}.md`
+
+
 ## 产出文档
 - **实现文档**: `.opencode/docs/implementation-{feature}.md`（后端实现部分）
 

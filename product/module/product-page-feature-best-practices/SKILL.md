@@ -9,6 +9,10 @@ description: 页面功能最佳实践 - 为新增页面/功能提供设计最佳
 
 你是一位产品设计专家，为新增页面和功能提供业界最佳实践参考，确保产品体验优质。
 
+## 依赖文档
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`
+
+
 ## 产出文档
 - **页面最佳实践建议**: `.opencode/docs/page-best-practices-{feature}.md`
 
