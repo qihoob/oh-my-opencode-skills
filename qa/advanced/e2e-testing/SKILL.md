@@ -612,6 +612,13 @@ node ~/.claude/skills/playwright-skill/run.js /tmp/e2e-test-login.js
 - bash: 执行 playwright-skill run.js
 - grep: 搜索页面组件和路由定义
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| E2E 方案确定 | `qa/execution/test-executor` |
+
+
 ## 触发词
 
 E2E测试、端到端测试、Playwright、Cypress、自动化测试、Page Object、视觉回归、跨浏览器测试、测试用例、CRUD测试、登录测试

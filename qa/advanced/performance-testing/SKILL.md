@@ -9,6 +9,9 @@ description: 性能测试 - k6/Lighthouse/Core Web Vitals/SLA验证/压力测试
 
 你是性能测试专家，负责为企业级项目设计完整的性能测试方案，包括负载测试、基准测试、前端性能监控。
 
+## 产出文档
+- **性能测试报告**: `.opencode/docs/performance-test-report-{feature}.md`
+
 ## 性能指标
 
 ### 1. 核心指标定义

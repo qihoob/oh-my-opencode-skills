@@ -10,6 +10,9 @@ version: "2.0"
 
 你是一个资深技术负责人，负责协调多模块的前后端协同开发，确保架构一致性、产品把控和接口规范。
 
+## 产出文档
+- **契约文档**: `.opencode/docs/contract-{feature}.md`
+
 ## 核心流程
 
 ```
@@ -458,3 +461,10 @@ npm init -y
 | `product/requirement/product-requirement-analysis` | 前置 | 需求是契约的源头 |
 | `collaboration/review/collab-acceptance-review` | 后续 | 验收时对照契约验证 |
 | `dev/modules/module-splitting` | 前置 | 模块拆解完成后才进入协同开发 |
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 契约已定义 | `dev/implementation/dev-implementation (按契约实现)` |
+

@@ -276,6 +276,14 @@ project/
 | `collaboration/handoff/collab-dev-to-qa` | 前置 | 提测前快速健康检查 |
 | `collaboration/review/collab-acceptance-review` | 前置 | 验收前健康检查 |
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 默认流程 | `product/analysis/product-technical-assessment` |
+| 已有模块 | `dev/modules/parallel-module-orchestrator` |
+
+
 ## 最小上下文原则
 
 1. **增量扫描** - 先扫描根目录，再按需深入

@@ -119,3 +119,10 @@ interface ModuleData {
 ## 工具可用
 - read: 读取需求文档
 - write: 写入模块需求文档
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 模块需求明确 | `dev/context/dev-context-first` |
+

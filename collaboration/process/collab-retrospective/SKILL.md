@@ -105,3 +105,10 @@ description: 迭代复盘 - 总结迭代经验教训，制定改进计划
 
 ## 工具可用
 - read, write, grep
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 复盘完成 | `collaboration/process/iteration-closure` |
+

@@ -323,3 +323,11 @@ so that [价值]
 需求文档写入后，检查 `.opencode/state.json` 中的流程状态，触发下一步：
 - 如果存在实现技能，推荐读取需求文档开始实现
 - 如果需要技术评审，推荐先进行方案设计
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 复杂需求需评审 | `product/requirement/product-collaborative-requirement-optimization` |
+| 默认流程 | `collaboration/handoff/collab-product-to-dev` |
+

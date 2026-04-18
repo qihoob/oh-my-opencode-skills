@@ -89,3 +89,10 @@ CMD ["node", "dist/main.js"]
 ## 工具可用
 - write: 写入 Dockerfile
 - read: 读取项目配置
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 镜像构建完成 | `devops/deploy/k8s` |
+

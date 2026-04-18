@@ -231,7 +231,7 @@ Bug影响链:
 ## 修复上下文（开发拿到即可开工）
 
 ### 问题是什么
-{从 bug-{id}.md 提取的核心问题描述}
+{从 bug-{module}-{seq}.md 提取的核心问题描述}
 
 ### 根因可能在哪
 | 方向 | 代码位置 | 可能性 |
@@ -284,7 +284,7 @@ Bug影响链:
   QA 测试失败
       │
       ▼
-  test-executor 自动生成 bug-{id}.md
+  test-executor 自动生成 bug-{module}-{seq}.md
       │
       ▼
   bug-coordinator 分析 + 分配
@@ -346,6 +346,13 @@ Bug影响链:
 | `dev/code-review` | 后续 | 修复后代码审查 |
 | `qa/execution/test-executor` | 后续（回归） | 修复后执行回归验证 |
 | `collaboration/handoff/collab-product-to-dev` | 条件 | 如为需求偏差，先澄清再修复 |
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| Bug 已分配 | `dev/implementation/dev-implementation (Bug修复模式)` |
+
 
 ## 触发词
 Bug协调、Bug追踪、Bug修复、Bug管理、Bug分配、缺陷管理

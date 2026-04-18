@@ -150,3 +150,10 @@ kubectl exec -it pod/myapp-pod -n production -- /bin/sh
 ## 工具可用
 - write: 写入 K8s 配置
 - read: 读取项目配置
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| K8s 配置完成 | `devops/deploy/multi-env` |
+

@@ -105,3 +105,10 @@ WHERE event_name = 'page_view'
 ## 工具可用
 - read: 读取需求文档
 - write: 写入埋点设计文档
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 埋点方案确定 | `dev/implementation/dev-implementation` |
+

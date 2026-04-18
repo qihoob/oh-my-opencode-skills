@@ -186,6 +186,9 @@ version: "2.0"
 | `retrospective-report.md` | 复盘完成 | 推进到迭代闭环 |
 | `health-check-*.md` | 健康检查完成 | 推进到迭代规划 |
 | `incident-report-*.md` | 应急处理完成 | 推进到 Bug 协调或修复 |
+| `iteration-closure.md` | 迭代闭环完成 | 推进到下一迭代全局分析 |
+| `quickfix-*.md` | 快速修复完成 | 推进到回归测试 |
+| `question-for-product.md` | 需求回退问题清单 | 暂停等待产品澄清 |
 | `DOC_AUDIT.md` | 文档审计完成 | 推进到文档对齐 |
 
 ---

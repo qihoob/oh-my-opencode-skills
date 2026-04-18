@@ -134,7 +134,7 @@ product-requirement-analysis → product-collaborative-requirement-optimization(
 触发词: "bug", "修复", "报错", "错误"
 
 test-executor (发现失败)
-  → 自动生成 bug-{id}.md
+  → 自动生成 bug-{module}-{seq}.md
   → bug-coordinator (分析+分配，生成分配单)
   → dev-implementation (Bug修复模式: 读分配单 → 根因分析 → 最小修复)
   → test-executor (回归测试)

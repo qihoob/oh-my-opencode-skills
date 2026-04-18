@@ -146,3 +146,10 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS ...;
 ## 工具可用
 - write: 写入迁移脚本
 - read: 读取现有 schema
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 迁移方案确定 | `system/security/compliance (安全检查)` |
+

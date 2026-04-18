@@ -143,3 +143,10 @@ API_KEY=${PRODUCTION_API_KEY}
 ## 工具可用
 - write: 写入环境配置
 - read: 读取项目配置
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 多环境配置完成 | `devops/monitoring/observability` |
+

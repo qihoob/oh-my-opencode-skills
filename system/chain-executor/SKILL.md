@@ -247,7 +247,7 @@ test-executor 发现失败用例
         → 2轮后仍失败 → 升级为正式 Bug
 
   正式 Bug 路径:
-    → [自动] 生成 bug-{id}.md
+    → [自动] 生成 bug-{module}-{seq}.md
     → [自动] bug-coordinator 分析分配
       → 产出 bug-分配单
       → [自动] dev-implementation (Bug修复模式)

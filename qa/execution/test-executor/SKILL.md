@@ -13,7 +13,7 @@ version: "3.0"
 
 ## 产出文档
 - **测试报告**: `.opencode/docs/test-report-{feature}.md`
-- **Bug 单**（失败时自动生成）: `.opencode/docs/bug-{id}.md`
+- **Bug 单**（失败时自动生成）: `.opencode/docs/bug-{module}-{seq}.md`
 
 ## 依赖文档
 **必须读取**: `.opencode/docs/test-cases-{feature}.md`
