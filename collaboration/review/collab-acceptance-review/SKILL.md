@@ -246,6 +246,14 @@ version: "3.0"
 - 验收报告结论为 **不通过** → 自动生成 Bug 单（如无已有 Bug 单），通知开发修复
 - 验收报告结论为 **有条件通过** → 自动创建修复任务，修复后无需重新验收，直接进入上线准备
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 验收通过 | `collaboration/process/collab-retrospective`（复盘） |
+| 验收不通过 | `collaboration/process/bug-coordinator`（Bug 修复协调） |
+| 有条件通过 | `dev/implementation/dev-implementation`（修复后直接上线准备） |
+
 ## 配合 Skills
 
 | 配合技能 | 关系 | 说明 |

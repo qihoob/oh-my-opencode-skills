@@ -395,6 +395,18 @@ version: "1.0"
 | `dev/context/dev-context-first` | 参考 | 类似的代码分析思路，但面向开发 |
 | `product/requirement/product-requirement-analysis` | 可选后续 | 基于逆向结果补充正式需求文档 |
 
+## 依赖文档
+
+- 无前置文档（本技能用于无文档场景）
+- **可选读取**: 如存在 `.opencode/docs/implementation-{feature}.md` 可辅助分析
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 逆向分析完成 | `qa/test-case/test-case-design` |
+| 需要补充正式需求文档 | `product/requirement/product-requirement-analysis` |
+
 ## 工具可用
 - grep: 搜索路由定义、状态枚举、权限检查、模型定义
 - glob: 扫描项目结构、查找测试文件

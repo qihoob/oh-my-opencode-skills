@@ -489,8 +489,8 @@ lci run
 
 ## 依赖文档
 
-- **必须读取**: `.opencode/docs/requirement-{feature}.md``
-- **必须读取**: `.opencode/docs/implementation-{feature}.md``
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`
+- **必须读取**: `.opencode/docs/implementation-{feature}.md`
 
 ## 配合 Skills
 
@@ -503,6 +503,13 @@ lci run
 | `devops/monitoring/observability` | 后续 | 性能基线纳入持续监控 |
 | `qa/context/qa-context-first` | 前置 | 获取测试上下文和验收标准 |
 
-## 触发词
+## 下一步推荐
 
+| 条件 | 推荐技能 |
+|------|----------|
+| 性能达标 | `collaboration/review/collab-acceptance-review` |
+| 性能不达标 | `dev/implementation/dev-implementation`（性能优化） |
+| 需要持续监控 | `devops/monitoring/observability` |
+
+## 触发词
 性能测试、负载测试、压力测试、k6、Lighthouse、Web Vitals、SLA、响应时间、吞吐量、并发用户

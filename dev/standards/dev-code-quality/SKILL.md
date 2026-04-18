@@ -406,15 +406,19 @@ npx husky add .husky/pre-commit "npm run precommit"
 - [ ] 圈复杂度 ≤ 10
 - [ ] 函数行数 ≤ 50
 
+## 产出文档
+- **规范配置报告（可选持久化）**: `.opencode/docs/code-quality-config.md`
+
 ## 配合 Skills
 
 | 配合技能 | 关系 | 说明 |
 |----------|------|------|
 | `dev/code-review` | 后续 | 规范检查后进入审查 |
+| `dev/implementation/dev-implementation` | 后续 | 按规范修复代码质量问题 |
+| `dev/standards/dev-frontend-standards` | 互补 | 前端专项规范 |
 
 ## 触发词
-
-lint、eslint、prettier、代码规范、命名规范、注释规范、pre-commit、类型检查、代码复杂度
+lint、eslint、prettier、代码规范、命名规范、注释规范、pre-commit、类型检查、代码复杂度、代码质量
 
 ## 下一步推荐
 
@@ -423,5 +427,3 @@ lint、eslint、prettier、代码规范、命名规范、注释规范、pre-comm
 | 规范配置完成 | `dev/code-review` — 按规范审查代码 |
 | 发现质量问题 | `dev/implementation/dev-implementation` — 修复问题 |
 | 前端项目 | `dev/standards/dev-frontend-standards` — 前端专项规范 |
-
-代码质量、lint、eslint、prettier、代码规范、命名规范、注释规范、pre-commit、类型检查、代码复杂度

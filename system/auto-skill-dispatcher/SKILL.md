@@ -53,6 +53,11 @@ version: "4.0"
 | 模块拆解、划分模块 | dev/modules/module-splitting | → parallel-module-orchestrator |
 | 并行开发、多模块编排 | dev/modules/parallel-module-orchestrator | → dev-implementation |
 | 需求匹配、代码验证 | dev/verify-implementation | → dev-implementation (如不匹配) |
+| 调试、debug、排查问题 | dev/debugging | → dev-implementation (修复后) |
+| 重构、refactor | dev/refactoring | → dev-code-review |
+| ADR、架构决策 | dev/adr | → dev-implementation |
+| 评估依赖、引入依赖 | dev/dependency-eval | → dev-implementation (如决定引入) |
+| 保存上下文、恢复上下文 | dev/context-restore | → dev-implementation (恢复后继续) |
 
 ### 测试技能 (8)
 
@@ -82,7 +87,7 @@ version: "4.0"
 | 线上故障、应急 | incident | - | → bug-coordinator → dev-implementation |
 | 项目体检、健康检查 | global-project-analysis(健康检查模式) | - | → 产出 health-check-*.md |
 
-### DevOps 技能 (7)
+### DevOps 技能 (10)
 
 | 用户输入 | 触发技能 | 推荐下一步 |
 |----------|----------|------------|
@@ -91,7 +96,10 @@ version: "4.0"
 | K8s、Kubernetes | devops/deploy/k8s | → multi-env |
 | 多环境、环境配置 | devops/deploy/multi-env | → observability |
 | 监控、告警、日志 | devops/monitoring/observability | - |
+| 数据库设计、表结构设计 | devops/data/schema-design | → schema-review |
+| 数据库评审、表结构评审 | devops/data/schema-review | → migration (通过) 或 schema-design (不通过) |
 | 数据库迁移、DDL | devops/data/migration | → security-compliance |
+| 数据库变更影响、字段变更 | devops/data/change-impact | → schema-design 或 dev-implementation |
 | 成本优化、云成本 | devops/cost-optimization | - |
 
 ### 系统技能 (5)
@@ -174,11 +182,11 @@ module-document-keeper → document-integrity-check → document-alignment
 ci-pipeline → dockerfile → k8s → multi-env → observability → cost-optimization
 ```
 
-### 链路 7: 数据迁移 (3 步)
+### 链路 7: 数据迁移 (5 步)
 ```
 触发词: "数据库迁移", "表结构变更"
 
-dev-context-first → migration → security-compliance
+schema-design → schema-review → migration → change-impact → security-compliance
 ```
 
 ### 链路 8: 用户反馈驱动优化 (4 步)
@@ -224,6 +232,9 @@ design-review → design-handoff → dev/implementation/frontend
 | parallel-module-orchestrator | module-splitting | 模块拆解报告是否存在 |
 | module-collaborative-dev | product-requirement-analysis | requirement-*.md 是否存在 |
 | verify-implementation | dev-implementation + contract-*.md（如有） | implementation-*.md 是否存在 |
+| devops/data/migration | devops/data/schema-design | db-schema-*.md 是否存在 |
+| devops/data/schema-review | devops/data/schema-design | db-schema-*.md 是否存在 |
+| devops/data/change-impact | devops/data/schema-design | db-schema-*.md 或当前 schema |
 | incident | - | 无前置，立即执行 |
 
 ---
@@ -314,7 +325,7 @@ performance-testing
 ```
 verify-implementation (发现跨层不一致)
   ├── 前后端不一致 → module-collaborative-dev (补充/修订契约) → dev-implementation (按契约修正)
-  ├── 后端数据库不一致 → devops/data/migration (补字段/索引) → dev-implementation (适配)
+  ├── 后端数据库不一致 → devops/data/change-impact (评估影响) → devops/data/schema-design (更新设计) → devops/data/migration (补字段/索引) → dev-implementation (适配)
   ├── 接口实现不一致 → dev-implementation (按契约修正实现)
   └── 新旧代码共存 → dev-implementation (执行变更清洁，删除旧代码)
 ```

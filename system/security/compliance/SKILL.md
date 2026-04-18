@@ -135,6 +135,22 @@ version: "1.0"
 2. 密码策略加强
 ```
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `dev/code-review` | 后续 | 安全问题修复后审查 |
+| `dev/implementation/dev-implementation` | 后续 | 安全问题修复实现 |
+| `devops/data/migration` | 条件 | 数据库迁移后安全检查 |
+| `system/document-integrity-check` | 协同 | 文档完整性联合检查 |
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 发现安全问题 | `dev/implementation/dev-implementation`（修复） |
+| 无安全问题 | 流程继续 |
+
 ## 工具可用
 - grep: 搜索安全相关代码模式
 - read: 读取可疑文件

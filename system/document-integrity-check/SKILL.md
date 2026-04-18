@@ -220,6 +220,13 @@ requirement-*.md ──→ contract-*.md ──→ implementation-*.md ──→
 | `collaboration/sync/document-alignment` | 后续 | 文档对齐修复 |
 | `dev/modules/module-collaborative-dev` | 前置 | 产出契约文档 |
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 文档审计完成（有不一致） | `collaboration/sync/document-alignment` |
+| 文档审计完成（全部一致） | 流程继续 |
+
 ## 工具可用
 - glob: 扫描文档目录
 - read: 读取文档内容

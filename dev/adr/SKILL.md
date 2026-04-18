@@ -242,6 +242,25 @@ ADR 记录了"为什么这样做"
 | 为什么用 X、技术选型 | 检查是否需要新 ADR |
 | 查看决策、决策历史 | 列出已有 ADR |
 
+## 依赖文档
+
+## 产出文档
+- **架构决策记录**: `.opencode/docs/adr-{seq}-{title}.md`
+
+## 依赖文档
+
+按优先级检查：
+1. `.opencode/docs/requirement-{feature}.md` — 需求文档（如有，了解决策背景）
+2. `.opencode/docs/project-overview.md` — 项目概览（如有）
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 决策完成后实现 | `dev/implementation/dev-implementation` |
+| 多模块架构决策 | `dev/modules/module-collaborative-dev` |
+| 技术选型需评估依赖 | `dev/dependency-eval` |
+
 ## 配合 Skills
 
 | 场景 | 调用 Skill | 说明 |

@@ -47,7 +47,7 @@ version: "3.0"
 | `test-report-*.md` (有失败) | `bug-coordinator` | 测试失败 |
 | `bug-{module}-{seq}.md` | `bug-coordinator` (分配) | 自动分配 |
 | `bug-分配单` | `dev-implementation`(Bug修复模式) | 分配完成 |
-| `implementation-bugfix-*.md` | `test-executor`(回归) | 修复完成 |
+| `bug-{module}-{seq}.md` (修复后更新) | `test-executor`(回归) | 修复完成 |
 | `acceptance-report.md` (通过) | `collab-retrospective` | 验收通过 |
 | `acceptance-report.md` (不通过) | `dev-implementation`(修复) | 验收不通过 |
 | `retrospective-report.md` | `iteration-closure` | 无条件触发 |
@@ -55,6 +55,32 @@ version: "3.0"
 | `health-check-*.md` | 下一迭代规划 | 健康报告产出 |
 | `incident-report-*.md` | `bug-coordinator` 或 `dev-implementation`(修复) | 止血完成 |
 | `bugfix-*.md` | `test-executor`(回归) | 调试修复完成 |
+| `quickfix-*.md` | `test-executor`(回归) | 快速修复完成 |
+| `requirement-structure-*.md` | `product-collaborative-requirement-optimization`(可选) | 需求结构化完成 |
+| `requirement-review-*.md` | `collab-product-to-dev` | 需求评审完成 |
+| `data-tracking-*.md` | `dev-implementation` | 埋点设计完成 |
+| `design-review-*.md` | `visual/design-handoff` | 设计评审完成 |
+| `design-handoff-*.md` | `dev/implementation/frontend` | 设计交接完成 |
+| `feedback-analysis-*.md` | `product-requirement-analysis` | 反馈分析完成 |
+| `page-best-practices-*.md` | `dev/implementation/frontend` | 页面最佳实践完成 |
+| `alignment-*.md` | `dev-implementation`(按对齐结果修正) | 文档对齐完成 |
+| `dep-eval-*.md` | `dev-implementation`(如决定引入) | 依赖评估完成 |
+| `refactoring-*.md` | `dev-code-review` | 重构完成 |
+| `e2e-test-plan-*.md` | `qa/execution/test-executor` | E2E测试计划完成 |
+| `context-snapshot-*.md` | `dev-implementation`(恢复后继续) | 上下文快照保存 |
+| `security-audit-*.md` | `dev-code-review`(如有问题) | 安全审计完成 |
+| `cost-optimization-*.md` | - | 成本优化建议完成 |
+| `module-splitting-*.md` | `parallel-module-orchestrator` | 模块拆解完成 |
+| `module-orchestration-*.md` | `dev-implementation`(各模块并行) | 模块编排完成 |
+| `module-context-*.md` | `parallel-module-orchestrator` | 模块上下文产出 |
+| `adr-*.md` | - | 架构决策记录完成 |
+| `project-overview.md` | `product-requirement-analysis` 或 `module-splitting` | 项目概览完成 |
+| `performance-test-report-*.md` | `dev-implementation`(如不达标) 或 `collab-acceptance-review`(达标) | 性能测试完成 |
+| `module-test-context-*.md` | `qa/test-case/test-case-design` | 模块测试上下文获取 |
+| `db-schema-*.md` | `devops/data/schema-review` | 数据库设计完成 |
+| `db-review-*.md` (通过) | `devops/data/migration` | 数据库设计评审通过 |
+| `db-review-*.md` (不通过) | `devops/data/schema-design`（修改设计） | 数据库设计评审不通过 |
+| `db-change-impact-*.md` | `devops/data/schema-design`（更新设计）或 `dev-implementation`（修复） | 数据库变更影响分析完成 |
 
 ### 规则二：条件分支 = 自动分流
 
@@ -251,7 +277,7 @@ test-executor 发现失败用例
     → [自动] bug-coordinator 分析分配
       → 产出 bug-分配单
       → [自动] dev-implementation (Bug修复模式)
-        → 产出 implementation-bugfix-{id}.md
+        → 更新 bug-{module}-{seq}.md（添加修复记录）
         → [自动] test-executor (回归测试)
           → 通过 → [自动] Bug 关闭
           → 失败 → [自动] 退回 dev-implementation (循环)
@@ -303,7 +329,13 @@ ci-pipeline → dockerfile → k8s → multi-env → observability → cost-opti
 ### 链路 7: 数据迁移（自驱动）
 
 ```
-dev-context-first → migration → security-compliance
+devops/data/schema-design
+  → 产出 db-schema-*.md
+  → [自动] devops/data/schema-review
+    → 产出 db-review-*.md (通过)
+    → [自动] devops/data/migration
+      → [自动] devops/data/change-impact
+        → [自动] system/security/compliance
 ```
 
 ### 链路 8: 用户反馈驱动（自驱动）

@@ -187,6 +187,16 @@ version: "1.0"
 | `collaboration/process/collab-retrospective` | 后续 | 故障复盘 |
 | `system/security/compliance` | 条件 | 如涉及安全事件，触发合规检查 |
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 止血完成（需根因修复） | `dev/context/dev-context-first` → `dev/implementation/dev-implementation` |
+| 止血完成（有残留 Bug） | `collaboration/process/bug-coordinator` |
+| 修复验证 | `qa/execution/test-executor` |
+| 全部恢复 | `collaboration/process/collab-retrospective`（故障复盘） |
+| 涉及安全事件 | `system/security/compliance` |
+
 ## 工具可用
 - read: 读取相关代码、配置、日志
 - grep: 搜索错误日志、定位异常代码

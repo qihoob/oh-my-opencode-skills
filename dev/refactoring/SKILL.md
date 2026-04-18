@@ -349,6 +349,25 @@ function createProduct(name) { createEntity('product', name); }
 | 消除重复、去重 | 从 Step 3 开始（合并重复代码） |
 | 拆分大函数、拆大文件 | 从 Step 3 开始（分解） |
 
+## 依赖文档
+
+## 产出文档
+- **重构报告**: `.opencode/docs/refactoring-{scope}.md`
+
+## 依赖文档
+
+按优先级检查：
+1. `.opencode/docs/implementation-{feature}.md` — 实现文档（了解当前实现）
+2. `.opencode/docs/contract-{feature}.md` — 契约文档（重构不能改变契约）
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 重构完成，需审查 | `dev/code-review` |
+| 重构后需验证行为不变 | `qa/execution/test-executor` |
+| 重构涉及架构变更 | `dev/adr` |
+
 ## 配合 Skills
 
 | 场景 | 调用 Skill | 说明 |

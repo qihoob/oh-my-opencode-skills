@@ -127,7 +127,7 @@ if grep -q "oh-my-opencode" "$CLAUDE_MD" 2>/dev/null; then
     sed -i "s|/home/[^/]*/skill|$SKILL_DIR|g" "$CLAUDE_MD"
     sed -i "s|/Users/[^/]*/skill|$SKILL_DIR|g" "$CLAUDE_MD"
     # 更新技能数量（如果有变化）
-    sed -i "s|的 [0-9]* 个技能|的 59 个技能|g" "$CLAUDE_MD"
+    sed -i "s|的 [0-9]* 个技能|的 62 个技能|g" "$CLAUDE_MD"
 else
     info "写入全局配置到 $CLAUDE_MD ..."
     cat >> "$CLAUDE_MD" << HEREDOC
@@ -139,7 +139,7 @@ else
 ## 工具约束（必须遵守）
 
 ### 技能加载方式：Read 文件，不要调用 Skill 工具
-oh-my-opencode 的 59 个技能存储为 SKILL.md 文件，**不是** Claude Code 原生注册的 skill。
+oh-my-opencode 的 62 个技能存储为 SKILL.md 文件，**不是** Claude Code 原生注册的 skill。
 - **正确**：用 Read 工具读取 SKILL.md 文件，然后按其指令执行
 - **错误**：调用 \`Skill("product-requirement-analysis")\` — 会找不到技能
 - **错误**：调用 \`skill(name=...)\` — 同样会失败
@@ -205,6 +205,9 @@ oh-my-opencode 的 59 个技能存储为 SKILL.md 文件，**不是** Claude Cod
 | 多环境、环境配置 | $SKILL_DIR/devops/deploy/multi-env/SKILL.md |
 | 监控、告警、日志 | $SKILL_DIR/devops/monitoring/observability/SKILL.md |
 | 数据库迁移、DDL | $SKILL_DIR/devops/data/migration/SKILL.md |
+| 数据库设计、表结构设计 | $SKILL_DIR/devops/data/schema-design/SKILL.md |
+| 数据库评审、表结构评审 | $SKILL_DIR/devops/data/schema-review/SKILL.md |
+| 数据库变更影响、字段变更 | $SKILL_DIR/devops/data/change-impact/SKILL.md |
 | 成本优化、云成本 | $SKILL_DIR/devops/cost-optimization/SKILL.md |
 | **其他** | |
 | 启动项目、新项目 | $SKILL_DIR/project/kickoff/SKILL.md |
@@ -212,6 +215,8 @@ oh-my-opencode 的 59 个技能存储为 SKILL.md 文件，**不是** Claude Cod
 | 设计评审、视觉确认 | $SKILL_DIR/visual/design-review/SKILL.md |
 | 安全审计、合规检查 | $SKILL_DIR/system/security/compliance/SKILL.md |
 | 文档检查、完整性检查 | $SKILL_DIR/system/document-integrity-check/SKILL.md |
+| 自动调度、技能匹配 | $SKILL_DIR/system/auto-skill-dispatcher/SKILL.md |
+| 流程监控、状态追踪 | $SKILL_DIR/system/state-tracker/SKILL.md |
 
 ## 完整触发词映射
 

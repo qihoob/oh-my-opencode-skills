@@ -12,6 +12,7 @@ version: "1.0"
 
 ## 依赖文档
 - **必须读取**: `.opencode/docs/contract-{feature}.md`
+- **可选读取**: `.opencode/docs/design-handoff-{feature}.md`（设计交接文档，如有）
 
 
 ## 产出文档
@@ -230,7 +231,6 @@ version: "1.0"
 
 
 ## 触发词
-
 前端开发、页面开发、组件开发、React开发、Vue开发、交互实现
 
 ## 配合 Skills

@@ -332,6 +332,10 @@ so that [价值]
 | `product/requirement/product-collaborative-requirement-optimization` | 后续（可选） | 复杂需求三方评审 |
 | `product/feedback/analysis` | 前置 | 用户反馈驱动需求分析 |
 | `product/requirement/product-requirement-structuring` | 前置 | 结构化需求后详细分析 |
+| `product/analysis/global-project-analysis` | 前置 | 项目全局分析后细化需求 |
+| `collaboration/process/iteration-closure` | 协同 | 迭代闭环时回顾需求 |
+| `collaboration/sync/context-alignment` | 协同 | 同步对齐时引用需求 |
+| `dev/modules/module-collaborative-dev` | 后续 | 需求驱动契约定义 |
 
 ## 下一步推荐
 

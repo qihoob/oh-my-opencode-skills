@@ -15,8 +15,8 @@ version: "2.0"
 
 ## 依赖文档
 **可选读取**:
-- **必须读取**: `.opencode/docs/test-cases-{feature}.md``
-- **必须读取**: `.opencode/docs/contract-{feature}.md``
+- **必须读取**: `.opencode/docs/test-cases-{feature}.md`
+- **必须读取**: `.opencode/docs/contract-{feature}.md`
 
 ## 运行时工具
 
@@ -620,5 +620,4 @@ node ~/.claude/skills/playwright-skill/run.js /tmp/e2e-test-login.js
 
 
 ## 触发词
-
 E2E测试、端到端测试、Playwright、Cypress、自动化测试、Page Object、视觉回归、跨浏览器测试、测试用例、CRUD测试、登录测试

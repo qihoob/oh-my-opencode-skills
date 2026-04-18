@@ -18,8 +18,10 @@ version: "3.0"
 **必须读取**: `.opencode/docs/requirement-{feature}.md`
 
 **推荐读取**:
-- **必须读取**: `.opencode/docs/contract-{feature}.md``
-- **必须读取**: `.opencode/docs/implementation-{feature}.md``
+- **可选读取**: `.opencode/docs/qa-context-report-{feature}.md`（qa-context-first 产出的测试上下文）
+- **可选读取**: `.opencode/docs/module-test-context-{module}.md`（module-test-context 产出的模块测试上下文）
+- **可选读取**: `.opencode/docs/contract-{feature}.md`
+- **可选读取**: `.opencode/docs/implementation-{feature}.md`
 
 ## 核心原则
 
@@ -606,6 +608,14 @@ version: "3.0"
 | `qa/advanced/e2e-testing` | 协同 | Playwright 浏览器自动化脚本 |
 | `dev/modules/module-collaborative-dev` | 前置 | 契约文档提供状态流转和错误码 |
 | `collaboration/handoff/collab-dev-to-qa` | 前置 | 提测后设计测试用例 |
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 测试用例设计完成 | `qa/test-case/test-case-prioritization` |
+| 用例优先级已排 | `qa/execution/test-executor` |
+| 需要 E2E 浏览器测试 | `qa/advanced/e2e-testing` |
 
 ## 工具可用
 - read: 读取需求文档、契约文档、实现代码

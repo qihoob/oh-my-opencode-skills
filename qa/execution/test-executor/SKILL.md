@@ -368,9 +368,20 @@ playwright-skill 优势:
 | `collaboration/process/bug-coordinator` | 后续（自动） | 失败用例自动流转到 Bug 协调 |
 | `dev/implementation/dev-implementation` | 后续 | Bug 修复实现 |
 | `dev/context/dev-context-first` | 后续 | 开发获取修复上下文 |
+| `dev/debugging` | 协同 | 测试失败时辅助定位根因 |
 | `collaboration/review/collab-acceptance-review` | 后续 | 全部通过后进入验收 |
 | `qa/context/module-test-context` | 前置 | 模块测试上下文获取后执行 |
 | `qa/test-case/test-case-prioritization` | 前置 | 优先级排序后按序执行 |
+| `collaboration/sync/incident` | 协同 | 线上故障验证修复 |
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 全部通过 | `collaboration/review/collab-acceptance-review` |
+| 有失败用例（≤3 个，P2/P3） | `dev/implementation/dev-implementation`（快速修复模式） |
+| 有失败用例（>3 个或 P0/P1） | `collaboration/process/bug-coordinator` |
+| Bug 修复完成（回归测试） | `qa/execution/test-executor`（回归） |
 
 ## 工具可用
 - read: 读取测试用例

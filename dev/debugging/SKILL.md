@@ -263,7 +263,7 @@ version: "1.0"
 
 ```
 7.1 记录到 Bug 修复文档
-    产出路径: .opencode/docs/bugfix-{bug-id}.md
+    产出路径: .opencode/docs/bug-{module}-{seq}.md（与 test-executor 生成的 Bug 单命名一致）
 
     内容:
     - Bug 描述: {现象}
@@ -319,6 +319,25 @@ version: "1.0"
 | 定位 bug、找 bug 原因 | 从 Step 2 开始 |
 | 复现、稳定复现 | 从 Step 1 开始 |
 | 根因分析、5-why | 使用根因分析方法 |
+
+## 依赖文档
+
+## 产出文档
+- **Bug 分析报告**: `.opencode/docs/bugfix-{id}.md`（或更新已有 `bug-{module}-{seq}.md` 添加根因分析）
+
+## 依赖文档
+
+按优先级检查：
+1. `.opencode/docs/bug-{module}-{seq}.md` — Bug 分配单（如有，从 bug-coordinator 来）
+2. `.opencode/docs/test-report-{feature}.md` — 测试报告（如有，从 test-executor 来）
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 根因定位完成，需修复 | `dev/implementation/dev-implementation` |
+| 修复完成，需验证 | `qa/execution/test-executor` |
+| 修复后需审查 | `dev/code-review` |
 
 ## 配合 Skills
 

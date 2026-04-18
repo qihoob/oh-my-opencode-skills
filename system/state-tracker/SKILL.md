@@ -182,6 +182,31 @@ version: "2.0"
 | `bug-{module}-{seq}.md` | Bug 生成 | 推进到 Bug 协调 |
 | `implementation-bugfix-*.md` | Bug 修复完成 | 推进到回归测试 |
 | `bugfix-*.md` | 调试修复完成 | 推进到回归测试 |
+| `requirement-structure-*.md` | 需求结构化完成 | 推进到需求评审（可选） |
+| `requirement-review-*.md` | 需求评审完成 | 推进到需求交接 |
+| `data-tracking-*.md` | 埋点设计完成 | 推进到功能实现 |
+| `design-review-*.md` | 设计评审完成 | 推进到设计交接 |
+| `design-handoff-*.md` | 设计交接完成 | 推进到前端实现 |
+| `feedback-analysis-*.md` | 反馈分析完成 | 推进到需求分析 |
+| `page-best-practices-*.md` | 页面最佳实践完成 | 推进到前端实现 |
+| `alignment-*.md` | 文档对齐完成 | 按对齐结果推进 |
+| `dep-eval-*.md` | 依赖评估完成 | 推进到功能实现 |
+| `refactoring-*.md` | 重构完成 | 推进到代码审查 |
+| `e2e-test-plan-*.md` | E2E测试计划完成 | 推进到测试执行 |
+| `context-snapshot-*.md` | 上下文快照保存 | 推进到恢复后继续开发 |
+| `security-audit-*.md` | 安全审计完成 | 推进到代码审查（如有问题） |
+| `cost-optimization-*.md` | 成本优化完成 | 等待决策 |
+| `module-splitting-*.md` | 模块拆解完成 | 推进到并行编排 |
+| `module-orchestration-*.md` | 模块编排完成 | 推进到各模块并行开发 |
+| `module-context-*.md` | 模块上下文产出 | 推进到并行编排 |
+| `adr-*.md` | 架构决策记录完成 | 等待后续引用 |
+| `project-overview.md` | 项目概览完成 | 推进到需求分析或模块拆解 |
+| `performance-test-report-*.md` | 性能测试完成 | 根据结果分支 |
+| `module-test-context-*.md` | 模块测试上下文获取 | 推进到测试用例设计 |
+| `db-schema-*.md` | 数据库设计完成 | 推进到设计评审 |
+| `db-review-*.md` (通过) | 数据库设计评审通过 | 推进到迁移脚本生成 |
+| `db-review-*.md` (不通过) | 数据库设计评审不通过 | 退回到数据库设计修改 |
+| `db-change-impact-*.md` | 数据库变更影响分析完成 | 根据影响结果推进到设计更新或实现 |
 | `acceptance-report.md` | 验收完成 | 根据结果分支 |
 | `retrospective-report.md` | 复盘完成 | 推进到迭代闭环 |
 | `health-check-*.md` | 健康检查完成 | 推进到迭代规划 |

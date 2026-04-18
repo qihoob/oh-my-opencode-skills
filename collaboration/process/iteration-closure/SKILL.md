@@ -122,6 +122,13 @@ version: "1.0"
 - [→] 启动：global-project-analysis
 ```
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 迭代闭环完成 | `product/analysis/global-project-analysis`（下一迭代全局分析） |
+| 有改进项需转化 | `product/requirement/product-requirement-analysis`（转化为新需求） |
+
 ## 配合 Skills
 
 | 配合技能 | 关系 | 说明 |

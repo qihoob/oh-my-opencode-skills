@@ -2,7 +2,7 @@
 
 ## 可用技能列表
 
-以下是可用的 59 个技能，当用户输入匹配时**必须调用**相应技能：
+以下是可用的 62 个技能，当用户输入匹配时**必须调用**相应技能：
 
 ### 系统类技能 (System)
 
@@ -80,6 +80,9 @@
 - `devops/deploy/multi-env` - 当用户提到"多环境"、"环境配置"、"dev/staging/prod"时调用
 - `devops/monitoring/observability` - 当用户提到"监控"、"告警"、"日志"、"链路追踪"、"Grafana"、"Prometheus"时调用
 - `devops/data/migration` - 当用户提到"数据库迁移"、"数据变更"、"DDL"、"迁移脚本"、"回滚方案"时调用
+- `devops/data/schema-design` - 当用户提到"数据库设计"、"表结构设计"、"schema设计"、"ER图"、"数据建模"、"建表"、"索引设计"时调用
+- `devops/data/schema-review` - 当用户提到"数据库评审"、"表结构评审"、"schema评审"、"数据库审查"、"索引检查"时调用
+- `devops/data/change-impact` - 当用户提到"数据库变更影响"、"表结构变更影响"、"DDL影响"、"字段变更影响"时调用
 - `devops/cost-optimization` - 当用户提到"成本优化"、"云成本"、"FinOps"、"预算管理"、"资源优化"时调用
 
 ### 视觉类技能 (Visual)

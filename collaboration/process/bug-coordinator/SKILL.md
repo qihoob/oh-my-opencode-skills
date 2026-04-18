@@ -348,6 +348,7 @@ Bug影响链:
 | `qa/execution/test-executor` | 前置 | 测试失败自动生成 Bug 单，触发本技能 |
 | `dev/implementation/dev-implementation` | 后续 | Bug 修复模式执行修复 |
 | `dev/context/dev-context-first` | 后续 | 开发获取修复上下文 |
+| `dev/debugging` | 协同 | 复杂 Bug 辅助定位根因 |
 | `dev/code-review` | 后续 | 修复后代码审查 |
 | `qa/execution/test-executor` | 后续（回归） | 修复后执行回归验证 |
 | `collaboration/handoff/collab-product-to-dev` | 条件 | 如为需求偏差，先澄清再修复 |

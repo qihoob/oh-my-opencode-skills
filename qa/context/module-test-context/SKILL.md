@@ -471,6 +471,13 @@ version: "2.0"
 | `qa/execution/test-executor` | 后续 | 执行生成的测试用例 |
 | `dev/context/dev-context-first` | 参考 | 类似的代码分析思路，但面向开发视角 |
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 模块测试上下文获取完成 | `qa/test-case/test-case-design` |
+| 多个模块需要测试 | `qa/context/qa-context-first`（全局测试上下文） |
+
 ## 工具可用
 - grep: 搜索路由定义、状态枚举、权限检查、模型定义、外部引用
 - glob: 扫描模块目录结构、查找文件

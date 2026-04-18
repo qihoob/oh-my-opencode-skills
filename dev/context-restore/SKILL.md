@@ -203,6 +203,12 @@ version: "1.0"
 注意: {事项}
 ```
 
+## 产出文档
+- **上下文快照**: `.opencode/docs/context-snapshot-{task}.md`
+
+## 依赖文档
+- **可选读取**: `.opencode/docs/context-snapshot-{task}.md`（恢复时读取对应快照）
+
 ## 触发词
 
 | 关键词 | 动作 |
@@ -212,6 +218,14 @@ version: "1.0"
 | 任务列表、我的任务 | 列出所有未完成任务 |
 | 切换任务 | 保存当前 + 恢复目标 |
 | 清理上下文 | 归档已完成任务的上下文 |
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 恢复后继续开发 | `dev/implementation/dev-implementation` |
+| 恢复后继续调试 | `dev/debugging` |
+| 需要重新获取完整上下文 | `dev/context/dev-context-first` |
 
 ## 配合 Skills
 

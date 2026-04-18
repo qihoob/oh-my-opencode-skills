@@ -231,8 +231,8 @@ version: "1.0"
 
 ## 依赖文档
 
-- **必须读取**: `.opencode/docs/test-cases-{feature}.md``
-- **必须读取**: `.opencode/docs/requirement-{feature}.md``
+- **必须读取**: `.opencode/docs/test-cases-{feature}.md`
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`
 
 ## 配合 Skills
 
@@ -251,5 +251,4 @@ version: "1.0"
 
 
 ## 触发词
-
 用例优先级、测试排序、资源分配、测试策略、测试覆盖、优先级排序

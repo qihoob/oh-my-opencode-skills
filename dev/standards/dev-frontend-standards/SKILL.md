@@ -525,6 +525,9 @@ const Page = lazy(() => import('./Page'));
 - [ ] success 状态 - 成功反馈
 ```
 
+## 产出文档
+- **前端规范报告（可选持久化）**: `.opencode/docs/frontend-standards-{feature}.md`
+
 ## 配合 Skills
 
 | 配合技能 | 关系 | 说明 |
@@ -536,8 +539,7 @@ const Page = lazy(() => import('./Page'));
 | `product/module/product-page-feature-best-practices` | 前置 | 页面功能最佳实践指导前端规范选型 |
 
 ## 触发词
-
-前端规范、响应式、响应式布局、状态管理、加载状态、错误处理、性能优化、无障碍、a11y
+前端规范、响应式、响应式布局、状态管理、加载状态、错误处理、性能优化、无障碍、a11y、键盘导航、虚拟列表、代码分割、懒加载
 
 ## 下一步推荐
 
@@ -546,5 +548,3 @@ const Page = lazy(() => import('./Page'));
 | 规范确认后开发 | `dev/implementation/frontend` — 按规范实现前端 |
 | 需要代码审查 | `dev/code-review` — 审查前端代码质量 |
 | 性能优化验证 | `qa/advanced/performance-testing` — 性能测试 |
-
-前端规范、响应式、响应式布局、状态管理、加载状态、错误处理、性能优化、无障碍、a11y、keyboard 导航、虚拟列表、代码分割、懒加载

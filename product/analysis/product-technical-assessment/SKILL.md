@@ -117,6 +117,9 @@ version: "1.0"
 | `product/module/module-product-requirement` | 后续 | 评估后细化模块需求 |
 | `dev/modules/module-splitting` | 后续 | 需拆模块时触发 |
 | `project/kickoff` | 前置 | 项目启动后技术评估 |
+| `collaboration/handoff/collab-product-to-dev` | 后续 | 评估结果纳入交接单 |
+| `collaboration/sync/context-alignment` | 协同 | 技术评估结果用于同步对齐 |
+| `dev/dependency-eval` | 协同 | 技术选型时评估依赖 |
 
 ## 下一步推荐
 

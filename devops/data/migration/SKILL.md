@@ -15,6 +15,7 @@ version: "1.0"
 - **迁移文档（可选持久化）**: `.opencode/docs/devops-migration-{feature}.md`
 
 ## 依赖文档
+- **可选读取**: `.opencode/docs/db-schema-{feature}.md`
 - 当前数据库 schema
 - 目标 schema 设计
 
@@ -152,6 +153,9 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS ...;
 
 | 配合技能 | 关系 | 说明 |
 |----------|------|------|
+| `devops/data/schema-design` | 前置 | 设计文档驱动迁移脚本 |
+| `devops/data/schema-review` | 前置 | 评审通过后生成迁移 |
+| `devops/data/change-impact` | 协同 | 迁移后评估代码影响 |
 | `system/security/compliance` | 后续 | 迁移后安全检查 |
 
 ## 下一步推荐
@@ -159,3 +163,7 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS ...;
 | 条件 | 推荐技能 |
 |------|----------|
 | 迁移方案确定 | `system/security/compliance (安全检查)` |
+| 迁移涉及代码变更 | `devops/data/change-impact (评估代码影响)` |
+
+## 触发词
+数据库迁移、数据变更、DDL、迁移脚本、回滚方案、schema变更、表结构变更、数据库迁移脚本

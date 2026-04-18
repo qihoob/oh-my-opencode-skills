@@ -48,7 +48,6 @@ version: "1.0"
 
 
 ## 触发词
-
 代码审查、Code Review、CR、代码检查、代码评审、代码质量、Review
 
 ## 配合 Skills
@@ -56,6 +55,11 @@ version: "1.0"
 - dev-context-first：审查前先获取项目上下文
 - dev-implementation：对照实现文档审查
 - product-requirement-analysis：对照需求文档验证
+- dev/verify-implementation：前置，验证通过后才进入审查
+- dev/standards/dev-code-quality：参照代码质量标准审查
+- dev/standards/dev-frontend-standards：参照前端规范审查
+- dev/debugging：审查发现复杂问题时转入调试
+- collaboration/process/bug-coordinator：审查发现严重问题转 Bug 协调
 
 ---
 

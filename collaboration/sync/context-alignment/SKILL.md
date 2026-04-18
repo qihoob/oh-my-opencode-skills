@@ -90,6 +90,18 @@ version: "1.0"
 | {行动1} | {name} | {date} |
 ```
 
+## 产出文档
+- **同步记录（可选持久化）**: `.opencode/docs/alignment-sync-{topic}.md`
+- 如处于自驱动链路中（chain-executor 执行），必须持久化到文件
+- 如为单次交互，可即时输出不写文件
+
+## 依赖文档
+
+按优先级检查：
+1. `.opencode/docs/requirement-*.md` — 需求文档（如有）
+2. `.opencode/docs/implementation-*.md` — 实现文档（如有）
+3. `.opencode/docs/project-overview.md` — 项目概览（如有）
+
 ## 配合 Skills
 
 | 配合技能 | 关系 | 说明 |

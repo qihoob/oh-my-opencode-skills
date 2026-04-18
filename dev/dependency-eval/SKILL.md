@@ -242,6 +242,25 @@ version: "1.0"
 | 替代方案、选型对比 | 替代方案对比 |
 | 许可证检查 | 许可证评估 |
 
+## 依赖文档
+
+## 产出文档
+- **依赖评估报告**: `.opencode/docs/dep-eval-{package-name}.md`
+
+## 依赖文档
+
+按优先级检查：
+1. `.opencode/docs/requirement-{feature}.md` — 需求文档（了解引入背景）
+2. `.opencode/docs/project-overview.md` — 项目概览（了解技术栈）
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 评估通过，决定引入 | `dev/implementation/dev-implementation` |
+| 重大依赖需记录决策 | `dev/adr` |
+| 依赖有安全风险 | `system/security/compliance` |
+
 ## 配合 Skills
 
 | 场景 | 调用 Skill | 说明 |

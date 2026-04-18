@@ -16,9 +16,9 @@ version: "1.0"
 
 ## 依赖文档
 **必须读取**:
-- **必须读取**: `.opencode/docs/requirement-*.md``
-- **必须读取**: `.opencode/docs/implementation-*.md``
-- **必须读取**: `.opencode/docs/test-cases-*.md``
+- **必须读取**: `.opencode/docs/requirement-*.md`
+- **必须读取**: `.opencode/docs/implementation-*.md`
+- **必须读取**: `.opencode/docs/test-cases-*.md`
 
 ## 核心能力
 

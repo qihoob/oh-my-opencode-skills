@@ -21,8 +21,14 @@ version: "1.0"
 - 确认优先级
 
 **可选读取**:
-- **必须读取**: `.opencode/docs/handoff-product-to-dev.md``
-- **必须读取**: `.opencode/docs/module-requirement-{module}.md``
+- **可选读取**: `.opencode/docs/handoff-product-to-dev.md`
+- **可选读取**: `.opencode/docs/module-requirement-{module}.md`
+- **可选读取**: `.opencode/docs/data-tracking-{feature}.md`（埋点方案，实现时需集成）
+- **可选读取**: `.opencode/docs/page-best-practices-{feature}.md`（页面最佳实践参考）
+- **可选读取**: `.opencode/docs/dep-eval-{package}.md`（已评估的新依赖信息）
+- **可选读取**: `.opencode/docs/adr-*`（架构决策记录，影响实现方案）
+- **可选读取**: `.opencode/docs/refactoring-{scope}.md`（重构计划）
+- **可选读取**: `.opencode/docs/context-snapshot-{task}.md`（恢复的上下文快照）
 
 ## 核心能力
 
@@ -521,7 +527,7 @@ TDD 纪律:
 ### Bug Step 5: 产出修复文档
 
 ```
-更新 implementation-bugfix-{id}.md:
+更新 bug-{module}-{seq}.md（在原 Bug 单中追加修复记录）:
 
 ## Bug 修复记录
 

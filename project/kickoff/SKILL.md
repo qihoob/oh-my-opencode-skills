@@ -83,5 +83,13 @@ version: "1.0"
 | `devops/ci/pipeline` | 后续 | 配置 CI/CD 流水线 |
 | `system/state-tracker` | 状态 | 记录链路执行状态 |
 
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 项目已初始化 | `product/analysis/global-project-analysis`（全局分析） |
+| 需要评估可行性 | `product/analysis/product-technical-assessment`（技术评估） |
+| 需要拆解模块 | `dev/modules/module-splitting`（模块拆解） |
+
 ## 触发词
 启动项目、新项目、项目初始化、从零开始

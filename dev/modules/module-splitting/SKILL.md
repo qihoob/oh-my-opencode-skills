@@ -407,6 +407,17 @@ Response: { valid, userId }
 | 模块开发 | parallel-module-orchestrator | 并行任务 + 开发者上下文单 |
 | 接口契约 | module-collaborative-dev | 详细接口 + 业务规则层 |
 
+## 关键反向引用
+
+| 被引用方 | 引用本技能的方式 | 说明 |
+|----------|------------------|------|
+| `dev/context/module-dev-context` | 前置 | 获取模块上下文前了解拆解 |
+| `dev/modules/parallel-module-orchestrator` | 前置 | 编排前必须先拆解 |
+| `dev/modules/module-collaborative-dev` | 前置 | 协同开发前必须有拆解结果 |
+| `product/analysis/global-project-analysis` | 后续 | 全局分析后触发拆解 |
+| `product/analysis/product-technical-assessment` | 后续 | 技术评估后触发拆解 |
+| `project/kickoff` | 后续 | 项目启动后触发拆解 |
+
 ## 关键决策点
 
 ### 产品视角 vs 架构视角

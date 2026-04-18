@@ -299,6 +299,9 @@ version: "2.0"
 | `collaboration/handoff/collab-dev-to-qa` | 前置 | 提测后获取测试上下文 |
 | `qa/test-case/test-case-design` | 后续 | 上下文获取后设计用例 |
 | `qa/test-case/test-case-prioritization` | 后续 | 上下文获取后用例优先级排序 |
+| `qa/context/module-test-context` | 互补 | 模块级测试上下文，本技能是功能级 |
+| `qa/context/qa-context-from-code` | 互补 | 无需求文档时用逆向分析替代 |
+| `qa/advanced/performance-testing` | 后续 | 性能测试前获取上下文 |
 
 ## 下一步推荐
 
