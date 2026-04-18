@@ -1,6 +1,6 @@
 # oh-my-opencode-skills
 
-Claude Code 技能库 — 60 个结构化 SKILL.md 技能，覆盖完整 SDLC 流程。
+Claude Code 技能库 — 59 个结构化 SKILL.md 技能，覆盖完整 SDLC 流程。
 
 通过 `CLAUDE.md` 配置加载，Claude Code 自动读取 SKILL.md 文件执行，无需注册。
 

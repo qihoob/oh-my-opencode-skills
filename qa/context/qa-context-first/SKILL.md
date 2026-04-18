@@ -12,7 +12,9 @@ version: "2.0"
 
 ## 产出文档
 
-无固定产出文件。输出为即时测试上下文报告，供 test-case-design 和 test-executor 使用。
+- **测试上下文报告（可选持久化）**: `.opencode/docs/qa-context-report-{feature}.md`
+- 如处于自驱动链路中（chain-executor 执行），必须持久化到文件，以触发下游技能
+- 如为单次交互（用户直接说"测试上下文"），可即时输出不写文件
 
 ## 依赖文档
 

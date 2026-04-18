@@ -40,11 +40,12 @@ version: "3.0"
 | `verify-report-*.md` (有偏差) | `dev-implementation`(修正) | 验证不通过 |
 | `code-review-*.md` (通过) | `collab-dev-to-qa` | 审查通过 |
 | `code-review-*.md` (失败) | `dev-implementation`(修复) | 审查不通过 |
-| `handoff-dev-to-qa.md` | `test-case-design` | 无条件触发 |
+| `handoff-dev-to-qa.md` | `qa-context-first` 或 `test-case-design` | 无条件触发 |
+| `qa-context-report-*.md` | `test-case-design` | 无条件触发 |
 | `test-cases-*.md` | `test-executor` | 无条件触发 |
 | `test-report-*.md` (全部通过) | `collab-acceptance-review` | 测试通过 |
 | `test-report-*.md` (有失败) | `bug-coordinator` | 测试失败 |
-| `bug-*.md` | `bug-coordinator` (分配) | 自动分配 |
+| `bug-{module}-{seq}.md` | `bug-coordinator` (分配) | 自动分配 |
 | `bug-分配单` | `dev-implementation`(Bug修复模式) | 分配完成 |
 | `implementation-bugfix-*.md` | `test-executor`(回归) | 修复完成 |
 | `acceptance-report.md` (通过) | `collab-retrospective` | 验收通过 |
@@ -52,6 +53,8 @@ version: "3.0"
 | `retrospective-report.md` | `iteration-closure` | 无条件触发 |
 | `iteration-closure.md` | `global-project-analysis`(健康检查) | 无条件触发 |
 | `health-check-*.md` | 下一迭代规划 | 健康报告产出 |
+| `incident-report-*.md` | `bug-coordinator` 或 `dev-implementation`(修复) | 止血完成 |
+| `bugfix-*.md` | `test-executor`(回归) | 调试修复完成 |
 
 ### 规则二：条件分支 = 自动分流
 
@@ -205,6 +208,7 @@ verify-implementation 产出 verify-report-*.md
 
 product-requirement-analysis
   → 产出 requirement-login.md
+  → [可选] product-collaborative-requirement-optimization（复杂需求建议评审）
   → [自动] collab-product-to-dev
     → 产出 handoff-product-to-dev.md
     → [自动] dev-context-first
@@ -259,11 +263,12 @@ test-executor 发现失败用例
 用户说："支付服务挂了"
 
 incident
-  → 产出 incident-report.md (止血完成)
-  → [自动] dev-context-first (定位根因)
-    → [自动] dev-implementation (根因修复)
-      → [自动] test-executor (验证)
-        → 通过 → [自动] collab-retrospective (复盘)
+  → 产出 incident-report-{id}.md (止血完成)
+  → [自动] bug-coordinator (分析影响、分配修复)
+    → [自动] dev-context-first (定位根因)
+      → [自动] dev-implementation (根因修复)
+        → [自动] test-executor (验证)
+          → 通过 → [自动] collab-retrospective (复盘)
 ```
 
 ### 链路 4: 新项目启动（自驱动）

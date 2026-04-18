@@ -5,77 +5,100 @@ description: 同步对齐 - 上下文对齐、需求对齐、模块协调
 
 # 同步对齐 Skill
 
-## Role
-Sync Coordinator
+**角色**: 协同 (Collaboration)
+**功能**: 上下文对齐、需求对齐、模块协调
+**触发关键词**: 同步、对齐、上下文对齐、确认范围、模块协调
 
-## Capabilities
+## 核心能力
 
-### Context Alignment
+### 1. 上下文对齐
 - 背景同步
 - 范围对齐
 - 理解一致
 
-### Requirement Alignment
+### 2. 需求对齐
 - 需求澄清
 - 优先级确认
 - 变更通知
 
-### Module Coordination
+### 3. 模块协调
 - 依赖协调
 - 接口对齐
 - 进度同步
 
-## Trigger Keywords
+## 执行步骤
 
-- 同步、对齐
-- 上下文、范围
-- 确认需求、模块协调
+### Step 1: 收集各方状态
 
-## Sync Patterns
-
-### Daily Standup
 ```
-昨天: 完成了登录
-今天: 做订单模块
-阻塞: 等待API定义
+对每个参与方：
+- 当前进度
+- 遇到的问题
+- 待确认事项
+- 依赖等待
 ```
 
-### Requirement Alignment
+### Step 2: 识别对齐点
+
 ```
-问题: 登录方式有哪些?
-确认: 用户名密码 + 短信验证码
+检查：
+- 各方理解是否一致？
+- 范围是否有偏移？
+- 依赖是否阻塞？
+- 优先级是否对齐？
 ```
 
-## Output Format
+### Step 3: 达成共识
+
+```
+对每个对齐点：
+- 澄清分歧
+- 确认决议
+- 分配行动项
+- 约定下次同步时间
+```
+
+## 输出格式
 
 ```markdown
 ## 同步记录
 
-### 主题: 订单模块进度同步
+### 主题: {同步主题}
 
 ### 参与方
-- 前端: 小王
-- 后端: 小李
-- 产品: 小张
+- {角色1}: {name}
+- {角色2}: {name}
 
 ### 同步内容
 | 事项 | 状态 | 备注 |
 |------|------|------|
-| 订单列表API | 已完成 | /api/orders |
-| 订单详情API | 开发中 | 预计明天 |
-| 创建订单API | 待开发 | 依赖支付模块 |
+| {事项1} | {状态} | {备注} |
+| {事项2} | {状态} | {备注} |
 
 ### 依赖问题
-- 等待: 支付模块接口定义
-- 风险: 可能延期1天
+- 等待: {阻塞项}
+- 风险: {风险描述}
 
 ### 决议
-1. 支付接口明天上午10点前输出
-2. 前端先做静态页面
+1. {决议1}
+2. {决议2}
+
+### 行动项
+| 行动 | 负责人 | 截止时间 |
+|------|--------|----------|
+| {行动1} | {name} | {date} |
 ```
 
-## Combined From
-- collab-context-alignment
-- collab-dev-qa-sync
-- collab-module-to-module
-- collab-requirement-alignment
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 发现需求偏差 | `product/requirement/product-requirement-analysis` |
+| 发现接口不一致 | `dev/modules/module-collaborative-dev` |
+| 发现文档不同步 | `collaboration/sync/document-alignment` |
+| 范围变更需评估 | `product/analysis/product-technical-assessment` |
+
+## 工具可用
+- read: 读取各方文档和状态
+- write: 写入同步记录
+- grep: 搜索相关代码和文档

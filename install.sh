@@ -127,7 +127,7 @@ if grep -q "oh-my-opencode" "$CLAUDE_MD" 2>/dev/null; then
     sed -i "s|/home/[^/]*/skill|$SKILL_DIR|g" "$CLAUDE_MD"
     sed -i "s|/Users/[^/]*/skill|$SKILL_DIR|g" "$CLAUDE_MD"
     # 更新技能数量（如果有变化）
-    sed -i "s|的 [0-9]* 个技能|的 60 个技能|g" "$CLAUDE_MD"
+    sed -i "s|的 [0-9]* 个技能|的 59 个技能|g" "$CLAUDE_MD"
 else
     info "写入全局配置到 $CLAUDE_MD ..."
     cat >> "$CLAUDE_MD" << HEREDOC
@@ -137,7 +137,7 @@ else
 你的技能库位于 \`$SKILL_DIR/\`，在任何项目中都可以使用。
 
 ## 技能加载方式：Read 文件，不要调用 Skill 工具
-oh-my-opencode 的 60 个技能存储为 SKILL.md 文件，不是 Claude Code 原生注册的 skill。
+oh-my-opencode 的 59 个技能存储为 SKILL.md 文件，不是 Claude Code 原生注册的 skill。
 - 正确：用 Read 工具读取 SKILL.md 文件，然后按其指令执行
 - 错误：调用 Skill("product-requirement-analysis")
 

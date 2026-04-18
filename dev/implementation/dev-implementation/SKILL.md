@@ -425,12 +425,12 @@ TDD 纪律:
 
 ## Bug 修复专项流程
 
-当存在 `bug-{id}.md` 分配单时，执行以下流程（替代上述功能实现流程）：
+当存在 `bug-{module}-{seq}.md` 分配单时，执行以下流程（替代上述功能实现流程）：
 
 ### Bug Step 1: 读取 Bug 分配单
 
 ```
-检查路径: .opencode/docs/bug-{id}.md
+检查路径: .opencode/docs/bug-{module}-{seq}.md
 
 必须获取:
 - 问题描述（预期 vs 实际）

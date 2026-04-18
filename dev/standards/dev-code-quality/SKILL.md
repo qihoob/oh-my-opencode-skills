@@ -407,4 +407,14 @@ npx husky add .husky/pre-commit "npm run precommit"
 
 ## 触发词
 
+lint、eslint、prettier、代码规范、命名规范、注释规范、pre-commit、类型检查、代码复杂度
+
+## 下一步推荐
+
+| 条件 | 推荐技能 |
+|------|----------|
+| 规范配置完成 | `dev/code-review` — 按规范审查代码 |
+| 发现质量问题 | `dev/implementation/dev-implementation` — 修复问题 |
+| 前端项目 | `dev/standards/dev-frontend-standards` — 前端专项规范 |
+
 代码质量、lint、eslint、prettier、代码规范、命名规范、注释规范、pre-commit、类型检查、代码复杂度

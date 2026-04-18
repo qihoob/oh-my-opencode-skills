@@ -10,8 +10,8 @@ description: Kubernetes 部署 - 配置 K8s 资源，管理 Pod、Service、Depl
 **触发关键词**: K8s、Kubernetes、kubectl、Deployment、Service、Pod、容器编排
 
 ## 产出文档
-**路径**: `k8s/` 目录下的资源配置文件
-**说明**: Kubernetes 资源配置清单
+- **K8s 资源配置**: `k8s/` 目录下的 YAML 文件
+- **部署文档（可选持久化）**: `.opencode/docs/devops-k8s-{project}.md`
 
 ## 依赖文档
 - Docker 镜像信息

@@ -24,8 +24,10 @@ version: "1.0"
 ```
 
 ## 产出文档
-- **测试上下文**: 即时输出，供 test-case-design 使用
+- **测试上下文报告（可选持久化）**: `.opencode/docs/qa-context-report-{feature}.md`
 - **伪需求文档**: `.opencode/docs/requirement-{feature}-reverse.md`（可选，如需补文档）
+- 如处于自驱动链路中（chain-executor 执行），必须持久化到文件，以触发下游技能
+- 如为单次交互，可即时输出不写文件
 
 ---
 

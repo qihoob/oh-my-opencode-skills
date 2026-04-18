@@ -62,7 +62,7 @@ version: "2.0"
     "updatedAt": "2026-04-15T14:30:00Z"
   },
   "currentStep": 4,
-  "totalSteps": 11,
+  "totalSteps": 12,
   "steps": [
     {
       "id": 1,
@@ -170,18 +170,22 @@ version: "2.0"
 |------|----------|----------|
 | `requirement-*.md` | 需求分析完成 | 推进到需求交接 |
 | `handoff-product-to-dev.md` | 需求交接完成 | 推进到开发上下文 |
+| `context-report-*.md` | 开发上下文获取完成 | 推进到功能实现 |
 | `contract-*.md` | 契约定义完成 | 推进到实现（按契约） |
 | `implementation-*.md` | 功能实现完成 | 推进到实现验证 |
 | `verify-report-*.md` | 验证完成 | 根据结果分支 |
 | `code-review-*.md` | 代码审查完成 | 根据结果分支 |
-| `handoff-dev-to-qa.md` | 提测完成 | 推进到测试设计 |
+| `handoff-dev-to-qa.md` | 提测完成 | 推进到测试上下文或用例设计 |
+| `qa-context-report-*.md` | 测试上下文获取完成 | 推进到测试用例设计 |
 | `test-cases-*.md` | 用例设计完成 | 推进到测试执行 |
 | `test-report-*.md` | 测试执行完成 | 根据结果分支 |
-| `bug-*.md` | Bug 生成 | 推进到 Bug 协调 |
+| `bug-{module}-{seq}.md` | Bug 生成 | 推进到 Bug 协调 |
 | `implementation-bugfix-*.md` | Bug 修复完成 | 推进到回归测试 |
+| `bugfix-*.md` | 调试修复完成 | 推进到回归测试 |
 | `acceptance-report.md` | 验收完成 | 根据结果分支 |
 | `retrospective-report.md` | 复盘完成 | 推进到迭代闭环 |
 | `health-check-*.md` | 健康检查完成 | 推进到迭代规划 |
+| `incident-report-*.md` | 应急处理完成 | 推进到 Bug 协调或修复 |
 | `DOC_AUDIT.md` | 文档审计完成 | 推进到文档对齐 |
 
 ---

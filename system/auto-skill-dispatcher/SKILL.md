@@ -37,7 +37,7 @@ version: "4.0"
 | 页面最佳实践、交互规范 | product/module/product-page-feature-best-practices | → dev/implementation/frontend |
 | 用户反馈、NPS | product/feedback/analysis | → product-requirement-analysis |
 
-### 开发技能 (12)
+### 开发技能 (17)
 
 | 用户输入 | 触发技能 | 推荐下一步 |
 |----------|----------|------------|
@@ -123,7 +123,7 @@ version: "4.0"
 ```
 触发词: "完整流程", "端到端", "从零到上线"
 
-product-requirement-analysis → collab-product-to-dev → dev-context-first
+product-requirement-analysis → product-collaborative-requirement-optimization(可选) → collab-product-to-dev → dev-context-first
 → dev-implementation → verify-implementation → dev-code-review → collab-dev-to-qa
 → test-case-design → test-executor → collab-acceptance-review
 → collab-retrospective → iteration-closure
@@ -143,13 +143,13 @@ test-executor (发现失败)
   失败 → 退回 dev-implementation (标注新问题，循环)
 ```
 
-### 链路 3: 线上故障 (4 步)
+### 链路 3: 线上故障 (6 步)
 ```
 触发词: "线上故障", "服务挂了", "P0", "应急"
 
-incident → dev-context-first → dev-implementation → test-executor
-                                                         ↓
-                                                  通过 → collab-retrospective
+incident → bug-coordinator → dev-context-first → dev-implementation → test-executor
+                                                                              ↓
+                                                                       通过 → collab-retrospective
 ```
 
 ### 链路 4: 新项目启动 (7 步)
