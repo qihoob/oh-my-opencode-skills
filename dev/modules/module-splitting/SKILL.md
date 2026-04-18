@@ -234,7 +234,7 @@ Response: { valid, userId }
 目的：为每个模块生成一份独立的业务上下文单，供开发者直接使用。
       开发者拿到的不只是"你要开发哪些接口"，而是"你的模块在业务全局中的角色"。
 
-产出路径: .opencode/docs/module-context-{module-name}.md
+产出路径: .opencode/docs/module-context-{module}.md
 
 每个上下文单包含：
 
@@ -385,7 +385,7 @@ Response: { valid, userId }
 
 ## 7. 模块业务上下文单
 
-→ 每个模块一份独立文档：`module-context-{module-name}.md`
+→ 每个模块一份独立文档：`module-context-{module}.md`
 → 包含：定位、必须实现、不能改的、不变量、数据一致性、时序约束、补偿逻辑、隔离验证
 ```
 

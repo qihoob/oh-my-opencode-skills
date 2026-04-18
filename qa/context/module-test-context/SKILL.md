@@ -462,7 +462,7 @@ version: "2.0"
 | 配合技能 | 关系 | 说明 |
 |----------|------|------|
 | `qa/context/qa-context-from-code` | 上游 | 全项目无文档时先做项目级逆向分析，再用本技能深入单个模块 |
-| `qa/context/dev-context-first` | 互补 | 有需求文档时用 qa-context-first 获取上下文，无文档时用本技能 |
+| `qa/context/qa-context-first` | 互补 | 有需求文档时用 qa-context-first 获取上下文，无文档时用本技能 |
 | `qa/test-case/test-case-design` | 后续 | 基于本技能产出的模块测试上下文设计测试用例 |
 | `qa/execution/test-executor` | 后续 | 执行生成的测试用例 |
 | `dev/context/dev-context-first` | 参考 | 类似的代码分析思路，但面向开发视角 |

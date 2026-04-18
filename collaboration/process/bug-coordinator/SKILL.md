@@ -157,6 +157,9 @@ Bug影响链:
 - [ ] 无新引入问题
 ```
 
+## 产出文档
+- **Bug 分配单**: 嵌入 `.opencode/docs/bug-{module}-{seq}.md`（更新状态和分配信息）
+
 ## 工作流程
 
 ### Step 1: Bug 录入

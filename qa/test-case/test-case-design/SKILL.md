@@ -12,10 +12,10 @@ version: "3.0"
 **版本**: 3.0 (新增 Step 0 功能深度理解，九维度与代码理解联动)
 
 ## 产出文档
-**路径**: `.opencode/docs/test-cases-{feature-name}.md`
+**路径**: `.opencode/docs/test-cases-{feature}.md`
 
 ## 依赖文档
-**必须读取**: `.opencode/docs/requirement-{feature-name}.md`
+**必须读取**: `.opencode/docs/requirement-{feature}.md`
 
 **推荐读取**:
 - `.opencode/docs/contract-{feature}.md` — 契约文档（状态流转、错误码）
@@ -412,7 +412,7 @@ version: "3.0"
 
 ### Step 4: 产出测试用例文档
 
-按下方模板产出完整测试用例文档到 `.opencode/docs/test-cases-{feature-name}.md`。
+按下方模板产出完整测试用例文档到 `.opencode/docs/test-cases-{feature}.md`。
 
 ---
 

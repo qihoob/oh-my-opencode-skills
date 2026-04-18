@@ -11,7 +11,7 @@ version: "2.0"
 **触发关键词**: 需求分析、用户故事、需求澄清、功能定义
 
 ## 产出文档
-**路径**: `.opencode/docs/requirement-{feature-name}.md`
+**路径**: `.opencode/docs/requirement-{feature}.md`
 **说明**: 需求分析完成后必须写入此文件，供后续开发/测试技能读取
 
 ## 依赖文档
@@ -194,7 +194,7 @@ AC-001: [标题]
 
 将前四步的分析结果整理为结构化文档，写入指定路径。
 
-**输出路径**: `.opencode/docs/requirement-{feature-name}.md`
+**输出路径**: `.opencode/docs/requirement-{feature}.md`
 
 **文档模板：**
 

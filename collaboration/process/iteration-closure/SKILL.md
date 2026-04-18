@@ -1,5 +1,5 @@
 ---
-name: iteration_closure
+name: iteration-closure
 description: 迭代闭环 - 复盘结果连接到下一轮项目分析
 ---
 
@@ -25,6 +25,9 @@ description: 迭代闭环 - 复盘结果连接到下一轮项目分析
 ### 4. 资源配置
 - 确认各模块资源分配
 - 确认优先级调整
+
+## 产出文档
+- **迭代总结**: `.opencode/docs/iteration-closure.md`
 
 ## 输入
 - collab-retrospective 结果
@@ -117,7 +120,7 @@ description: 迭代闭环 - 复盘结果连接到下一轮项目分析
 
 | 配合技能 | 关系 | 说明 |
 |----------|------|------|
-| `collaboration/review/collab-retrospective` | 前置 | 输入复盘结果，提取改进项 |
+| `collaboration/process/collab-retrospective` | 前置 | 输入复盘结果，提取改进项 |
 | `product/analysis/global-project-analysis` | 后续 | 启动下一迭代的全局分析 |
 | `product/requirement/product-requirement-analysis` | 后续 | 将改进项转化为新需求 |
 | `system/state-tracker` | 状态 | 记录链路执行状态 |

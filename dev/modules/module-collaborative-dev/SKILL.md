@@ -363,14 +363,14 @@ backend/
 
 ```bash
 # 1. 创建模块目录
-mkdir -p modules/{module-name}/{frontend,backend,docs,tests}
+mkdir -p modules/{module}/{frontend,backend,docs,tests}
 
 # 2. 初始化前端
-cd modules/{module-name}/frontend
+cd modules/{module}/frontend
 npm create vite@latest . -- --template react-ts
 
 # 3. 初始化后端
-cd modules/{module-name}/backend
+cd modules/{module}/backend
 npm init -y
 ```
 
@@ -456,5 +456,5 @@ npm init -y
 | `dev/verify-implementation` | 后续 | 验证实现与契约是否一致 |
 | `qa/test-case/test-case-design` | 后续 | 按契约中的状态流转和边界设计测试 |
 | `product/requirement/product-requirement-analysis` | 前置 | 需求是契约的源头 |
-| `collaboration/handoff/collab-acceptance-review` | 后续 | 验收时对照契约验证 |
+| `collaboration/review/collab-acceptance-review` | 后续 | 验收时对照契约验证 |
 | `dev/modules/module-splitting` | 前置 | 模块拆解完成后才进入协同开发 |

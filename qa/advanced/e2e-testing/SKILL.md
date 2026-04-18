@@ -11,11 +11,11 @@ version: "2.0"
 **触发关键词**: E2E测试、端到端测试、Playwright、Cypress、自动化测试、Page Object、视觉回归、跨浏览器测试
 
 ## 产出文档
-**路径**: `.opencode/docs/e2e-test-plan-{feature-name}.md`
+**路径**: `.opencode/docs/e2e-test-plan-{feature}.md`
 
 ## 依赖文档
 **可选读取**:
-- `.opencode/docs/test-cases-{feature-name}.md` — 测试用例（含浏览器测试用例）
+- `.opencode/docs/test-cases-{feature}.md` — 测试用例（含浏览器测试用例）
 - `.opencode/docs/contract-{feature}.md` — 契约文档
 
 ## 运行时工具

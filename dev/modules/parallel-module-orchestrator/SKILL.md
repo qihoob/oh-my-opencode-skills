@@ -299,7 +299,7 @@ version: "2.0"
 ```
 目的：每个开发者拿到的不只是"你要开发哪些接口"，而是"你的模块在业务全局中的角色"。
 
-读取 module-splitting 产出的 module-context-{module-name}.md
+读取 module-splitting 产出的 module-context-{module}.md
 或从契约文档 contract-{feature}.md 中提取每个模块的业务上下文。
 
 为每个模块生成一份开发者上下文单，在启动开发前必须提供给开发者：

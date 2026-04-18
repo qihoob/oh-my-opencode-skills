@@ -34,6 +34,9 @@ version: "3.0"
    - 制定问题修复计划
    - 确认上线时间
 
+## 产出文档
+- **验收报告**: `.opencode/docs/acceptance-report.md`
+
 ## 执行流程
 
 ### Step 1: 验收准备
