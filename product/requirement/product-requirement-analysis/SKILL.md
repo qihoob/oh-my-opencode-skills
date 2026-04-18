@@ -330,6 +330,8 @@ so that [价值]
 |----------|------|------|
 | `collaboration/handoff/collab-product-to-dev` | 后续 | 需求分析后交接给开发 |
 | `product/requirement/product-collaborative-requirement-optimization` | 后续（可选） | 复杂需求三方评审 |
+| `product/feedback/analysis` | 前置 | 用户反馈驱动需求分析 |
+| `product/requirement/product-requirement-structuring` | 前置 | 结构化需求后详细分析 |
 
 ## 下一步推荐
 

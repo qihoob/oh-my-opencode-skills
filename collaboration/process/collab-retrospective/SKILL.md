@@ -117,6 +117,7 @@ version: "1.0"
 |----------|------|------|
 | `collaboration/review/collab-acceptance-review` | 前置 | 验收通过后复盘 |
 | `collaboration/process/iteration-closure` | 后续 | 复盘后迭代闭环 |
+| `collaboration/sync/incident` | 前置（可选） | 线上故障修复后复盘 |
 
 ## 下一步推荐
 

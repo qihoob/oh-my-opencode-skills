@@ -275,6 +275,8 @@ project/
 | `collaboration/process/iteration-closure` | 前置 | 迭代闭环前进行健康检查 |
 | `collaboration/handoff/collab-dev-to-qa` | 前置 | 提测前快速健康检查 |
 | `collaboration/review/collab-acceptance-review` | 前置 | 验收前健康检查 |
+| `product/analysis/product-technical-assessment` | 后续 | 全局分析后技术评估 |
+| `project/kickoff` | 前置 | 项目启动后全局分析 |
 
 ## 下一步推荐
 

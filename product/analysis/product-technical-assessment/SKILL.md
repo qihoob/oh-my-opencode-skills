@@ -116,6 +116,7 @@ version: "1.0"
 | `product/analysis/global-project-analysis` | 前置 | 全局分析后技术评估 |
 | `product/module/module-product-requirement` | 后续 | 评估后细化模块需求 |
 | `dev/modules/module-splitting` | 后续 | 需拆模块时触发 |
+| `project/kickoff` | 前置 | 项目启动后技术评估 |
 
 ## 下一步推荐
 

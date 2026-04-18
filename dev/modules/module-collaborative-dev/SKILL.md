@@ -466,6 +466,7 @@ npm init -y
 | `product/requirement/product-requirement-analysis` | 前置 | 需求是契约的源头 |
 | `collaboration/review/collab-acceptance-review` | 后续 | 验收时对照契约验证 |
 | `dev/modules/module-splitting` | 前置 | 模块拆解完成后才进入协同开发 |
+| `system/document-integrity-check` | 后续 | 契约文档产出后检查完整性 |
 
 ## 下一步推荐
 

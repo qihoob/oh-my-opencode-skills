@@ -94,6 +94,7 @@ jobs:
 | 配合技能 | 关系 | 说明 |
 |----------|------|------|
 | `devops/deploy/dockerfile` | 后续 | CI 配置后容器化 |
+| `project/kickoff` | 前置 | 项目启动后配置 CI |
 
 ## 下一步推荐
 

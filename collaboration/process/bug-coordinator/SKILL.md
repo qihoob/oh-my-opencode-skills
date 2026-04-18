@@ -351,6 +351,8 @@ Bug影响链:
 | `dev/code-review` | 后续 | 修复后代码审查 |
 | `qa/execution/test-executor` | 后续（回归） | 修复后执行回归验证 |
 | `collaboration/handoff/collab-product-to-dev` | 条件 | 如为需求偏差，先澄清再修复 |
+| `collaboration/review/collab-acceptance-review` | 前置 | 验收不通过时触发 Bug 协调 |
+| `collaboration/sync/incident` | 协同 | 线上故障驱动的 Bug 修复 |
 
 ## 下一步推荐
 

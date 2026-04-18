@@ -114,6 +114,7 @@ version: "1.0"
 | 配合技能 | 关系 | 说明 |
 |----------|------|------|
 | `system/document-integrity-check` | 前置 | 文档审计发现不一致后触发对齐 |
+| `collaboration/sync/context-alignment` | 协同 | 上下文对齐与文档对齐配合 |
 
 ## 下一步推荐
 

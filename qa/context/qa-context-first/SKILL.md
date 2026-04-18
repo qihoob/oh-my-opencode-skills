@@ -298,6 +298,7 @@ version: "2.0"
 |----------|------|------|
 | `collaboration/handoff/collab-dev-to-qa` | 前置 | 提测后获取测试上下文 |
 | `qa/test-case/test-case-design` | 后续 | 上下文获取后设计用例 |
+| `qa/test-case/test-case-prioritization` | 后续 | 上下文获取后用例优先级排序 |
 
 ## 下一步推荐
 

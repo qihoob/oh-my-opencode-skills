@@ -162,6 +162,7 @@ service:
 |----------|------|------|
 | `devops/deploy/multi-env` | 前置 | 多环境部署完成 |
 | `devops/cost-optimization` | 后续（可选） | 监控就绪后优化成本 |
+| `qa/advanced/performance-testing` | 前置（条件） | 性能测试需要监控数据支撑 |
 
 ## 下一步推荐
 

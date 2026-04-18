@@ -265,6 +265,11 @@ version: "1.0"
 |----------|------|------|
 | `collaboration/handoff/collab-product-to-dev` | 前置 | 需求交接后获取上下文 |
 | `dev/implementation/dev-implementation` | 后续 | 上下文获取后开始实现 |
+| `collaboration/process/bug-coordinator` | 前置（条件） | Bug 分配后开发获取修复上下文 |
+| `collaboration/sync/incident` | 前置（条件） | 线上故障定位根因 |
+| `dev/modules/module-collaborative-dev` | 后续 | 多模块协同开发时获取模块上下文 |
+| `product/module/module-product-requirement` | 前置 | 模块需求明确后获取上下文 |
+| `qa/execution/test-executor` | 前置（条件） | 测试失败定位问题时获取上下文 |
 
 ## 下一步推荐
 

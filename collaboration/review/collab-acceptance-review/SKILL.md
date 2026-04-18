@@ -256,6 +256,7 @@ version: "3.0"
 | `qa/execution/test-executor` | 前置 | 验收前完成测试执行 |
 | `collaboration/process/collab-retrospective` | 后续 | 验收通过后进入复盘 |
 | `collaboration/process/bug-coordinator` | 后续 | 验收不通过时协调 Bug 修复 |
+| `dev/modules/module-collaborative-dev` | 前置 | 多模块开发完成后验收 |
 
 ## 工具可用
 - read（读取需求文档、测试报告、代码文件）

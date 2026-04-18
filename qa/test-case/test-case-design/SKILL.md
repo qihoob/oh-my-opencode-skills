@@ -605,6 +605,7 @@ version: "3.0"
 | `qa/execution/test-executor` | 后续 | 执行测试 |
 | `qa/advanced/e2e-testing` | 协同 | Playwright 浏览器自动化脚本 |
 | `dev/modules/module-collaborative-dev` | 前置 | 契约文档提供状态流转和错误码 |
+| `collaboration/handoff/collab-dev-to-qa` | 前置 | 提测后设计测试用例 |
 
 ## 工具可用
 - read: 读取需求文档、契约文档、实现代码

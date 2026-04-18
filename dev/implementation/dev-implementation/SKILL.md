@@ -580,6 +580,11 @@ TDD 纪律:
 | `dev/verify-implementation` | 后续 | 实现后验证匹配 |
 | `dev/code-review` | 后续 | 验证通过后代码审查 |
 | `collaboration/process/bug-coordinator` | 条件 | Bug修复模式时输入 |
+| `collaboration/sync/incident` | 前置（条件） | 线上故障根因修复 |
+| `dev/context/module-dev-context` | 前置 | 模块上下文获取后实现 |
+| `dev/modules/module-collaborative-dev` | 前置 | 契约定义后按契约实现 |
+| `product/analysis/data-analysis` | 前置（条件） | 埋点方案确定后实现 |
+| `qa/execution/test-executor` | 前置（条件） | 测试失败后 Bug 修复 |
 
 ## 下一步推荐
 

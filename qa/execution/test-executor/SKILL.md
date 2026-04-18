@@ -369,6 +369,8 @@ playwright-skill 优势:
 | `dev/implementation/dev-implementation` | 后续 | Bug 修复实现 |
 | `dev/context/dev-context-first` | 后续 | 开发获取修复上下文 |
 | `collaboration/review/collab-acceptance-review` | 后续 | 全部通过后进入验收 |
+| `qa/context/module-test-context` | 前置 | 模块测试上下文获取后执行 |
+| `qa/test-case/test-case-prioritization` | 前置 | 优先级排序后按序执行 |
 
 ## 工具可用
 - read: 读取测试用例

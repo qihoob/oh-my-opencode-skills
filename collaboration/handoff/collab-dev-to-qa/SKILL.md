@@ -228,6 +228,8 @@ version: "2.0"
 | `dev/code-review` | 前置 | 审查通过后提测 |
 | `qa/test-case/test-case-design` | 后续 | 提测后设计用例 |
 | `qa/context/qa-context-first` | 后续 | 提测后测试获取上下文 |
+| `dev/verify-implementation` | 前置 | 实现验证通过后提测 |
+| `product/analysis/global-project-analysis` | 后续（可选） | 提测前执行项目健康检查 |
 
 ## 下一步推荐
 
