@@ -107,4 +107,3 @@ version: "1.0"
 | 条件 | 推荐技能 |
 |------|----------|
 | 文档整理完成 | `system/document-integrity-check` |
-

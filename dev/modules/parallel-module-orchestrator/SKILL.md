@@ -74,19 +74,19 @@ version: "2.0"
     role: dev
     skill: dev-module-development
     parallel_group: A
-    
+
   - task_id: 2
     module: 订单模块
     role: dev
     skill: dev-module-development
     parallel_group: B
-    
+
   - task_id: 3
     module: 商品模块
     role: dev
     skill: dev-module-development
     parallel_group: C
-    
+
   - task_id: 4
     module: 支付模块
     role: dev
@@ -234,7 +234,7 @@ version: "2.0"
 用户模块 ──→ 接口完成 ──→ 订单模块 ──→ 完成
                          ↑
 商品模块 ─────────────────┘
-                         
+
 (用户模块先完成接口，订单和商品可以并行依赖)
 ```
 

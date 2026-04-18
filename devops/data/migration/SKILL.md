@@ -44,7 +44,7 @@ version: "1.0"
 BEGIN;
 
 -- 添加新列
-ALTER TABLE users 
+ALTER TABLE users
   ADD COLUMN avatar_url VARCHAR(512) DEFAULT NULL,
   ADD COLUMN avatar_updated_at TIMESTAMP DEFAULT NULL;
 
@@ -61,7 +61,7 @@ BEGIN;
 
 DROP INDEX IF EXISTS idx_users_avatar_updated;
 
-ALTER TABLE users 
+ALTER TABLE users
   DROP COLUMN avatar_updated_at,
   DROP COLUMN avatar_url;
 
@@ -124,11 +124,11 @@ DECLARE
   updated INT;
 BEGIN
   LOOP
-    UPDATE users 
+    UPDATE users
     SET new_column = 'default'
     WHERE id IN (
-      SELECT id FROM users 
-      WHERE new_column IS NULL 
+      SELECT id FROM users
+      WHERE new_column IS NULL
       LIMIT batch_size
     );
     GET DIAGNOSTICS updated = ROW_COUNT;
@@ -159,4 +159,3 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS ...;
 | 条件 | 推荐技能 |
 |------|----------|
 | 迁移方案确定 | `system/security/compliance (安全检查)` |
-

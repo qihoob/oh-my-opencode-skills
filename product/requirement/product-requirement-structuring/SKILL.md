@@ -15,7 +15,7 @@ version: "1.0"
 **说明**: 需求结构化文档，包含需求层级、优先级、依赖关系
 
 ## 依赖文档
-- `.opencode/docs/requirement-*.md`（已有需求分析文档）
+- **必须读取**: `.opencode/docs/requirement-*.md`（已有需求分析文档）`
 
 ## 核心能力
 

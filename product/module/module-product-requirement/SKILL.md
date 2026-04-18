@@ -15,7 +15,7 @@ version: "1.0"
 **说明**: 模块级需求文档，包含模块职责、接口定义、交互流程
 
 ## 依赖文档
-- `.opencode/docs/requirement-{feature}.md`（功能需求文档）
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`（功能需求文档）`
 
 ## 核心能力
 
@@ -133,4 +133,3 @@ interface ModuleData {
 | 条件 | 推荐技能 |
 |------|----------|
 | 模块需求明确 | `dev/context/dev-context-first` |
-

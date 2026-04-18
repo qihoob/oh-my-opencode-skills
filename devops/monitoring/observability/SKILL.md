@@ -47,7 +47,7 @@ groups:
   rules:
   - alert: HighErrorRate
     expr: |
-      sum(rate(http_requests_total{status=~"5.."}[5m])) 
+      sum(rate(http_requests_total{status=~"5.."}[5m]))
       / sum(rate(http_requests_total[5m])) > 0.05
     for: 5m
     labels:
@@ -58,7 +58,7 @@ groups:
 
   - alert: HighLatency
     expr: |
-      histogram_quantile(0.95, 
+      histogram_quantile(0.95,
         sum(rate(http_request_duration_seconds_bucket[5m])) by (le)
       ) > 1
     for: 5m
@@ -169,4 +169,3 @@ service:
 | 条件 | 推荐技能 |
 |------|----------|
 | 监控部署完成 | `devops/cost-optimization (可选)` |
-

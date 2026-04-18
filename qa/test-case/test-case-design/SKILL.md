@@ -18,8 +18,8 @@ version: "3.0"
 **必须读取**: `.opencode/docs/requirement-{feature}.md`
 
 **推荐读取**:
-- `.opencode/docs/contract-{feature}.md` — 契约文档（状态流转、错误码）
-- `.opencode/docs/implementation-{feature}.md` — 实现文档（代码变更范围、涉及文件）
+- **必须读取**: `.opencode/docs/contract-{feature}.md``
+- **必须读取**: `.opencode/docs/implementation-{feature}.md``
 
 ## 核心原则
 

@@ -15,7 +15,7 @@ version: "1.0"
 **说明**: 数据埋点设计文档，包含指标定义、埋点位置、分析维度
 
 ## 依赖文档
-- `.opencode/docs/requirement-{feature}.md`（需求文档）
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`（需求文档）`
 
 ## 核心能力
 
@@ -118,4 +118,3 @@ WHERE event_name = 'page_view'
 | 条件 | 推荐技能 |
 |------|----------|
 | 埋点方案确定 | `dev/implementation/dev-implementation` |
-

@@ -15,8 +15,8 @@ version: "1.0"
 **说明**: 技术评估文档，包含可行性分析、风险评估、成本估算
 
 ## 依赖文档
-- `.opencode/docs/requirement-{feature}.md`（需求文档）
-- `.opencode/docs/project-overview.md`（项目概览）
+- **必须读取**: `.opencode/docs/requirement-{feature}.md`（需求文档）`
+- **必须读取**: `.opencode/docs/project-overview.md`（项目概览）`
 
 ## 核心能力
 
@@ -124,4 +124,3 @@ version: "1.0"
 |------|----------|
 | 默认流程 | `product/module/module-product-requirement` |
 | 需拆模块 | `dev/modules/module-splitting` |
-

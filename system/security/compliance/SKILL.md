@@ -16,7 +16,7 @@ version: "1.0"
 
 ## 依赖文档
 - 项目源代码
-- `.opencode/docs/project-overview.md`（项目概览）
+- **必须读取**: `.opencode/docs/project-overview.md`（项目概览）`
 
 ## 核心能力
 
@@ -99,7 +99,7 @@ version: "1.0"
   ```typescript
   // ❌ 错误
   const query = `SELECT * FROM users WHERE id = ${userId}`;
-  
+
   // ✅ 正确
   const query = 'SELECT * FROM users WHERE id = ?';
   db.execute(query, [userId]);

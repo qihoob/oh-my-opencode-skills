@@ -137,7 +137,7 @@ API_KEY=${PRODUCTION_API_KEY}
 ## 发布流程
 
 ```
-开发完成 → dev 环境验证 → 提测 → testing 环境验证 
+开发完成 → dev 环境验证 → 提测 → testing 环境验证
   → 预发布 → staging 环境验证 → 审批 → 生产发布
 ```
 
@@ -157,4 +157,3 @@ API_KEY=${PRODUCTION_API_KEY}
 | 条件 | 推荐技能 |
 |------|----------|
 | 多环境配置完成 | `devops/monitoring/observability` |
-

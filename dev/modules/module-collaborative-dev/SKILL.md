@@ -213,7 +213,7 @@ interface OrderResp {
 
 #### 请求
 - **URL**: `POST /api/v1/xxx`
-- **Headers**: 
+- **Headers**:
   - `Authorization: Bearer <token>`
   - `Content-Type: application/json`
 - **Body**:
@@ -473,4 +473,3 @@ npm init -y
 | 条件 | 推荐技能 |
 |------|----------|
 | 契约已定义 | `dev/implementation/dev-implementation (按契约实现)` |
-

@@ -231,8 +231,8 @@ version: "1.0"
 
 ## 依赖文档
 
-- `.opencode/docs/test-cases-{feature}.md` — 测试用例文档（必须，优先级排序的输入）
-- `.opencode/docs/requirement-{feature}.md` — 需求文档（确认业务优先级）
+- **必须读取**: `.opencode/docs/test-cases-{feature}.md``
+- **必须读取**: `.opencode/docs/requirement-{feature}.md``
 
 ## 配合 Skills
 

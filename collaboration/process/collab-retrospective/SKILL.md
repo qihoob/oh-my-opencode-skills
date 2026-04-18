@@ -124,4 +124,3 @@ version: "1.0"
 | 条件 | 推荐技能 |
 |------|----------|
 | 复盘完成 | `collaboration/process/iteration-closure` |
-

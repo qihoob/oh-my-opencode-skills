@@ -21,8 +21,8 @@ version: "1.0"
 - 确认优先级
 
 **可选读取**:
-- `.opencode/docs/handoff-product-to-dev.md` — 交接单（技术方案）
-- `.opencode/docs/module-requirement-{module}.md` — 模块需求（接口定义）
+- **必须读取**: `.opencode/docs/handoff-product-to-dev.md``
+- **必须读取**: `.opencode/docs/module-requirement-{module}.md``
 
 ## 核心能力
 
@@ -591,4 +591,3 @@ TDD 纪律:
 | 条件 | 推荐技能 |
 |------|----------|
 | 实现完成 | `dev/verify-implementation` |
-

@@ -15,8 +15,8 @@ version: "2.0"
 
 ## 依赖文档
 **可选读取**:
-- `.opencode/docs/test-cases-{feature}.md` — 测试用例（含浏览器测试用例）
-- `.opencode/docs/contract-{feature}.md` — 契约文档
+- **必须读取**: `.opencode/docs/test-cases-{feature}.md``
+- **必须读取**: `.opencode/docs/contract-{feature}.md``
 
 ## 运行时工具
 
@@ -52,7 +52,7 @@ export default defineConfig({
     ['json', { outputFile: 'test-results.json' }],
     ['list'],
   ],
-  
+
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
@@ -103,29 +103,29 @@ module.exports = defineConfig({
     baseUrl: 'http://localhost:3000',
     supportFile: 'cypress/support/e2e.js',
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    
+
     viewportWidth: 1280,
     viewportHeight: 720,
-    
+
     video: true,
     videoCompression: 32,
     screenshotOnRunFailure: true,
-    
+
     defaultCommandTimeout: 10000,
     requestTimeout: 15000,
     responseTimeout: 15000,
-    
+
     retries: {
       runMode: 2,
       openMode: 0,
     },
-    
+
     setupNodeEvents(on, config) {
       // 插件配置
       return config;
     },
   },
-  
+
   component: {
     devServer: {
       framework: 'react',
@@ -167,11 +167,11 @@ export class LoginPage {
   async login(username: string, password: string, rememberMe = false) {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
-    
+
     if (rememberMe) {
       await this.rememberMeCheckbox.check();
     }
-    
+
     await this.submitButton.click();
   }
 
@@ -266,15 +266,15 @@ export class ButtonComponent {
 test.describe('用户登录', () => {
   test('正常登录流程', async ({ page }) => {
     await page.goto('/login');
-    
+
     // 输入凭证
     await page.fill('[name="username"]', 'testuser@example.com');
     await page.fill('[name="password"]', 'Password123!');
     await page.click('[type="submit"]');
-    
+
     // 验证跳转
     await expect(page).toHaveURL('/dashboard');
-    
+
     // 验证用户信息
     await expect(page.locator('.user-name')).toContainText('测试用户');
   });
@@ -284,7 +284,7 @@ test.describe('用户登录', () => {
     await page.fill('[name="username"]', 'test@example.com');
     await page.fill('[name="password"]', 'wrongpassword');
     await page.click('[type="submit"]');
-    
+
     await expect(page.locator('.ant-message-error')).toBeVisible();
     await expect(page.locator('.ant-message-error')).toContainText('登录失败');
   });
@@ -294,7 +294,7 @@ test.describe('用户登录', () => {
     await page.fill('[name="username"]', 'nonexistent@example.com');
     await page.fill('[name="password"]', 'password123');
     await page.click('[type="submit"]');
-    
+
     await expect(page.locator('.ant-form-item-explain-error')).toContainText('用户不存在');
   });
 
@@ -304,7 +304,7 @@ test.describe('用户登录', () => {
     await page.fill('[name="username"]', 'test@example.com');
     await page.fill('[name="password"]', 'password123');
     await page.click('[type="submit"]');
-    
+
     // 验证 cookie 存在
     const cookies = await page.context().cookies();
     expect(cookies.find(c => c.name === 'remember_token')).toBeDefined();
@@ -326,16 +326,16 @@ test.describe('用户管理 - CRUD', () => {
   test('创建用户', async ({ page }) => {
     await page.goto('/users');
     await page.click('[data-testid="create-user-btn"]');
-    
+
     // 填写表单
     await page.fill('[name="name"]', testUser.name);
     await page.fill('[name="email"]', testUser.email);
     await page.selectOption('[name="role"]', testUser.role);
     await page.click('[data-testid="submit-btn"]');
-    
+
     // 验证成功消息
     await expect(page.locator('.ant-message-success')).toBeVisible();
-    
+
     // 验证列表中出现新用户
     await expect(page.locator('.user-table')).toContainText(testUser.name);
   });
@@ -343,22 +343,22 @@ test.describe('用户管理 - CRUD', () => {
   test('编辑用户', async ({ page }) => {
     await page.goto('/users');
     await page.click('[data-testid="edit-user-btn"]:first-child');
-    
+
     await page.fill('[name="name"]', '更新后的名称');
     await page.click('[data-testid="submit-btn"]');
-    
+
     await expect(page.locator('.ant-message-success')).toContainText('更新成功');
     await expect(page.locator('.user-table')).toContainText('更新后的名称');
   });
 
   test('删除用户', async ({ page }) => {
     await page.goto('/users');
-    
+
     // 确认删除弹窗
     await page.click('[data-testid="delete-user-btn"]:first-child');
     await expect(page.locator('.ant-modal')).toBeVisible();
     await page.click('[data-testid="confirm-delete-btn"]');
-    
+
     await expect(page.locator('.ant-message-success')).toContainText('删除成功');
   });
 });
@@ -384,7 +384,7 @@ test.describe('视觉回归测试', () => {
     await page.goto('/dashboard');
     // 等待数据加载完成
     await page.waitForSelector('.dashboard-loaded');
-    
+
     await expect(page).toHaveScreenshot('dashboard.png', {
       fullPage: true,
     });
@@ -416,7 +416,7 @@ import { percySnapshot } from '@percy/playwright';
 test('视觉快照测试', async ({ page }) => {
   await page.goto('/dashboard');
   await percySnapshot(page, 'Dashboard Page');
-  
+
   // 登录后
   await page.goto('/login');
   await page.fill('[name="username"]', 'admin');
@@ -456,7 +456,7 @@ test('表单提交 - 跨浏览器', async ({ page }) => {
   await page.goto('/form');
   await page.fill('[name="email"]', 'test@example.com');
   await page.click('[type="submit"]');
-  
+
   // 所有浏览器都应该成功
   await expect(page.locator('.success-message')).toBeVisible();
 });
@@ -480,22 +480,22 @@ export const test = base.extend({
         role: 'user',
       },
     });
-    
+
     const userData = await user.json();
-    
+
     await use(userData);
-    
+
     // 清理
     await request.delete(`/api/users/${userData.id}`);
   },
-  
+
   // 登录用户
   loggedInUser: async ({ page, testUser }, use) => {
     await page.goto('/login');
     await page.fill('[name="email"]', testUser.email);
     await page.fill('[name="password"]', 'password');
     await page.click('[type="submit"]');
-    
+
     await use(testUser);
   },
 });

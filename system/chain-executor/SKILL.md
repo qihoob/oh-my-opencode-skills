@@ -238,7 +238,7 @@ product-requirement-analysis
 ```
 test-executor 发现失败用例
   → 判断: 快速修复 or 正式 Bug?
-  
+
   快速修复路径:
     → [直接] dev-implementation (快速修复)
       → [自动] test-executor (回归)

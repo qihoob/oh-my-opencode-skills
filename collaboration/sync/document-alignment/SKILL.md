@@ -16,9 +16,9 @@ version: "1.0"
 
 ## 依赖文档
 **必须读取**:
-- `.opencode/docs/requirement-*.md` - 所有需求文档
-- `.opencode/docs/implementation-*.md` - 所有实现文档
-- `.opencode/docs/test-cases-*.md` - 所有测试用例
+- **必须读取**: `.opencode/docs/requirement-*.md``
+- **必须读取**: `.opencode/docs/implementation-*.md``
+- **必须读取**: `.opencode/docs/test-cases-*.md``
 
 ## 核心能力
 
@@ -121,4 +121,3 @@ version: "1.0"
 | 条件 | 推荐技能 |
 |------|----------|
 | 文档已对齐 | `流程结束` |
-

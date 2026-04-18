@@ -103,4 +103,3 @@ CMD ["node", "dist/main.js"]
 | 条件 | 推荐技能 |
 |------|----------|
 | 镜像构建完成 | `devops/deploy/k8s` |
-

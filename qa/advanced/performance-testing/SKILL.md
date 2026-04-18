@@ -53,22 +53,22 @@ sla:
   availability:
     target: 99.9%
     calculation: "(uptime_minutes / total_minutes) * 100"
-    
+
   response_time:
     p50: < 200ms    # 50% 请求响应时间
     p90: < 500ms    # 90% 请求响应时间
     p95: < 1000ms   # 95% 请求响应时间
     p99: < 2000ms   # 99% 请求响应时间
-    
+
   throughput:
     baseline: 100 TPS
     peak: 500 TPS
     burst: 1000 TPS (10秒内)
-    
+
   error_rate:
     max: 0.1%
     critical_max: 1%
-    
+
   web_vitals:
     LCP: < 2.5s (p95)
     FID: < 100ms (p95)
@@ -97,13 +97,13 @@ export const options = {
     { duration: '2m', target: 1000 }, // 压力测试
     { duration: '5m', target: 0 },    // 逐渐降为 0
   ],
-  
+
   thresholds: {
     http_req_duration: ['p(95)<1000'], // 95% 请求 < 1s
     http_req_failed: ['rate<0.01'],    // 错误率 < 1%
     errors: ['rate<0.1'],              // 自定义错误率 < 10%
   },
-  
+
   summaryTrendStats: ['avg', 'min', 'med', 'p(90)', 'p(95)', 'max'],
 };
 ```
@@ -118,7 +118,7 @@ import { check, sleep } from 'k6';
 export const options = {
   vus: 100,
   duration: '10m',
-  
+
   thresholds: {
     http_req_duration: ['p(95)<500', 'p(99)<1000'],
     http_req_failed: ['rate<0.01'],
@@ -129,26 +129,26 @@ const BASE_URL = __ENV.BASE_URL || 'http://localhost:3000';
 
 export default function () {
   // 1. 用户登录
-  const loginRes = http.post(`${BASE_URL}/api/auth/login`, 
+  const loginRes = http.post(`${BASE_URL}/api/auth/login`,
     JSON.stringify({ email: 'test@example.com', password: 'password' }),
     { headers: { 'Content-Type': 'application/json' } }
   );
-  
+
   check(loginRes, {
     'login status 200': (r) => r.status === 200,
     'login has token': (r) => !!r.json('token'),
   }) || errorRate.add(1);
-  
+
   const token = loginRes.json('token');
   const headers = { 'Authorization': `Bearer ${token}` };
-  
+
   // 2. 获取用户列表
   const listRes = http.get(`${BASE_URL}/api/users?page=1&size=20`, { headers });
   check(listRes, {
     'list status 200': (r) => r.status === 200,
     'list has data': (r) => Array.isArray(r.json('data')),
   });
-  
+
   // 3. 获取详情
   const userId = listRes.json('data.0.id');
   if (userId) {
@@ -157,7 +157,7 @@ export default function () {
       'detail status 200': (r) => r.status === 200,
     });
   }
-  
+
   // 4. 创建订单
   const orderRes = http.post(`${BASE_URL}/api/orders`,
     JSON.stringify({
@@ -169,7 +169,7 @@ export default function () {
   check(orderRes, {
     'order created': (r) => r.status === 201,
   });
-  
+
   sleep(1);
 }
 ```
@@ -194,7 +194,7 @@ export const options = {
       ],
       exec: 'browseProducts',
     },
-    
+
     // 场景2: 用户登录 (中等并发)
     login: {
       executor: 'constant-vus',
@@ -202,7 +202,7 @@ export const options = {
       duration: '2m',
       exec: 'userLogin',
     },
-    
+
     // 场景3: 创建订单 (低并发)
     createOrder: {
       executor: 'per-vu-iterations',
@@ -246,19 +246,19 @@ export function createOrder() {
 # lighthouse.config.js
 module.exports = {
   extends: 'lighthouse:default',
-  
+
   settings: {
     onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
-    
+
     emulatedFormFactor: 'desktop',
     throttlingMethod: 'simulate',
-    
+
     throttling: {
       rttMs: 40,
       throughputKbps: 10240,
       cpuSlowdownMultiplier: 1,
     },
-    
+
     formFactor: 'desktop',
     screenEmulation: {
       mobile: false,
@@ -268,7 +268,7 @@ module.exports = {
       disabled: false,
     },
   },
-  
+
   passes: [{
     passName: 'defaultPass',
     recordTrace: true,
@@ -288,7 +288,7 @@ const lighthouse = require('lighthouse');
 async function runLighthouse(url, options = {}) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
-  
+
   const config = {
     extends: 'lighthouse:default',
     settings: {
@@ -298,22 +298,22 @@ async function runLighthouse(url, options = {}) {
     },
     ...options,
   };
-  
+
   const result = await lighthouse(url, {
     port: new URL(browser.wsEndpoint()).port,
     output: 'json',
     logLevel: 'info',
     ...config,
   });
-  
+
   const report = result.lhr;
-  
+
   await browser.close();
-  
+
   return {
     // 性能得分
     performance: report.categories.performance.score * 100,
-    
+
     // Core Web Vitals
     webVitals: {
       LCP: report.audits['largest-contentful-paint'].numericValue,
@@ -323,7 +323,7 @@ async function runLighthouse(url, options = {}) {
       TTI: report.audits['interactive'].numericValue,
       TBT: report.audits['total-blocking-time'].numericValue,
     },
-    
+
     // 详细指标
     metrics: {
       firstContentfulPaint: report.audits['first-contentful-paint'].displayValue,
@@ -333,7 +333,7 @@ async function runLighthouse(url, options = {}) {
       totalBlockingTime: report.audits['total-blocking-time'].displayValue,
       cumulativeLayoutShift: report.audits['cumulative-layout-shift'].displayValue,
     },
-    
+
     // 建议
     recommendations: report.audits['network-requests'].details.items.slice(0, 10),
   };
@@ -346,11 +346,11 @@ async function runLighthouse(url, options = {}) {
     { url: 'http://localhost:3000/dashboard', name: '仪表盘' },
     { url: 'http://localhost:3000/users', name: '用户列表' },
   ];
-  
+
   for (const page of pages) {
     console.log(`\n测试: ${page.name}`);
     const result = await runLighthouse(page.url);
-    
+
     console.log(`性能得分: ${result.performance.toFixed(1)}/100`);
     console.log('Core Web Vitals:');
     console.log(`  LCP: ${(result.webVitals.LCP / 1000).toFixed(2)}s`);
@@ -377,18 +377,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Start dev server
         run: npm run dev &
-        
+
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v9
         with:
@@ -489,8 +489,8 @@ lci run
 
 ## 依赖文档
 
-- `.opencode/docs/requirement-{feature}.md` — 需求文档（确认性能验收标准）
-- `.opencode/docs/implementation-{feature}.md` — 实现文档（了解接口和数据流）
+- **必须读取**: `.opencode/docs/requirement-{feature}.md``
+- **必须读取**: `.opencode/docs/implementation-{feature}.md``
 
 ## 配合 Skills
 

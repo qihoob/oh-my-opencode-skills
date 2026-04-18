@@ -344,7 +344,7 @@ function processOrder(order: Order): void {
 // ✅ 复杂度低 - 清晰易维护
 function processOrder(order: Order): void {
   if (!canProcess(order)) return;
-  
+
   const handler = getOrderHandler(order.status);
   handler.process(order);
 }

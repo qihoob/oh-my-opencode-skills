@@ -16,7 +16,7 @@ version: "2.0"
 
 ## 依赖文档
 - 无（首次分析）
-- 或：`.opencode/docs/project-overview.md`（如有项目概览）
+- **必须读取**: `.opencode/docs/project-overview.md`（如有项目概览）`
 
 ## 工具可用
 - read: 读取现有需求文档、项目文档
@@ -339,4 +339,3 @@ so that [价值]
 |------|----------|
 | 复杂需求需评审 | `product/requirement/product-collaborative-requirement-optimization` |
 | 默认流程 | `collaboration/handoff/collab-product-to-dev` |
-

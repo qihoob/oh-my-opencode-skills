@@ -64,7 +64,7 @@ import { Row, Col } from 'antd';
   --breakpoint-md: 992px;
   --breakpoint-lg: 1200px;
   --breakpoint-xl: 1600px;
-  
+
   --container-width: 1200px;
   --sidebar-width: 240px;
   --header-height: 64px;
@@ -95,7 +95,7 @@ import { Row, Col } from 'antd';
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 16px;
-  
+
   @include mobile {
     padding: 0 12px;
   }
@@ -139,9 +139,9 @@ const LoadingState: React.FC<{ tip?: string }> = ({ tip }) => (
 );
 
 // 统一的错误状态组件
-const ErrorState: React.FC<{ 
-  message?: string; 
-  onRetry?: () => void 
+const ErrorState: React.FC<{
+  message?: string;
+  onRetry?: () => void
 }> = ({ message = '加载失败', onRetry }) => (
   <div className="error-container">
     <Result
@@ -167,11 +167,11 @@ const EmptyState: React.FC<{
 // 使用示例
 const UserList: React.FC = () => {
   const { data, loading, error } = useUserList();
-  
+
   if (loading) return <LoadingState tip="加载用户列表..." />;
   if (error) return <ErrorState message={error.message} onRetry={refetch} />;
   if (!data?.length) return <EmptyState action={<Button>新建用户</Button>} />;
-  
+
   return <UserListView data={data} />;
 };
 ```
@@ -282,8 +282,8 @@ const prefetchDashboard = () => {
 };
 
 // 鼠标悬停预加载
-<Link 
-  to="/dashboard" 
+<Link
+  to="/dashboard"
   onMouseEnter={prefetchDashboard}
 >
   跳转
@@ -350,10 +350,10 @@ import { Image } from 'antd';
 />
 
 // WebP + 渐进式加载
-<img 
-  src="image.jpg" 
+<img
+  src="image.jpg"
   srcSet="image.webp"
-  loading="lazy" 
+  loading="lazy"
   decoding="async"
   alt="描述"
 />
@@ -361,7 +361,7 @@ import { Image } from 'antd';
 // 占位符
 const ImageWithPlaceholder: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
   const [loaded, setLoaded] = useState(false);
-  
+
   return (
     <div className="image-wrapper">
       {!loaded && <div className="placeholder" />}
@@ -387,7 +387,7 @@ const ImageWithPlaceholder: React.FC<{ src: string; alt: string }> = ({ src, alt
 </button>
 
 // 模态框
-<div 
+<div
   role="dialog"
   aria-modal="true"
   aria-labelledby="modal-title"
@@ -398,7 +398,7 @@ const ImageWithPlaceholder: React.FC<{ src: string; alt: string }> = ({ src, alt
 </div>
 
 // 折叠面板
-<button 
+<button
   aria-expanded={isExpanded}
   aria-controls="section-content"
 >
@@ -410,9 +410,9 @@ const ImageWithPlaceholder: React.FC<{ src: string; alt: string }> = ({ src, alt
 
 // 表单
 <label htmlFor="email">邮箱</label>
-<input 
-  id="email" 
-  type="email" 
+<input
+  id="email"
+  type="email"
   aria-required="true"
   aria-invalid={!!error}
   aria-describedby="email-error"
