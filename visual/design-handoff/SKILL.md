@@ -1,6 +1,7 @@
 ---
-name: visual-design-handoff
+name: design-handoff
 description: 设计稿交接 - 将设计稿清晰交接给开发团队，确保视觉实现符合设计意图
+version: "1.0"
 ---
 
 # 设计稿交接 Skill

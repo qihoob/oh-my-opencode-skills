@@ -1,6 +1,7 @@
 ---
 name: cost-optimization
 description: 成本优化 - 分析云资源使用情况，优化资源配置，降低运营成本
+version: "1.0"
 ---
 
 # Skill: cost-optimization

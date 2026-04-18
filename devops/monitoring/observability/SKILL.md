@@ -1,6 +1,7 @@
 ---
 name: observability
 description: 监控与可观测性 - 配置日志、指标、链路追踪，建立系统可观测性体系
+version: "1.0"
 ---
 
 # Skill: observability

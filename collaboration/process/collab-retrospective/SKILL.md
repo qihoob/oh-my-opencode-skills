@@ -1,6 +1,7 @@
 ---
 name: collab-retrospective
 description: 迭代复盘 - 总结迭代经验教训，制定改进计划
+version: "1.0"
 ---
 
 # Skill: collab-retrospective

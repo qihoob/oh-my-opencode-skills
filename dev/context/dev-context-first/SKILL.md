@@ -1,6 +1,7 @@
 ---
 name: dev-context-first
 description: 开发前获取最小上下文 - 遵循最小上下文原则，扫描文档和代码，理解代码行为与业务逻辑，获取完成任务所需的最低限度信息
+version: "1.0"
 ---
 
 # Skill: dev-context-first

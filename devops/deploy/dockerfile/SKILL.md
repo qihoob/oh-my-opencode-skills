@@ -1,6 +1,7 @@
 ---
 name: dockerfile
 description: Docker 容器化 - 编写 Dockerfile，构建优化镜像，配置容器运行环境
+version: "1.0"
 ---
 
 # Skill: dockerfile

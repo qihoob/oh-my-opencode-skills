@@ -1,6 +1,7 @@
 ---
 name: kickoff
 description: 项目启动 - 确定项目目标、制定里程碑、团队分工
+version: "1.0"
 ---
 
 # Skill: kickoff

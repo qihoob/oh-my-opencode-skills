@@ -1,6 +1,7 @@
 ---
-name: dev-code-review
+name: code-review
 description: 代码审查 - 代码质量检查/最佳实践审查/安全审查/性能审查
+version: "1.0"
 ---
 
 # 代码审查 Skill

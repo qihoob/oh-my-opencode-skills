@@ -1,6 +1,7 @@
 ---
 name: dev-code-quality
 description: 代码质量规范 - ESLint/Prettier/TypeScript 严格模式/命名规范/注释规范
+version: "1.0"
 ---
 
 # 代码质量规范 Skill

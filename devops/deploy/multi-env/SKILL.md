@@ -1,6 +1,7 @@
 ---
 name: multi-env
 description: 多环境管理 - 配置开发、测试、预发、生产等多套环境，管理环境差异
+version: "1.0"
 ---
 
 # Skill: multi-env

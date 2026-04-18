@@ -1,6 +1,7 @@
 ---
-name: security-compliance
+name: compliance
 description: 安全合规检查 - 检查代码和系统是否符合安全规范和合规要求（GDPR、SOC2 等）
+version: "1.0"
 ---
 
 # Skill: security-compliance

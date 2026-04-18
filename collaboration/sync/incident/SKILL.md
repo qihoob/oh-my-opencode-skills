@@ -1,6 +1,7 @@
 ---
-name: collaboration-incident
+name: incident
 description: 应急响应 - 线上故障快速止血、根因定位、修复验证、复盘总结
+version: "1.0"
 ---
 
 # 应急响应 Skill

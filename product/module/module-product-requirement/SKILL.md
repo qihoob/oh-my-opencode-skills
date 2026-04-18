@@ -1,6 +1,7 @@
 ---
 name: module-product-requirement
 description: 模块需求细化 - 将高层需求拆解为模块级详细需求，定义模块接口和交互
+version: "1.0"
 ---
 
 # Skill: module-product-requirement

@@ -1,6 +1,7 @@
 ---
 name: product-collaborative-requirement-optimization
 description: 协同需求优化 - 联合开发、测试进行需求评审与优化，确保需求可实现、可测试、可验收
+version: "1.0"
 ---
 
 # 协同需求优化 Skill

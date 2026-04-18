@@ -1,6 +1,7 @@
 ---
 name: dev-frontend-standards
 description: 前端开发规范 - 响应式布局/状态管理/加载错误状态/性能优化/无障碍访问
+version: "1.0"
 ---
 
 # 前端开发规范 Skill

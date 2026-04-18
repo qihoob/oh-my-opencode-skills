@@ -1,6 +1,7 @@
 ---
 name: data-analysis
 description: 数据分析与埋点设计 - 设计数据指标体系，规划数据埋点，定义分析维度
+version: "1.0"
 ---
 
 # Skill: data-analysis

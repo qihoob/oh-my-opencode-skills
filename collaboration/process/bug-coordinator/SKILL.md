@@ -1,6 +1,7 @@
 ---
 name: bug-coordinator
 description: Bug协调器 - 追踪跨模块Bug，协调相关模块负责人修复，驱动回归测试
+version: "1.0"
 ---
 
 # Bug 协调器 Skill

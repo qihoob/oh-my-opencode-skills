@@ -1,6 +1,7 @@
 ---
 name: product-requirement-structuring
 description: 需求整理与结构化 - 将分散的需求信息整理为结构化文档，建立需求层级和关联关系
+version: "1.0"
 ---
 
 # Skill: product-requirement-structuring

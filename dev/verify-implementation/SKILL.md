@@ -1,6 +1,7 @@
 ---
-name: dev/verify-implementation
+name: verify-implementation
 description: 实现与需求匹配监督 - 监督后端代码、前端代码、视觉样式是否与需求完全匹配，按模块验证，含跨层一致性检查
+version: "1.0"
 ---
 
 # 实现与需求匹配监督 Skill

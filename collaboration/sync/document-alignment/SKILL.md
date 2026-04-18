@@ -1,6 +1,7 @@
 ---
 name: document-alignment
 description: 文档对齐协同 - 确保产品 - 开发 - 测试文档一致性和同步更新
+version: "1.0"
 ---
 
 # Skill: document-alignment

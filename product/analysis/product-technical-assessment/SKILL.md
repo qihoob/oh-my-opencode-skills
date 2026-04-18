@@ -1,6 +1,7 @@
 ---
 name: product-technical-assessment
 description: 技术评估 - 评估需求的技术可行性，识别技术风险，估算开发成本
+version: "1.0"
 ---
 
 # Skill: product-technical-assessment

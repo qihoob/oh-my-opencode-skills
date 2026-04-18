@@ -1,7 +1,7 @@
 ---
-name: dev/implementation/backend
+name: backend
 description: 后端开发实现 - 基于契约和代码理解的后端开发执行流程，含接口实现、业务逻辑、数据访问、事务处理
-version: "2.0"
+version: "1.0"
 ---
 
 # 后端开发实现 Skill

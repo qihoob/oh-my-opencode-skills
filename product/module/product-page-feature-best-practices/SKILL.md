@@ -1,6 +1,7 @@
 ---
 name: product-page-feature-best-practices
 description: 页面功能最佳实践 - 为新增页面/功能提供设计最佳实践参考，确保可用性、易用性、好用性
+version: "1.0"
 ---
 
 # 页面功能最佳实践 Skill

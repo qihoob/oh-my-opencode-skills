@@ -1,6 +1,7 @@
 ---
-name: data-migration
+name: migration
 description: 数据库迁移 - 管理数据库 schema 变更，编写迁移脚本，确保数据一致性
+version: "1.0"
 ---
 
 # Skill: data-migration

@@ -1,6 +1,7 @@
 ---
-name: feedback-analysis
+name: analysis
 description: 用户反馈分析 - 收集、整理、分析用户反馈，提取改进建议，生成洞察报告
+version: "1.0"
 ---
 
 # Skill: feedback-analysis

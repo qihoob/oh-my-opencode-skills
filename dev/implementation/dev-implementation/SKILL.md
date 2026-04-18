@@ -1,6 +1,7 @@
 ---
 name: dev-implementation
 description: 功能实现 - 根据需求文档实现功能代码，包含需求确认、理解现有实现、方案设计、编码实现、基于代码的自测验证的完整流程
+version: "1.0"
 ---
 
 # Skill: dev-implementation

@@ -1,6 +1,7 @@
 ---
 name: module-dev-context
 description: 模块上下文获取 - 深入了解特定模块的代码结构、依赖关系、核心逻辑
+version: "1.0"
 ---
 
 # Skill: module-dev-context

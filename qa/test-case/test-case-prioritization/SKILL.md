@@ -1,6 +1,7 @@
 ---
-name: qa-test-case-prioritization
+name: test-case-prioritization
 description: 测试用例优先级 - 业务优先级排序，资源分配，测试覆盖优化
+version: "1.0"
 ---
 
 # 测试用例优先级 Skill

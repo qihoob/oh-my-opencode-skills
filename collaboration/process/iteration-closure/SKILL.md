@@ -1,6 +1,7 @@
 ---
 name: iteration-closure
 description: 迭代闭环 - 复盘结果连接到下一轮项目分析
+version: "1.0"
 ---
 
 # 迭代闭环 Skill

@@ -1,6 +1,7 @@
 ---
-name: ci-pipeline
+name: pipeline
 description: CI/CD流水线设计与实现 - 配置自动化构建、测试、部署流水线
+version: "1.0"
 ---
 
 # Skill: ci-pipeline

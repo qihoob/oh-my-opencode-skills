@@ -1,6 +1,7 @@
 ---
-name: kubernetes
+name: k8s
 description: Kubernetes 部署 - 配置 K8s 资源，管理 Pod、Service、Deployment 等资源
+version: "1.0"
 ---
 
 # Skill: kubernetes

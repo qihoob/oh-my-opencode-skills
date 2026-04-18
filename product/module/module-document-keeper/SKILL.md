@@ -1,6 +1,7 @@
 ---
 name: module-document-keeper
 description: 模块文档管理 - 整合和管理模块级所有文档，确保产品 - 开发 - 测试文档一致性
+version: "1.0"
 ---
 
 # Skill: module-document-keeper

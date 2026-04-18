@@ -1,6 +1,7 @@
 ---
-name: collaboration-sync
+name: context-alignment
 description: 同步对齐 - 上下文对齐、需求对齐、模块协调
+version: "1.0"
 ---
 
 # 同步对齐 Skill

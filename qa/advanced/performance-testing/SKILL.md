@@ -1,6 +1,7 @@
 ---
-name: qa/advanced/performance-testing
+name: performance-testing
 description: 性能测试 - k6/Lighthouse/Core Web Vitals/SLA验证/压力测试
+version: "1.0"
 ---
 
 # 性能测试 Skill
