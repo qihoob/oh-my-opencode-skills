@@ -1,8 +1,6 @@
 ---
 name: product-collaborative-requirement-optimization
-description: (opencode - Skill) 协同需求优化 - 联合开发、测试进行需求评审与优化，确保需求可实现、可测试、可验收
-subtask: true
-argument-hint: "<需求模块> <参与方>"
+description: 协同需求优化 - 联合开发、测试进行需求评审与优化，确保需求可实现、可测试、可验收
 ---
 
 # 协同需求优化 Skill

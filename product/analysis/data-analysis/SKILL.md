@@ -103,5 +103,5 @@ WHERE event_name = 'page_view'
 3. **分析导向** - 每个埋点都有明确的分析目的
 
 ## 工具可用
-- file-read: 读取需求文档
-- file-write: 写入埋点设计文档
+- read: 读取需求文档
+- write: 写入埋点设计文档

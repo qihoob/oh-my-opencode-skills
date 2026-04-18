@@ -117,5 +117,5 @@ interface ModuleData {
 3. **便于实现** - 输出开发可直接使用的规格
 
 ## 工具可用
-- file-read: 读取需求文档
-- file-write: 写入模块需求文档
+- read: 读取需求文档
+- write: 写入模块需求文档

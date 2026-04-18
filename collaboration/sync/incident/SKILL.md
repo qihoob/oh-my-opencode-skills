@@ -1,8 +1,6 @@
 ---
 name: collaboration-incident
-description: (opencode - Skill) 应急响应 - 线上故障、紧急修复、复盘
-subtask: true
-argument-hint: "<故障描述>"
+description: 应急响应 - 线上故障、紧急修复、复盘
 ---
 
 # 应急响应 Skill

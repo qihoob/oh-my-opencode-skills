@@ -1,8 +1,6 @@
 ---
 name: qa-test-case-prioritization
-description: (opencode - Skill) 测试用例优先级 - 业务优先级排序，资源分配，测试覆盖优化
-subtask: true
-argument-hint: "<用例优先级> 或 <测试排序>"
+description: 测试用例优先级 - 业务优先级排序，资源分配，测试覆盖优化
 ---
 
 # 测试用例优先级 Skill

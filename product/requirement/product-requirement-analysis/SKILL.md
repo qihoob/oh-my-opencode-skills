@@ -19,9 +19,9 @@ version: "2.0"
 - 或：`.opencode/docs/project-overview.md`（如有项目概览）
 
 ## 工具可用
-- file-read: 读取现有需求文档、项目文档
+- read: 读取现有需求文档、项目文档
 - grep: 搜索相关代码/文档，了解现有系统
-- file-write: 写入需求文档到 `.opencode/docs/`
+- write: 写入需求文档到 `.opencode/docs/`
 
 ---
 

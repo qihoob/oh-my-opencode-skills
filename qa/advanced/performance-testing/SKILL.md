@@ -1,8 +1,6 @@
 ---
 name: qa/advanced/performance-testing
-description: (opencode - Skill) 性能测试 - k6/Lighthouse/Core Web Vitals/SLA验证/压力测试
-subtask: true
-argument-hint: "<性能测试> 或 <压力测试>"
+description: 性能测试 - k6/Lighthouse/Core Web Vitals/SLA验证/压力测试
 ---
 
 # 性能测试 Skill

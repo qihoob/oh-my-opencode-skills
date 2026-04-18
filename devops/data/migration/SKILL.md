@@ -144,5 +144,5 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS ...;
 ```
 
 ## 工具可用
-- file-write: 写入迁移脚本
+- write: 写入迁移脚本
 - read: 读取现有 schema

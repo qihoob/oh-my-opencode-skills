@@ -9,7 +9,7 @@ version: "4.0"
 **角色**: 系统 (System)
 **功能**: 自动技能调度器
 **触发关键词**: [所有关键词]
-**版本**: 4.0 (覆盖 53 个技能，支持链路调用)
+**版本**: 4.0 (覆盖 59 个技能，支持链路调用)
 
 ## 核心能力
 
@@ -71,7 +71,7 @@ version: "4.0"
 
 | 用户输入 | 触发技能 | 前置条件 | 推荐下一步 |
 |----------|----------|----------|------------|
-| 需求交接、需求评审 | collab-product-to-dev | requirement-*.md | → dev-context-first |
+| 需求交接、转开发 | collab-product-to-dev | requirement-*.md | → dev-context-first |
 | 提测、测试交接 | collab-dev-to-qa | code-review-*.md + 提测前检查点 | → test-case-design |
 | 验收、UAT | collab-acceptance-review | test-report-*.md + 验收前健康快照 | → collab-retrospective 或 iteration-closure |
 | 复盘、回顾 | collab-retrospective | - | → iteration-closure |
@@ -119,12 +119,12 @@ version: "4.0"
 
 ## 链路识别
 
-### 链路 1: 完整 SDLC (11 步)
+### 链路 1: 完整 SDLC (12 步)
 ```
 触发词: "完整流程", "端到端", "从零到上线"
 
 product-requirement-analysis → collab-product-to-dev → dev-context-first
-→ dev-implementation → dev-code-review → collab-dev-to-qa
+→ dev-implementation → verify-implementation → dev-code-review → collab-dev-to-qa
 → test-case-design → test-executor → collab-acceptance-review
 → collab-retrospective → iteration-closure
 ```
@@ -214,7 +214,7 @@ design-review → design-handoff → dev/implementation/frontend
 | dev-implementation | product-requirement-analysis | requirement-*.md 是否存在 |
 | dev/implementation/frontend | dev-context-first 或 product-page-feature-best-practices | 上下文已获取 |
 | dev/implementation/backend | contract-*.md（跨层时）或 dev-context-first | 契约文档是否存在 |
-| dev-code-review | dev-implementation | implementation-*.md 是否存在 |
+| dev-code-review | verify-implementation（或 dev-implementation） | verify-report-*.md 或 implementation-*.md 是否存在 |
 | qa-test-case-design | product-requirement-analysis 或 qa-context-from-code | requirement-*.md 或逆向分析报告是否存在 |
 | qa-test-executor | qa-test-case-design | test-cases-*.md 是否存在 |
 | collab-product-to-dev | product-requirement-analysis | requirement-*.md 是否存在 |
@@ -362,8 +362,8 @@ verify-implementation (发现跨层不一致)
 ---
 
 ## 工具可用
-- 所有工具
-- skill(): 加载并执行技能
-- task(): 创建子任务
+- read: 读取 SKILL.md 文件加载并执行技能
+- Agent: 创建子任务（如需并行执行）
 - read/grep: 检查文档是否存在
-- file-write: 写入执行状态
+- write: 写入执行状态
+- glob: 扫描文件结构

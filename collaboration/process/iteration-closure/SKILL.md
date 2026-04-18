@@ -1,7 +1,6 @@
 ---
 name: iteration_closure
-description: (opencode - Skill) 迭代闭环 - 复盘结果连接到下一轮项目分析
-subtask: true
+description: 迭代闭环 - 复盘结果连接到下一轮项目分析
 ---
 
 # 迭代闭环 Skill

@@ -1,8 +1,6 @@
 ---
 name: dev-frontend-standards
-description: (opencode - Skill) 前端开发规范 - 响应式布局/状态管理/加载错误状态/性能优化/无障碍访问
-subtask: true
-argument-hint: "<前端规范> 或 <响应式开发>"
+description: 前端开发规范 - 响应式布局/状态管理/加载错误状态/性能优化/无障碍访问
 ---
 
 # 前端开发规范 Skill

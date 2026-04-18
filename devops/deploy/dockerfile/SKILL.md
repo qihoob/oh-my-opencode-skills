@@ -87,5 +87,5 @@ CMD ["node", "dist/main.js"]
 - ❌ 不硬编码敏感信息
 
 ## 工具可用
-- file-write: 写入 Dockerfile
+- write: 写入 Dockerfile
 - read: 读取项目配置

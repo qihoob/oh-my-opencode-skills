@@ -1,8 +1,6 @@
 ---
 name: dev-code-quality
-description: (opencode - Skill) 代码质量规范 - ESLint/Prettier/TypeScript 严格模式/命名规范/注释规范
-subtask: true
-argument-hint: "<代码质量配置> 或 <lint 配置>"
+description: 代码质量规范 - ESLint/Prettier/TypeScript 严格模式/命名规范/注释规范
 ---
 
 # 代码质量规范 Skill

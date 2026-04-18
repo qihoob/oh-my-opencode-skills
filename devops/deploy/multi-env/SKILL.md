@@ -141,5 +141,5 @@ API_KEY=${PRODUCTION_API_KEY}
 ```
 
 ## 工具可用
-- file-write: 写入环境配置
+- write: 写入环境配置
 - read: 读取项目配置

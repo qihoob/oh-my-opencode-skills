@@ -1,7 +1,6 @@
 ---
 name: visual-design-review
-description: (opencode - Skill) 视觉设计评审 - 与产品经理协同进行设计评审，确保视觉和交互清晰完整
-subtask: true
+description: 视觉设计评审 - 与产品经理协同进行设计评审，确保视觉和交互清晰完整
 ---
 
 # 视觉设计评审 Skill

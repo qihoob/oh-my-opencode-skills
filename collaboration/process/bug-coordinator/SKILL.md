@@ -1,8 +1,6 @@
 ---
 name: bug-coordinator
-description: (opencode - Skill) Bug协调器 - 追踪跨模块Bug，协调相关模块负责人修复，驱动回归测试
-subtask: true
-argument-hint: "<Bug描述或Bug ID>"
+description: Bug协调器 - 追踪跨模块Bug，协调相关模块负责人修复，驱动回归测试
 ---
 
 # Bug 协调器 Skill

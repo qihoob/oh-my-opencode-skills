@@ -502,7 +502,6 @@ design-review
 | `system/document-integrity-check` | 协同 | 文档产出后完整性验证 |
 
 ## 工具
-- skill(): 加载并执行技能
-- read: 读取 state.json 和产出文档
+- read: 读取 SKILL.md 文件加载并执行技能；读取 state.json 和产出文档
 - write: 更新 state.json
 - glob: 监控 .opencode/docs/ 新文档

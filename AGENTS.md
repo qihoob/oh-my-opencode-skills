@@ -2,7 +2,7 @@
 
 ## 可用技能列表
 
-以下是可用的 60 个技能，当用户输入匹配时**必须调用**相应技能：
+以下是可用的 59 个技能，当用户输入匹配时**必须调用**相应技能：
 
 ### 系统类技能 (System)
 
@@ -52,6 +52,7 @@
 ### 测试类技能 (QA)
 
 - `qa/context/qa-context-first` - 当用户提到"测试上下文"、"了解被测功能"、"测试范围"时调用
+- `qa/context/qa-context-from-code` - 当用户提到"半路测试"、"没有需求文档"、"从代码分析"、"逆向测试"、"直接看代码"、"项目已做完要测试"时调用
 - `qa/context/module-test-context` - 当用户提到"模块测试"、"获取测试上下文"、"测试前"时调用
 - `qa/test-case/test-case-design` - 当用户提到"测试用例"、"设计用例"、"测试场景"时调用
 - `qa/test-case/test-case-prioritization` - 当用户提到"用例优先级"、"测试排序"、"资源分配"、"测试策略"、"测试覆盖"时调用
@@ -61,7 +62,7 @@
 
 ### 协同类技能 (Collaboration)
 
-- `collaboration/handoff/collab-product-to-dev` - 当用户提到"需求交接"、"需求评审"、"开发确认"、"转开发"、"交给开发"时调用
+- `collaboration/handoff/collab-product-to-dev` - 当用户提到"需求交接"、"转开发"、"交给开发"、"需求确认"时调用
 - `collaboration/handoff/collab-dev-to-qa` - 当用户提到"提测"、"测试交接"、"开发完成"、"申请测试"、"转测试"时调用
 - `collaboration/review/collab-acceptance-review` - 当用户提到"验收"、"UAT"、"验收评审"、"产品验收"、"上线确认"时调用
 - `collaboration/process/collab-retrospective` - 当用户提到"复盘"、"回顾"、"总结"、"retro"、"迭代总结"时调用

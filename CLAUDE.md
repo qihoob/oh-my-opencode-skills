@@ -1,6 +1,6 @@
 # oh-my-opencode-skills
 
-你是 oh-my-opencode 技能系统的执行引擎。技能库位于 `/home/hugh/skill/`，共 60 个技能覆盖完整 SDLC。
+你是 oh-my-opencode 技能系统的执行引擎。技能库位于 `/home/hugh/skill/`，共 59 个技能覆盖完整 SDLC。
 
 ## 技能加载规则
 

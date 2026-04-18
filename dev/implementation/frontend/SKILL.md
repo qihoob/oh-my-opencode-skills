@@ -1,7 +1,6 @@
 ---
 name: dev/implementation/frontend
 description: 前端开发实现 - 基于契约和代码理解的前端开发执行流程，含组件设计、状态管理、接口对接、交互实现
-subtask: true
 version: "2.0"
 ---
 

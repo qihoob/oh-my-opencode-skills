@@ -148,5 +148,5 @@ kubectl exec -it pod/myapp-pod -n production -- /bin/sh
 ```
 
 ## 工具可用
-- file-write: 写入 K8s 配置
+- write: 写入 K8s 配置
 - read: 读取项目配置

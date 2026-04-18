@@ -1,7 +1,6 @@
 ---
 name: visual-design-handoff
-description: (opencode - Skill) 设计稿交接 - 将设计稿清晰交接给开发团队，确保视觉实现符合设计意图
-subtask: true
+description: 设计稿交接 - 将设计稿清晰交接给开发团队，确保视觉实现符合设计意图
 ---
 
 # 设计稿交接 Skill

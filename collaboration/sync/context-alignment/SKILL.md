@@ -1,8 +1,6 @@
 ---
 name: collaboration-sync
-description: (opencode - Skill) 同步对齐 - 上下文对齐、需求对齐、模块协调
-subtask: true
-argument-hint: "<同步场景>"
+description: 同步对齐 - 上下文对齐、需求对齐、模块协调
 ---
 
 # 同步对齐 Skill
