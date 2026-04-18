@@ -59,5 +59,12 @@ version: "1.0"
 | 设计交接完成 | `dev/implementation/frontend` |
 
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `visual/design-review` | 前置 | 评审通过后交接 |
+| `dev/implementation/frontend` | 后续 | 设计交接后前端实现 |
+
 ## 触发词
 设计稿交接、设计标注、视觉验收、UI交接、开发协同

@@ -112,6 +112,12 @@ version: "1.0"
 - write: 写入分析报告
 - grep: 搜索相关反馈
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `product/requirement/product-requirement-analysis` | 后续 | 反馈汇总后进入需求分析 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

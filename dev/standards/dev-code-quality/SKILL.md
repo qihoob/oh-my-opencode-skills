@@ -406,6 +406,12 @@ npx husky add .husky/pre-commit "npm run precommit"
 - [ ] 圈复杂度 ≤ 10
 - [ ] 函数行数 ≤ 50
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `dev/code-review` | 后续 | 规范检查后进入审查 |
+
 ## 触发词
 
 lint、eslint、prettier、代码规范、命名规范、注释规范、pre-commit、类型检查、代码复杂度

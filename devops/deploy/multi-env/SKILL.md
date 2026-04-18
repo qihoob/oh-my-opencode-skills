@@ -145,6 +145,13 @@ API_KEY=${PRODUCTION_API_KEY}
 - write: 写入环境配置
 - read: 读取项目配置
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `devops/deploy/k8s` | 前置 | K8s 配置就绪 |
+| `devops/monitoring/observability` | 后续 | 环境就绪后配置监控 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

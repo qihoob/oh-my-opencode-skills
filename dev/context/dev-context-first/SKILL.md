@@ -259,6 +259,13 @@ version: "1.0"
 - grep: 搜索关键词和代码模式
 - read: 读取关键文件内容
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `collaboration/handoff/collab-product-to-dev` | 前置 | 需求交接后获取上下文 |
+| `dev/implementation/dev-implementation` | 后续 | 上下文获取后开始实现 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

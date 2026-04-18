@@ -121,6 +121,13 @@ interface ModuleData {
 - read: 读取需求文档
 - write: 写入模块需求文档
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `product/analysis/product-technical-assessment` | 前置 | 技术评估后细化需求 |
+| `dev/context/dev-context-first` | 后续 | 需求明确后开发获取上下文 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

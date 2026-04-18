@@ -292,6 +292,13 @@ version: "2.0"
 - glob: 扫描项目结构、定位相关代码文件
 - bash: 运行测试脚本验证环境连通性
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `collaboration/handoff/collab-dev-to-qa` | 前置 | 提测后获取测试上下文 |
+| `qa/test-case/test-case-design` | 后续 | 上下文获取后设计用例 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

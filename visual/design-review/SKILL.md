@@ -55,5 +55,12 @@ version: "1.0"
 | 需产品确认 | `product/module/product-page-feature-best-practices` |
 
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `visual/design-handoff` | 后续 | 评审通过后交接 |
+| `product/module/product-page-feature-best-practices` | 后续（可选） | 需产品确认时 |
+
 ## 触发词
 设计评审、设计规范、视觉确认、UI确认、视觉产品经理

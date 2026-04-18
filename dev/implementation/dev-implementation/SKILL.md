@@ -572,6 +572,15 @@ TDD 纪律:
 - glob: 扫描文件结构
 - grep: 搜索代码模式
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `dev/context/dev-context-first` | 前置 | 实现前获取上下文 |
+| `dev/verify-implementation` | 后续 | 实现后验证匹配 |
+| `dev/code-review` | 后续 | 验证通过后代码审查 |
+| `collaboration/process/bug-coordinator` | 条件 | Bug修复模式时输入 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

@@ -109,6 +109,14 @@ version: "1.0"
 - grep: 搜索技术相关代码
 - write: 写入评估文档
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `product/analysis/global-project-analysis` | 前置 | 全局分析后技术评估 |
+| `product/module/module-product-requirement` | 后续 | 评估后细化模块需求 |
+| `dev/modules/module-splitting` | 后续 | 需拆模块时触发 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

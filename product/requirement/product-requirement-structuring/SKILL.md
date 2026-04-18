@@ -86,6 +86,13 @@ version: "1.0"
 - write: 写入结构化需求文档
 - grep: 搜索需求相关内容
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `product/requirement/product-requirement-analysis` | 后续 | 结构化后进入详细分析 |
+| `product/requirement/product-collaborative-requirement-optimization` | 后续（可选） | 需评审时触发 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

@@ -438,6 +438,10 @@ version: "2.0"
 | 编排完成 | `dev/implementation/dev-implementation (各模块并行)` |
 
 
+## 触发词
+
+并行开发、多模块编排、模块任务分配、并行模块
+
 ## 高级功能
 
 ### 1. 动态任务调整

@@ -151,6 +151,13 @@ As a {用户角色}, I want to {功能}, so that {价值}
 <!-- 下一步：dev-context-first → dev-implementation -->
 ```
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `product/requirement/product-requirement-analysis` | 前置 | 输入需求文档 |
+| `dev/context/dev-context-first` | 后续 | 交接后开发获取上下文 |
+
 ## 下一步推荐
 
 交接完成后，自动推荐：

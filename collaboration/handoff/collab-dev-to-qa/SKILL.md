@@ -221,6 +221,14 @@ version: "2.0"
 <!-- 下一步：qa-test-case-design → qa-test-executor -->
 ```
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `dev/code-review` | 前置 | 审查通过后提测 |
+| `qa/test-case/test-case-design` | 后续 | 提测后设计用例 |
+| `qa/context/qa-context-first` | 后续 | 提测后测试获取上下文 |
+
 ## 下一步推荐
 
 提测完成后，自动推荐：

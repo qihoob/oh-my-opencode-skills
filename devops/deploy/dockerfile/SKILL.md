@@ -91,6 +91,13 @@ CMD ["node", "dist/main.js"]
 - write: 写入 Dockerfile
 - read: 读取项目配置
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `devops/ci/pipeline` | 前置 | CI 就绪后容器化 |
+| `devops/deploy/k8s` | 后续 | 镜像就绪后 K8s 部署 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

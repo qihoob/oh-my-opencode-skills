@@ -90,6 +90,12 @@ version: "1.0"
 | {行动1} | {name} | {date} |
 ```
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `collaboration/sync/document-alignment` | 协同 | 上下文对齐与文档对齐配合 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

@@ -111,6 +111,13 @@ version: "1.0"
 - lsp_symbols: 分析符号定义
 - lsp_find_references: 查找引用关系
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `dev/implementation/dev-implementation` | 后续 | 模块上下文获取后开始实现 |
+| `dev/modules/module-splitting` | 前置 | 拆解后了解特定模块 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

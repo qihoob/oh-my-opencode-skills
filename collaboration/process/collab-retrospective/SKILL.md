@@ -111,6 +111,13 @@ version: "1.0"
 ## 工具可用
 - read, write, grep
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `collaboration/review/collab-acceptance-review` | 前置 | 验收通过后复盘 |
+| `collaboration/process/iteration-closure` | 后续 | 复盘后迭代闭环 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

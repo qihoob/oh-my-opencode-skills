@@ -324,6 +324,13 @@ so that [价值]
 - 如果存在实现技能，推荐读取需求文档开始实现
 - 如果需要技术评审，推荐先进行方案设计
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `collaboration/handoff/collab-product-to-dev` | 后续 | 需求分析后交接给开发 |
+| `product/requirement/product-collaborative-requirement-optimization` | 后续（可选） | 复杂需求三方评审 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

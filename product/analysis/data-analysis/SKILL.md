@@ -107,6 +107,12 @@ WHERE event_name = 'page_view'
 - read: 读取需求文档
 - write: 写入埋点设计文档
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `dev/implementation/dev-implementation` | 后续 | 埋点方案确定后实现 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |

@@ -156,6 +156,13 @@ service:
 - write: 写入监控配置
 - read: 读取项目配置
 
+## 配合 Skills
+
+| 配合技能 | 关系 | 说明 |
+|----------|------|------|
+| `devops/deploy/multi-env` | 前置 | 多环境部署完成 |
+| `devops/cost-optimization` | 后续（可选） | 监控就绪后优化成本 |
+
 ## 下一步推荐
 
 | 条件 | 推荐技能 |
