@@ -9,7 +9,7 @@ version: "4.0"
 **角色**: 系统 (System)
 **功能**: 自动技能调度器
 **触发关键词**: [所有关键词]
-**版本**: 4.0 (覆盖 59 个技能，支持链路调用)
+**版本**: 4.0 (覆盖 62 个技能，支持链路调用)
 
 ## 核心能力
 
@@ -266,7 +266,7 @@ design-review → design-handoff → dev/implementation/frontend
 | collab-retrospective | - | iteration-closure |
 | iteration-closure | - | global-project-analysis (下一迭代) |
 | incident | 止血完成 | dev-implementation (根因修复) |
-| security-compliance | 有问题 | dev-code-review |
+| security-compliance | 有问题 | dev-implementation (修复) → dev-code-review |
 
 ### 文档创建后推荐
 
@@ -280,7 +280,7 @@ design-review → design-handoff → dev/implementation/frontend
 | test-report-*.md | collab-acceptance-review | "测试报告已生成，是否进行验收？（验收前执行健康快照）" |
 | alignment-*.md | - | "文档已对齐" |
 | DOC_AUDIT.md | document-alignment | "文档审计完成，是否对齐？" |
-| security-audit-*.md | dev-code-review | "安全审计完成，是否修复问题？" |
+| security-audit-*.md | dev-implementation | "安全审计完成，是否先修复问题再复审？" |
 | health-check-*.md | iteration-closure | "健康报告已生成，请查看偏移项并纳入迭代计划" |
 | bug-*.md | bug-coordinator | "Bug 已记录，是否分配修复？" |
 | Bug 分配单生成 | dev-implementation(Bug修复模式) | "Bug 已分配，请查看分配单开始修复" |

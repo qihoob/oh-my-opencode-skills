@@ -29,6 +29,8 @@ version: "3.0"
 
 每当 `.opencode/docs/` 下出现新文档，评估是否触发下一步：
 
+**匹配原则**：如一个文件名同时命中多个规则，优先使用**更具体**的模式（如 `requirement-structure-*` 优先于 `requirement-*`）。
+
 | 文档产出 | 自动触发 | 条件 |
 |----------|----------|------|
 | `requirement-*.md` | `collab-product-to-dev` | 无条件触发 |
@@ -56,25 +58,27 @@ version: "3.0"
 | `incident-report-*.md` | `bug-coordinator` 或 `dev-implementation`(修复) | 止血完成 |
 | `bugfix-*.md` | `test-executor`(回归) | 调试修复完成 |
 | `quickfix-*.md` | `test-executor`(回归) | 快速修复完成 |
-| `requirement-structure-*.md` | `product-collaborative-requirement-optimization`(可选) | 需求结构化完成 |
+| `requirement-structure-*.md` | `product-collaborative-requirement-optimization`(需评审) 或 `product-requirement-analysis`(补充AC) | 需求结构化完成 |
 | `requirement-review-*.md` | `collab-product-to-dev` | 需求评审完成 |
+| `reverse-requirement-*.md` | `collab-product-to-dev` 或 `product-requirement-analysis` | 逆向伪需求完成 |
 | `data-tracking-*.md` | `dev-implementation` | 埋点设计完成 |
 | `design-review-*.md` | `visual/design-handoff` | 设计评审完成 |
 | `design-handoff-*.md` | `dev/implementation/frontend` | 设计交接完成 |
 | `feedback-analysis-*.md` | `product-requirement-analysis` | 反馈分析完成 |
 | `page-best-practices-*.md` | `dev/implementation/frontend` | 页面最佳实践完成 |
+| `context-alignment-*.md` | `dev-implementation`(按对齐结果修正) | 上下文对齐完成 |
 | `alignment-*.md` | `dev-implementation`(按对齐结果修正) | 文档对齐完成 |
 | `dep-eval-*.md` | `dev-implementation`(如决定引入) | 依赖评估完成 |
 | `refactoring-*.md` | `dev-code-review` | 重构完成 |
 | `e2e-test-plan-*.md` | `qa/execution/test-executor` | E2E测试计划完成 |
 | `context-snapshot-*.md` | `dev-implementation`(恢复后继续) | 上下文快照保存 |
-| `security-audit-*.md` | `dev-code-review`(如有问题) | 安全审计完成 |
+| `security-audit-*.md` | `dev-implementation`(如有问题) → `dev-code-review`(修复后复审) | 安全审计完成 |
 | `cost-optimization-*.md` | - | 成本优化建议完成 |
 | `module-splitting-*.md` | `parallel-module-orchestrator` | 模块拆解完成 |
 | `module-orchestration-*.md` | `dev-implementation`(各模块并行) | 模块编排完成 |
 | `module-context-*.md` | `parallel-module-orchestrator` | 模块上下文产出 |
 | `adr-*.md` | - | 架构决策记录完成 |
-| `project-overview.md` | `product-requirement-analysis` 或 `module-splitting` | 项目概览完成 |
+| `project-overview.md` | `product-technical-assessment`、`product-requirement-analysis` 或 `module-splitting` | 项目概览完成 |
 | `performance-test-report-*.md` | `dev-implementation`(如不达标) 或 `collab-acceptance-review`(达标) | 性能测试完成 |
 | `module-test-context-*.md` | `qa/test-case/test-case-design` | 模块测试上下文获取 |
 | `db-schema-*.md` | `devops/data/schema-review` | 数据库设计完成 |

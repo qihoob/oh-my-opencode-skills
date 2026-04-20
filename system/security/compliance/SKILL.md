@@ -149,6 +149,7 @@ version: "1.0"
 | 条件 | 推荐技能 |
 |------|----------|
 | 发现安全问题 | `dev/implementation/dev-implementation`（修复） |
+| 修复完成后需复审 | `dev/code-review` |
 | 无安全问题 | 流程继续 |
 
 ## 工具可用

@@ -91,7 +91,7 @@ version: "1.0"
 ```
 
 ## 产出文档
-- **同步记录（可选持久化）**: `.opencode/docs/alignment-sync-{topic}.md`
+- **同步记录（可选持久化）**: `.opencode/docs/context-alignment-{topic}.md`
 - 如处于自驱动链路中（chain-executor 执行），必须持久化到文件
 - 如为单次交互，可即时输出不写文件
 
@@ -112,6 +112,7 @@ version: "1.0"
 
 | 条件 | 推荐技能 |
 |------|----------|
+| 对齐结论需要代码落实 | `dev/implementation/dev-implementation` |
 | 发现需求偏差 | `product/requirement/product-requirement-analysis` |
 | 发现接口不一致 | `dev/modules/module-collaborative-dev` |
 | 发现文档不同步 | `collaboration/sync/document-alignment` |

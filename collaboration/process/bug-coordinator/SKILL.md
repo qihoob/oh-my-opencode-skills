@@ -360,6 +360,8 @@ Bug影响链:
 | 条件 | 推荐技能 |
 |------|----------|
 | Bug 已分配 | `dev/implementation/dev-implementation (Bug修复模式)` |
+| 复杂 Bug 需先定位根因 | `dev/debugging` |
+| 修复完成，需回归验证 | `qa/execution/test-executor` |
 
 
 ## 触发词

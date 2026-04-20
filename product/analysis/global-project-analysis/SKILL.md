@@ -283,7 +283,8 @@ project/
 | 条件 | 推荐技能 |
 |------|----------|
 | 默认流程 | `product/analysis/product-technical-assessment` |
-| 已有模块 | `dev/modules/parallel-module-orchestrator` |
+| 需要直接拆模块 | `dev/modules/module-splitting` |
+| 已有明确模块边界 | `dev/modules/parallel-module-orchestrator` |
 
 
 ## 最小上下文原则

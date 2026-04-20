@@ -365,7 +365,7 @@ function createProduct(name) { createEntity('product', name); }
 | 条件 | 推荐技能 |
 |------|----------|
 | 重构完成，需审查 | `dev/code-review` |
-| 重构后需验证行为不变 | `qa/execution/test-executor` |
+| 重构完成，需验证行为不变 | `dev/code-review` 后进入 `qa/execution/test-executor` |
 | 重构涉及架构变更 | `dev/adr` |
 
 ## 配合 Skills
