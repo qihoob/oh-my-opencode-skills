@@ -119,7 +119,7 @@
 
 某些任务需要**多个技能协作**。以下是核心链路：
 
-### 链路 1: 完整 SDLC 流程 (12 步)
+### 链路 1: 完整 SDLC 流程 (13 步)
 
 ```
 product-requirement-analysis
@@ -127,25 +127,26 @@ product-requirement-analysis
     -> collab-product-to-dev
       -> dev-context-first
         -> dev-implementation
-          -> dev-code-review
-            -> dev-verify-implementation
+          -> verify-implementation
+            -> dev-code-review
               -> collab-dev-to-qa
                 -> qa-context-first
                   -> test-case-design
                     -> test-executor
                       -> collab-acceptance-review
-                      -> collab-retrospective
-                        -> iteration-closure
+                        -> collab-retrospective
+                          -> iteration-closure
 ```
 
-### 链路 2: Bug 修复流程 (5 步)
+### 链路 2: Bug 修复流程 (6 步)
 
 ```
 dev-context-first
-  -> dev-implementation
-    -> dev-code-review
-      -> test-executor
-        -> bug-coordinator (关闭)
+  -> dev-implementation (Bug修复模式)
+    -> verify-implementation
+      -> dev-code-review
+        -> test-executor (回归)
+          -> bug-coordinator (关闭)
 ```
 
 ### 链路 3: 新项目启动流程 (6 步)
@@ -178,11 +179,12 @@ devops/ci/pipeline
           -> devops/cost-optimization
 ```
 
-### 链路 6: 安全合规流程 (2 步)
+### 链路 6: 安全合规流程 (3 步)
 
 ```
 system/security/compliance
-  -> dev/code-review (如有问题)
+  -> dev-implementation (修复问题)
+    -> dev-code-review (复审)
 ```
 
 ### 链路 7: 用户反馈驱动优化 (4 步)
@@ -234,8 +236,8 @@ dev/debugging (复现→定位根因)
 
 ```
 dev/refactoring (识别坏味道→建立安全网→小步重构)
-  -> test-executor (验证行为不变)
-    -> dev/code-review (审查重构)
+  -> dev-code-review (审查重构)
+    -> test-executor (验证行为不变)
       -> dev/adr (记录重构决策，如涉及架构变更)
 ```
 
@@ -295,7 +297,7 @@ dev/dependency-eval (安全+质量+体积+许可证评估)
 | `dev-refactoring` | **目标代码** + **测试** | `refactoring-{scope}.md` |
 | `dev-adr` | 需求/契约/实现文档 | `adr-{seq}-{title}.md` |
 | `dev-dependency-eval` | 无 | `dep-eval-{package-name}.md` |
-| `dev-verify-implementation` | `requirement-*.md` + `implementation-*.md` | 验证报告 |
+| `dev/verify-implementation` | `requirement-*.md` + `implementation-*.md` | `verify-report-*.md` |
 | `test-case-design` | `requirement-{feature}.md` + **实现代码（必须）** | `test-cases-{feature}.md` |
 | `test-executor` | `test-cases-{feature}.md` | `test-report-{feature}.md` |
 | `module-document-keeper` | `.opencode/docs/*` | `INDEX.md` |

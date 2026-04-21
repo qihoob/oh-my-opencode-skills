@@ -306,7 +306,7 @@ incident
 ```
 用户说："启动新项目"
 
-project-kickoff
+project/kickoff
   → [自动] global-project-analysis
     → [自动] product-technical-assessment
       → [自动] module-splitting
@@ -326,7 +326,7 @@ module-document-keeper
 ### 链路 6: DevOps 部署（自驱动）
 
 ```
-ci-pipeline → dockerfile → k8s → multi-env → observability → cost-optimization
+devops/ci/pipeline → dockerfile → k8s → multi-env → observability → cost-optimization
 每步产出配置文件，自动推下一步。
 ```
 

@@ -218,7 +218,7 @@ version: "2.0"
 
 ## 后续技能引用
 <!-- 测试技能请读取此提测单设计测试用例 -->
-<!-- 下一步：qa-test-case-design → qa-test-executor -->
+<!-- 下一步：test-case-design → test-executor -->
 ```
 
 ## 配合 Skills

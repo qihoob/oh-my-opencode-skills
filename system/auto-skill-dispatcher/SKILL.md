@@ -164,7 +164,7 @@ incident → bug-coordinator → dev-context-first → dev-implementation → te
 ```
 触发词: "新项目", "项目初始化", "从零开始"
 
-project-kickoff → global-project-analysis → product-technical-assessment
+project/kickoff → global-project-analysis → product-technical-assessment
 → module-splitting → parallel-module-orchestrator → dev-implementation → verify-implementation
 ```
 
@@ -179,7 +179,7 @@ module-document-keeper → document-integrity-check → document-alignment
 ```
 触发词: "部署", "上线", "发布", "devops"
 
-ci-pipeline → dockerfile → k8s → multi-env → observability → cost-optimization
+devops/ci/pipeline → devops/deploy/dockerfile → devops/deploy/k8s → devops/deploy/multi-env → devops/monitoring/observability → devops/cost-optimization
 ```
 
 ### 链路 7: 数据迁移 (5 步)
@@ -223,11 +223,11 @@ design-review → design-handoff → dev/implementation/frontend
 | dev/implementation/frontend | dev-context-first 或 product-page-feature-best-practices | 上下文已获取 |
 | dev/implementation/backend | contract-*.md（跨层时）或 dev-context-first | 契约文档是否存在 |
 | dev-code-review | verify-implementation（或 dev-implementation） | verify-report-*.md 或 implementation-*.md 是否存在 |
-| qa-test-case-design | product-requirement-analysis 或 qa-context-from-code | requirement-*.md 或逆向分析报告是否存在 |
-| qa-test-executor | qa-test-case-design | test-cases-*.md 是否存在 |
+| test-case-design | product-requirement-analysis 或 qa-context-from-code | requirement-*.md 或逆向分析报告是否存在 |
+| test-executor | test-case-design | test-cases-*.md 是否存在 |
 | collab-product-to-dev | product-requirement-analysis | requirement-*.md 是否存在 |
 | collab-dev-to-qa | dev-code-review | code-review-*.md 是否存在 |
-| collab-acceptance-review | qa-test-executor | test-report-*.md 是否存在 |
+| collab-acceptance-review | test-executor | test-report-*.md 是否存在 |
 | iteration-closure | collab-retrospective | 复盘报告是否存在 |
 | parallel-module-orchestrator | module-splitting | 模块拆解报告是否存在 |
 | module-collaborative-dev | product-requirement-analysis | requirement-*.md 是否存在 |
@@ -258,9 +258,9 @@ design-review → design-handoff → dev/implementation/frontend
 | verify-implementation | 全部匹配 + 跨层一致 | dev-code-review |
 | verify-implementation | 有偏差 | dev-implementation (修正) |
 | verify-implementation | 跨层不一致 | module-collaborative-dev (补充契约/对齐) |
-| qa-test-case-design | - | test-case-prioritization |
-| qa-test-executor | 全部通过 | collab-acceptance-review |
-| qa-test-executor | 有失败 | bug-coordinator |
+| test-case-design | - | test-case-prioritization |
+| test-executor | 全部通过 | collab-acceptance-review |
+| test-executor | 有失败 | bug-coordinator |
 | bug-coordinator | 分配完成 | dev-implementation (修复) |
 | collab-acceptance-review | 通过 | collab-retrospective |
 | collab-retrospective | - | iteration-closure |
@@ -276,7 +276,7 @@ design-review → design-handoff → dev/implementation/frontend
 | contract-*.md | dev-implementation | "契约文档已定义，按契约开始实现？" |
 | implementation-*.md | verify-implementation | "实现完成，是否验证需求匹配和跨层一致性？" |
 | code-review-*.md | collab-dev-to-qa | "代码审查通过，是否需要提测？（提测前执行项目检查点）" |
-| test-cases-*.md | qa-test-executor | "测试用例已设计，是否执行测试？" |
+| test-cases-*.md | test-executor | "测试用例已设计，是否执行测试？" |
 | test-report-*.md | collab-acceptance-review | "测试报告已生成，是否进行验收？（验收前执行健康快照）" |
 | alignment-*.md | - | "文档已对齐" |
 | DOC_AUDIT.md | document-alignment | "文档审计完成，是否对齐？" |
@@ -300,7 +300,7 @@ dev-code-review
 
 ### 测试失败分支
 ```
-qa-test-executor (失败)
+test-executor (失败)
   ├── Bug → bug-coordinator → dev-implementation → test-executor (复测)
   ├── 需求偏差 → collab-product-to-dev (澄清) → dev-implementation
   └── 用例问题 → test-case-design (修订) → test-executor

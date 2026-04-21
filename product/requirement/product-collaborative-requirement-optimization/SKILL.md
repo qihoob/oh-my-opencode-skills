@@ -210,9 +210,9 @@ version: "1.0"
 |------|-------|
 | 需求分析 | product-requirement-analysis |
 | 最佳实践 | product-page-feature-best-practices |
-| 开发实现 | dev/dev-implementation |
-| 测试设计 | qa/qa-test-case-design |
-| 开发交接 | collaboration/collab-product-to-dev |
+| 开发实现 | dev/implementation/dev-implementation |
+| 测试设计 | qa/test-case/test-case-design |
+| 开发交接 | collaboration/handoff/collab-product-to-dev |
 ```
 
 ## 下一步推荐

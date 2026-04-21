@@ -159,8 +159,8 @@ version: "1.0"
 | 场景 | Skill |
 |------|-------|
 | 需求细化 | product-requirement-analysis |
-| 开发实现 | dev/dev-implementation |
-| 测试覆盖 | qa/qa-test-case-design |
+| 开发实现 | dev/implementation/dev-implementation |
+| 测试覆盖 | qa/test-case/test-case-design |
 ```
 
 ## 下一步推荐
