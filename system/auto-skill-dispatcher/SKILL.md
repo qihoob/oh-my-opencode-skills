@@ -49,6 +49,7 @@ version: "4.0"
 | 代码审查、CR | dev/code-review | → collab-dev-to-qa (通过) 或 dev-implementation (失败) |
 | 代码质量、lint | dev/standards/dev-code-quality | → dev-code-review |
 | 前端规范、响应式 | dev/standards/dev-frontend-standards | → dev/implementation/frontend |
+| 分支策略、版本规范、commit规范 | dev/standards/branch-and-version | → devops/ci/pipeline |
 | 多模块协同开发 | dev/modules/module-collaborative-dev | → parallel-module-orchestrator |
 | 模块拆解、划分模块 | dev/modules/module-splitting | → parallel-module-orchestrator |
 | 并行开发、多模块编排 | dev/modules/parallel-module-orchestrator | → dev-implementation |
@@ -101,20 +102,22 @@ version: "4.0"
 | 数据库迁移、DDL | devops/data/migration | → security-compliance |
 | 数据库变更影响、字段变更 | devops/data/change-impact | → schema-design 或 dev-implementation |
 | 成本优化、云成本 | devops/cost-optimization | - |
+| 发布管理、灰度发布、发布计划 | devops/release/release-management | → devops/deploy/multi-env |
 
 ### 系统技能 (5)
 
 | 用户输入 | 触发技能 | 推荐下一步 |
 |----------|----------|------------|
 | 执行链路、运行流程 | system/chain-executor | (链路管理) |
-| 安全审计、合规检查 | system/security/compliance | → dev-code-review (如有问题) |
+| 安全审计、合规检查 | system/security/compliance | → dev-implementation (修复) → dev-code-review |
 | 文档检查、完整性检查 | system/document-integrity-check | → document-alignment |
 
-### 项目技能 (1)
+### 项目技能 (2)
 
 | 用户输入 | 触发技能 | 推荐下一步 |
 |----------|----------|------------|
 | 启动项目、新项目 | project/kickoff | → global-project-analysis → module-splitting |
+| Sprint规划、迭代规划、排期 | project/sprint-planning | → collab-product-to-dev |
 
 ### 视觉技能 (2)
 
@@ -236,6 +239,9 @@ design-review → design-handoff → dev/implementation/frontend
 | devops/data/schema-review | devops/data/schema-design | db-schema-*.md 是否存在 |
 | devops/data/change-impact | devops/data/schema-design | db-schema-*.md 或当前 schema |
 | incident | - | 无前置，立即执行 |
+| sprint-planning | iteration-closure（或已有需求） | 需求文档或迭代闭环报告是否存在 |
+| release-management | collab-acceptance-review | 验收报告或 code-review 是否存在 |
+| dev/standards/branch-and-version | project/kickoff（推荐） | 项目概览是否存在 |
 
 ---
 
@@ -267,12 +273,18 @@ design-review → design-handoff → dev/implementation/frontend
 | iteration-closure | - | global-project-analysis (下一迭代) |
 | incident | 止血完成 | dev-implementation (根因修复) |
 | security-compliance | 有问题 | dev-implementation (修复) → dev-code-review |
+| sprint-planning | 规划完成 | collab-product-to-dev |
+| dev/standards/branch-and-version | 规范确立 | devops/ci/pipeline |
+| release-management | 发布计划完成 | devops/deploy/multi-env |
 
 ### 文档创建后推荐
 
 | 创建的文档 | 推荐技能 | 提示信息 |
 |------------|----------|----------|
 | requirement-*.md | collab-product-to-dev | "需求文档已创建，是否交接给开发？" |
+| sprint-plan-*.md | collab-product-to-dev | "Sprint 规划完成，是否交接需求给开发？" |
+| branch-strategy-*.md | devops/ci/pipeline | "分支策略确立，是否配置 CI 流水线？" |
+| release-plan-*.md | devops/deploy/multi-env | "发布计划完成，是否执行环境部署？" |
 | contract-*.md | dev-implementation | "契约文档已定义，按契约开始实现？" |
 | implementation-*.md | verify-implementation | "实现完成，是否验证需求匹配和跨层一致性？" |
 | code-review-*.md | collab-dev-to-qa | "代码审查通过，是否需要提测？（提测前执行项目检查点）" |

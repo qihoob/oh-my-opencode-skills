@@ -44,6 +44,7 @@
 - `dev/code-review` - 当用户提到"代码审查"、"Code Review"、"CR"、"代码检查"、"代码评审"、"代码质量"、"Review"时调用
 - `dev/standards/dev-code-quality` - 当用户提到"lint"、"eslint"、"prettier"、"代码规范"、"命名规范"、"注释规范"、"pre-commit"、"类型检查"、"代码复杂度"时调用
 - `dev/standards/dev-frontend-standards` - 当用户提到"前端规范"、"响应式"、"响应式布局"、"状态管理"、"加载状态"、"错误处理"、"性能优化"、"无障碍"、"a11y"时调用
+- `dev/standards/branch-and-version` - 当用户提到"分支策略"、"Git分支"、"版本规范"、"SemVer"、"CHANGELOG"、"commit规范"、"版本号"、"Git规范"时调用
 - `dev/modules/module-collaborative-dev` - 当用户提到"多模块协同"、"模块开发"、"协同开发"、"接口定义"时调用
 - `dev/modules/module-splitting` - 当用户提到"模块拆解"、"划分模块"、"拆解项目"、"模块边界"、"模块依赖"时调用
 - `dev/modules/parallel-module-orchestrator` - 当用户提到"并行开发"、"并行模块"、"多模块编排"时调用
@@ -84,11 +85,17 @@
 - `devops/data/schema-review` - 当用户提到"数据库评审"、"表结构评审"、"schema评审"、"数据库审查"、"索引检查"时调用
 - `devops/data/change-impact` - 当用户提到"数据库变更影响"、"表结构变更影响"、"DDL影响"、"字段变更影响"时调用
 - `devops/cost-optimization` - 当用户提到"成本优化"、"云成本"、"FinOps"、"预算管理"、"资源优化"时调用
+- `devops/release/release-management` - 当用户提到"发布管理"、"版本发布"、"灰度发布"、"发布计划"、"上线计划"、"发布流程"、"回滚策略"时调用
 
 ### 视觉类技能 (Visual)
 
 - `visual/design-handoff` - 当用户提到"设计稿交接"、"设计标注"、"视觉验收"、"UI交接"、"开发协同"时调用
 - `visual/design-review` - 当用户提到"设计评审"、"设计规范"、"视觉确认"、"UI确认"、"视觉产品经理"时调用
+
+### 项目类技能 (Project)
+
+- `project/kickoff` - 当用户提到"启动项目"、"新项目"、"项目初始化"时调用
+- `project/sprint-planning` - 当用户提到"Sprint规划"、"迭代规划"、"排期"、"规划迭代"、"Sprint启动"时调用
 
 ---
 
@@ -247,6 +254,23 @@ dev/refactoring (识别坏味道→建立安全网→小步重构)
 dev/dependency-eval (安全+质量+体积+许可证评估)
   -> dev/implementation (引入依赖)
     -> dev/adr (记录选型决策)
+```
+
+### 链路 14: Sprint 规划 (3 步)
+
+```
+iteration-closure (上一迭代闭环)
+  -> sprint-planning (Sprint 规划)
+    -> collab-product-to-dev (需求交接开发)
+```
+
+### 链路 15: 版本发布 (4 步)
+
+```
+collab-acceptance-review (验收通过)
+  -> branch-and-version (版本号/Tag)
+    -> release-management (发布计划/灰度)
+      -> devops/deploy/multi-env (环境部署)
 ```
 
 当用户请求完整流程时，应**按顺序调用**这些技能。可通过 `system/chain-executor` 执行预定义链路。

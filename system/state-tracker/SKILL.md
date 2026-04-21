@@ -219,6 +219,9 @@ version: "2.0"
 | `quickfix-*.md` | 快速修复完成 | 推进到回归测试 |
 | `question-for-product.md` | 需求回退问题清单 | 暂停等待产品澄清 |
 | `DOC_AUDIT.md` | 文档审计完成 | 推进到文档对齐 |
+| `sprint-plan-*.md` | Sprint 规划完成 | 推进到需求交接开发 |
+| `branch-strategy-*.md` | 分支策略确立 | 推进到 CI 配置 |
+| `release-plan-*.md` | 发布计划完成 | 推进到环境部署 |
 
 ---
 

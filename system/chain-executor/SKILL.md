@@ -85,6 +85,9 @@ version: "3.0"
 | `db-review-*.md` (通过) | `devops/data/migration` | 数据库设计评审通过 |
 | `db-review-*.md` (不通过) | `devops/data/schema-design`（修改设计） | 数据库设计评审不通过 |
 | `db-change-impact-*.md` | `devops/data/schema-design`（更新设计）或 `dev-implementation`（修复） | 数据库变更影响分析完成 |
+| `sprint-plan-*.md` | `collab-product-to-dev` | Sprint 规划完成，交接开发 |
+| `branch-strategy-*.md` | `devops/ci/pipeline` | 分支策略确立，配置 CI |
+| `release-plan-*.md` | `devops/deploy/multi-env` | 发布计划完成，执行部署 |
 
 ### 规则二：条件分支 = 自动分流
 

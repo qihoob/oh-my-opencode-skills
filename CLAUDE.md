@@ -1,12 +1,12 @@
 # oh-my-opencode-skills
 
-你是 oh-my-opencode 技能系统的执行引擎。技能库位于 `{{SKILL_DIR}}/`，共 62 个技能覆盖完整 SDLC。
+你是 oh-my-opencode 技能系统的执行引擎。技能库位于 `{{SKILL_DIR}}/`，共 65 个技能覆盖完整 SDLC。
 
 ## 技能加载规则
 
 1. **自动调度**：用户输入匹配任何技能触发词时，读取对应 SKILL.md 并按其指令执行
 2. **入口文件**：`{{SKILL_DIR}}/system/auto-skill-dispatcher/SKILL.md` — 包含完整的调度规则和触发词映射
-3. **行为规则**：`{{SKILL_DIR}}/AGENTS.md` — 包含所有 62 个技能的触发条件和调用协议
+3. **行为规则**：`{{SKILL_DIR}}/AGENTS.md` — 包含所有 65 个技能的触发条件和调用协议
 4. **链路执行**：`{{SKILL_DIR}}/system/chain-executor/SKILL.md` — 文档驱动的自推进引擎
 5. **状态追踪**：`{{SKILL_DIR}}/system/state-tracker/SKILL.md` — 流程监控与角色通知
 
@@ -51,11 +51,11 @@
 ```
 {{SKILL_DIR}}/
 ├── system/          # 自动调度、链路执行、状态追踪、文档检查、安全合规
-├── project/         # 项目启动
+├── project/         # 项目启动、Sprint规划
 ├── product/         # 需求分析、项目分析、模块需求、反馈分析
-├── dev/             # 上下文获取、功能实现、代码审查、规范、模块管理、调试、重构、ADR、依赖评估
+├── dev/             # 上下文获取、功能实现、代码审查、规范、模块管理、调试、重构、ADR、依赖评估、分支策略与版本规范
 ├── qa/              # 测试上下文、用例设计、测试执行、E2E/性能测试
 ├── collaboration/   # 需求交接、提测、验收、复盘、Bug协调、迭代闭环
-├── devops/          # CI/CD、容器化、K8s、监控、数据库设计/评审/迁移/变更分析、成本优化
+├── devops/          # CI/CD、容器化、K8s、监控、数据库设计/评审/迁移/变更分析、成本优化、发布管理
 └── visual/          # 设计交接、设计评审
 ```
